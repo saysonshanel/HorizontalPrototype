@@ -422,10 +422,10 @@
     </Window.Triggers>
     <Canvas x:Name="Canvas">
 
-        <Canvas x:Name="MainScreenCanvas" Height="377.333" Canvas.Left="41" Canvas.Top="143.334" Width="284.334" d:IsHidden="True">
+        <Canvas x:Name="MainScreenCanvas" Height="377.333" Canvas.Left="41" Canvas.Top="143.334" Width="284.334">
             <Canvas x:Name="Logo" Height="131.333" Canvas.Left="47.671" Width="208.666">
-                <TextBlock x:Name="useekLogo" Height="99.333" TextWrapping="Wrap" FontSize="72" FontWeight="Bold" Canvas.Top="32" Width="208.666" d:IsHidden="True"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
-                <Path x:Name="HeartLogo" Fill="#FFE8BD5F" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="109.784" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Canvas.Left="30" Width="106.099" d:IsHidden="True">
+                <TextBlock x:Name="useekLogo" Height="99.333" TextWrapping="Wrap" FontSize="72" FontWeight="Bold" Canvas.Top="32" Width="208.666"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
+                <Path x:Name="HeartLogo" Fill="#FFE8BD5F" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="109.784" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Canvas.Left="30" Width="106.099">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -438,13 +438,13 @@
             </Canvas>
             <Button x:Name="SignupButton" Content="Button" Style="{DynamicResource ButtonStyle2}" Width="101.333" Cursor="Hand" Height="64.667" Canvas.Left="183.001" Canvas.Top="143.999"/>
             <Button x:Name="FacebookButton" Content="Button" Height="44" Style="{DynamicResource ButtonStyle3}" Cursor="Hand" Canvas.Left="79" Canvas.Top="262.666" Width="204.667"/>
-            <Button x:Name="GoogleButton" Content="Button" Height="44" Style="{DynamicResource ButtonStyle4}" Cursor="Hand" Canvas.Left="79" Canvas.Top="322.333" Width="204.667" d:IsHidden="True"/>
+            <Button x:Name="GoogleButton" Content="Button" Height="44" Style="{DynamicResource ButtonStyle4}" Cursor="Hand" Canvas.Left="79" Canvas.Top="322.333" Width="204.667"/>
             <Button x:Name="LoginButton" Content="Button" Style="{DynamicResource ButtonStyle1}" Width="101.333" Cursor="Hand" Height="64.667" Canvas.Top="143.999"/>
             <Path Data="M35,424.5 L107,424.5" Height="1" Stretch="Fill" Width="65" Stroke="#FF666666" StrokeDashArray="2 2" Opacity="0.5" Canvas.Left="1" Canvas.Top="284.166"/>
             <Path Data="M35,487.83333 L107,487.83333" Height="1" Stretch="Fill" Width="65.001" Stroke="#FF666666" StrokeDashArray="2 2" Opacity="0.5" Canvas.Left="1" Canvas.Top="347.499"/>
-            <TextBlock x:Name="textBlock" Height="22" TextWrapping="Wrap" Text="-or-" Foreground="#FF666666" Opacity="0.5" Canvas.Left="130.336" Canvas.Top="224.168" Width="30.417" d:IsHidden="True"/>
-            <TextBlock x:Name="textBlock1" Height="47" TextWrapping="Wrap" Text="f" Width="30.5" FontWeight="Bold" FontSize="48" Foreground="White" Canvas.Left="95.5" Canvas.Top="259.666" d:IsHidden="True"/>
-            <TextBlock x:Name="textBlock2" Height="57.5" TextWrapping="Wrap" Text="g" Width="31" FontSize="36" FontWeight="Bold" Foreground="White" Canvas.Left="95" Canvas.Top="319.833" d:IsHidden="True"/>
+            <TextBlock x:Name="textBlock" Height="22" TextWrapping="Wrap" Text="-or-" Foreground="#FF666666" Opacity="0.5" Canvas.Left="130.336" Canvas.Top="224.168" Width="30.417"/>
+            <TextBlock x:Name="textBlock1" Height="47" TextWrapping="Wrap" Text="f" Width="30.5" FontWeight="Bold" FontSize="48" Foreground="White" Canvas.Left="95.5" Canvas.Top="259.666"/>
+            <TextBlock x:Name="textBlock2" Height="57.5" TextWrapping="Wrap" Text="g" Width="31" FontSize="36" FontWeight="Bold" Foreground="White" Canvas.Left="95" Canvas.Top="319.833"/>
 
         </Canvas>
         <Canvas x:Name="LoginScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
@@ -482,9 +482,15 @@
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Canvas.Left="314.02" Stretch="Fill" Stroke="White" StrokeThickness="4" Canvas.Top="25.333" Width="18.563" Cursor="Hand"/>
             <CheckBox x:Name="RememberMeCheck" Content="CheckBox" Height="19.333" Canvas.Left="131.685" Canvas.Top="411.667" Width="18.667"/>
             <TextBlock x:Name="textBlock9" Height="22.848" Canvas.Left="153.519" TextWrapping="Wrap" Canvas.Top="410.5" Width="146" Text="Remember me" Foreground="White" Opacity="0.5"/>
+            <Canvas x:Name="UsernameErrorCanvas" Height="40.666" Canvas.Left="241.665" Canvas.Top="259.118" Width="45">
+                <TextBlock x:Name="textBlock11" Height="20.666" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="10" Width="25" FontWeight="Bold" FontSize="20" Foreground="Red"/>
+            </Canvas>
+            <Canvas x:Name="PasswordErrorCanvas" Height="40.666" Canvas.Left="210.332" Canvas.Top="322.669" Width="45">
+                <TextBlock x:Name="textBlock13" Height="20.666" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="10" Width="25" FontWeight="Bold" FontSize="20" Foreground="Red"/>
+            </Canvas>
 
         </Canvas>
-        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
+        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
             <TextBlock x:Name="textBlock5" Height="59.334" Canvas.Left="119.832" TextWrapping="Wrap" Text="sign-up" Width="139.334" FontSize="36" FontWeight="Bold" Canvas.Top="39.833" Foreground="#FF494848"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="125.334" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="197" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
@@ -570,8 +576,8 @@
             <Button x:Name="Answer2Button" Content="Sed quia consequuntur&#xD;&#xA;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="209" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
             <Button x:Name="NextButton" Content="Next" Height="42" Canvas.Left="214" Canvas.Top="419" Width="123" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="20" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1"/>
         </Canvas>
-        <local:DropDownMenuControl x:Name="dropDownMenuControl" Height="73" Canvas.Left="-187" Canvas.Top="315" Width="144"/>
-        <Button x:Name="MenuButton" Content="Button" Height="73" Canvas.Left="-187" Style="{DynamicResource ButtonStyle10}" Canvas.Top="315" Width="144"/>
+        <local:DropDownMenuControl x:Name="dropDownMenuControl" Height="73" Canvas.Left="-291" Canvas.Top="315" Width="144" d:IsHidden="True"/>
+        <Button x:Name="MenuButton" Content="Button" Height="73" Canvas.Left="-291" Style="{DynamicResource ButtonStyle10}" Canvas.Top="315" Width="144" d:IsHidden="True"/>
 
     </Canvas>
 </Window>
