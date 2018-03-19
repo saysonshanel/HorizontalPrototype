@@ -91,15 +91,95 @@ namespace HorizontalPrototype
             //hide other screens
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
+            this.FullNameErrorCanvas.Visibility = Visibility.Hidden;
+            this.UsernameFieldErrorCanvas.Visibility = Visibility.Hidden;
+            this.PasswordFieldErrorCanvas.Visibility = Visibility.Hidden;
+            this.RepeatPasswordErrorCanvas.Visibility = Visibility.Hidden;
+            this.EmailErrorCanvas.Visibility = Visibility.Hidden;
+            this.VerifyErrorCanvas.Visibility = Visibility.Hidden;
+
             //show signup screen
             this.SignupScreenCanvas.Visibility = Visibility.Visible;
 
             //when signup button is clicked, direct to edit profile
-            this.RegisterSignupButton.Click += ToEditProfileScreen;
+            // this.RegisterSignupButton.Click += ToEditProfileScreen;
+            this.RegisterSignupButton.Click += CheckSignupFieldsOnClicked;
 
             //otherwise back button is clicked, direct to main screen
             this.BackButton1.Click += OnBackButtonClicked;
 
+        }
+
+        private void CheckSignupFieldsOnClicked(object sender, RoutedEventArgs e)
+        {
+           /* if ((this.FullNameTextbox.Text == string.Empty) || (this.UsernameTextbox1.Text == string.Empty) || (this.PasswordBox1.Password == string.Empty)
+                    || (this.PasswordRepeatBox.Password == string.Empty) || (this.EmailTextbox2.Text == string.Empty))
+            {
+                MessageBox.Show("Please enter in the required fields");
+                this.FullNameErrorCanvas.Visibility = Visibility.Visible;
+                this.UsernameFieldErrorCanvas.Visibility = Visibility.Visible;
+                this.PasswordFieldErrorCanvas.Visibility = Visibility.Visible;
+                this.RepeatPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.EmailErrorCanvas.Visibility = Visibility.Visible;
+                this.VerifyErrorCanvas.Visibility = Visibility.Visible;
+            }*/
+            if (this.FullNameTextbox.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter in your full name");
+
+                this.FullNameErrorCanvas.Visibility = Visibility.Visible;
+                this.UsernameFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.PasswordFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.RepeatPasswordErrorCanvas.Visibility = Visibility.Hidden;
+                this.EmailErrorCanvas.Visibility = Visibility.Hidden;
+                this.VerifyErrorCanvas.Visibility = Visibility.Hidden;
+
+            }
+            else if (this.UsernameTextbox2.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter in a username");
+                this.FullNameErrorCanvas.Visibility = Visibility.Hidden;
+                this.UsernameFieldErrorCanvas.Visibility = Visibility.Visible;
+                this.PasswordFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.RepeatPasswordErrorCanvas.Visibility = Visibility.Hidden;
+                this.EmailErrorCanvas.Visibility = Visibility.Hidden;
+                this.VerifyErrorCanvas.Visibility = Visibility.Hidden;
+
+            }
+            else if (this.PasswordBox1.Password == string.Empty)
+            {
+                MessageBox.Show("Please enter in a password");
+                this.FullNameErrorCanvas.Visibility = Visibility.Hidden;
+                this.UsernameFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.PasswordFieldErrorCanvas.Visibility = Visibility.Visible;
+                this.RepeatPasswordErrorCanvas.Visibility = Visibility.Hidden;
+                this.EmailErrorCanvas.Visibility = Visibility.Hidden;
+                this.VerifyErrorCanvas.Visibility = Visibility.Hidden; 
+            }
+            else if (this.PasswordRepeatBox.Password == string.Empty)
+            {
+                MessageBox.Show("Please repeat your password");
+                this.FullNameErrorCanvas.Visibility = Visibility.Hidden;
+                this.UsernameFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.PasswordFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.RepeatPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.EmailErrorCanvas.Visibility = Visibility.Hidden;
+                this.VerifyErrorCanvas.Visibility = Visibility.Hidden;
+            }
+            else if (this.EmailTextbox2.Text == string.Empty)
+            {
+                MessageBox.Show("Please enter in your email");
+                this.FullNameErrorCanvas.Visibility = Visibility.Hidden;
+                this.UsernameFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.PasswordFieldErrorCanvas.Visibility = Visibility.Hidden;
+                this.RepeatPasswordErrorCanvas.Visibility = Visibility.Hidden;
+                this.EmailErrorCanvas.Visibility = Visibility.Visible;
+                this.VerifyErrorCanvas.Visibility = Visibility.Hidden;
+            }
+            else
+            {
+                this.RegisterSignupButton.Click += ToEditProfileScreen;
+            }
         }
 
         //move back to main screen
