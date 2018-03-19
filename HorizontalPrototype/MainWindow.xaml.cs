@@ -34,15 +34,34 @@ namespace HorizontalPrototype
             Storyboard sb1 = this.FindResource("SplashDisappear1") as Storyboard;
             sb1.Completed += SignupButtonComplete;
 
+
             //hide other canvas's
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Hidden;
+            this.dropDownMenuControl.Visibility = Visibility.Hidden;
 
             //when facebook or google connection is clicked,  move to login
             this.FacebookButton.Click += LoginButtonComplete;
             this.GoogleButton.Click += LoginButtonComplete;
 
+            //When toggle menu button is checked
+            this.MenuButton.Checked += UponToggleMenuButtonChecked;
+
+            //When toggle menu is collapsed
+            Storyboard sb2 = this.FindResource("MenuCollapse") as Storyboard;
+            sb2.Completed += DropDownMenuCollapseComplete;
+
+        }
+
+        private void DropDownMenuCollapseComplete(object sender, EventArgs e)
+        {
+            this.dropDownMenuControl.Visibility = Visibility.Hidden;
+        }
+
+        private void UponToggleMenuButtonChecked(object sender, RoutedEventArgs e)
+        {
+            this.dropDownMenuControl.Visibility = Visibility.Visible;
         }
 
         //sign up screen

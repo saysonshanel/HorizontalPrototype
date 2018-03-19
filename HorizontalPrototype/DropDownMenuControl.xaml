@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="HorizontalPrototype.DropDownMenuControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HorizontalPrototype"
+             mc:Ignorable="d" 
+             d:DesignHeight="200" Width="75">
+    <UniformGrid x:Name="DropDownMenu">
+        <Menu>
+            <MenuItem Header="Action1" Height="40" Width="75" FontWeight="Bold" FontFamily="Georgia" FontSize="14" Background="#FFE8BD5F" Foreground="White"/>
+            <MenuItem Header="Action2" Height="40" Width="75" FontFamily="Georgia" FontWeight="Bold" FontSize="14" Background="#FFE64646" Foreground="White"/>
+            <MenuItem Header="Action3" Height="40" Width="75" FontSize="14" FontFamily="Georgia" FontWeight="Bold" Background="Black" Foreground="White"/>
+            <MenuItem Header="Action4" Height="40" Width="75" FontFamily="Georgia" FontSize="14" FontWeight="Bold" Background="#FFE8BD5F" Foreground="White"/>
+            <MenuItem Header="Action5" Height="40" Width="75" FontSize="14" FontFamily="Georgia" FontWeight="Bold" Background="#FFE64646" Foreground="White"/>
+        </Menu>
+
+    </UniformGrid>
+</UserControl>
