@@ -121,47 +121,15 @@ namespace HorizontalPrototype
         {
             //hide the main screen
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
-            this.UsernameErrorCanvas.Visibility = Visibility.Hidden;
-            this.PasswordErrorCanvas.Visibility = Visibility.Hidden;
             //show the login screen
             this.LoginScreenCanvas.Visibility = Visibility.Visible;
 
             //when login button is clicked, move to the edit profile screen
-            //this.LoginScreenLoginButton.Click += ToEditProfileScreen;
-            this.LoginScreenLoginButton.Click += CheckLoginFieldsOnClicked;
+            this.LoginScreenLoginButton.Click += ToEditProfileScreen;
 
             //otherwise, if back button is clicked, go back to main screen
             this.BackButton.Click += OnBackButtonClicked;
 
-        }
-
-        private void CheckLoginFieldsOnClicked(object sender, RoutedEventArgs e)
-        {
-            if ((this.UsernameTextbox.Text == string.Empty) && (this.PasswordBox.Password == string.Empty))
-            {
-                MessageBox.Show("Please enter in a username/e-mail and password");
-                this.PasswordErrorCanvas.Visibility = Visibility.Visible;
-                this.UsernameErrorCanvas.Visibility = Visibility.Visible;
-            }
-            else if(this.UsernameTextbox.Text == string.Empty)
-            {
-                MessageBox.Show("Please enter in a username or e-mail");
-                this.PasswordErrorCanvas.Visibility = Visibility.Hidden;
-
-                this.UsernameErrorCanvas.Visibility = Visibility.Visible;
-
-            }else if(this.PasswordBox.Password == string.Empty)
-            {
-                MessageBox.Show("Please enter in a password");
-                this.UsernameErrorCanvas.Visibility = Visibility.Hidden;
-                this.PasswordErrorCanvas.Visibility = Visibility.Visible;
-
-            }else
-            {
-                this.LoginScreenLoginButton.Click += ToEditProfileScreen;
-            }
-
-           
         }
 
         //edit profile screen

@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace HorizontalPrototype
 {
     /// <summary>
-    /// Interaction logic for DropDownMenuControl.xaml
+    /// Interaction logic for ViewMatchesControl.xaml
     /// </summary>
-    public partial class DropDownMenuControl : UserControl
+    public partial class ViewMatchesControl : UserControl
     {
-        public DropDownMenuControl()
+        public ViewMatchesControl()
         {
             InitializeComponent();
         }
