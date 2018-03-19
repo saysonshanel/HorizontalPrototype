@@ -40,6 +40,9 @@ namespace HorizontalPrototype
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Hidden;
             this.dropDownMenuControl.Visibility = Visibility.Hidden;
+            this.ProfileScreenCanvas.Visibility = Visibility.Hidden;
+            this.QuizMainScreenCanvas.Visibility = Visibility.Hidden;
+            this.QuizQuestionScreen.Visibility = Visibility.Hidden;
 
             //when facebook or google connection is clicked,  move to login
             this.FacebookButton.Click += LoginButtonComplete;
@@ -52,6 +55,24 @@ namespace HorizontalPrototype
             Storyboard sb2 = this.FindResource("MenuCollapse") as Storyboard;
             sb2.Completed += DropDownMenuCollapseComplete;
 
+            //When save button is clicked, direct to profile screen
+            this.SaveButton.Click += UponEditProfileButtonClicked;
+
+            //Quiz button clicked, start quiz
+            this.Quiz1Button.Click += UponQuizButtonClicked;
+       
+
+        }
+
+        private void UponQuizButtonClicked(object sender, RoutedEventArgs e)
+        {
+            QuizMainScreenCanvas.Visibility = Visibility.Hidden;
+            QuizQuestionScreen.Visibility = Visibility.Visible;
+        }
+
+        private void UponEditProfileButtonClicked(object sender, RoutedEventArgs e)
+        {
+            this.EditScreenCanvas.Visibility = Visibility.Hidden;
         }
 
         private void DropDownMenuCollapseComplete(object sender, EventArgs e)
@@ -75,6 +96,7 @@ namespace HorizontalPrototype
 
             //when signup button is clicked, direct to edit profile
             this.RegisterSignupButton.Click += ToEditProfileScreen;
+
             //otherwise back button is clicked, direct to main screen
             this.BackButton1.Click += OnBackButtonClicked;
 
