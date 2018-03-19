@@ -25,3 +25,10 @@ C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\Horizo
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe.config
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\bin\Debug\HorizontalPrototype.pdb
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\DropDownMenuControl.baml
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MainWindow.baml
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.g.resources
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.Properties.Resources.resources
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.GenerateResource.Cache
