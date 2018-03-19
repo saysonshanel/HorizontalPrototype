@@ -368,6 +368,25 @@
                 <EasingColorKeyFrame KeyTime="0:0:1" Value="#FFE64646"/>
             </ColorAnimationUsingKeyFrames>
         </Storyboard>
+        <Style x:Key="ButtonStyle10" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="#FFF4F4F5" Stroke="Black"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -551,6 +570,8 @@
             <Button x:Name="Answer2Button" Content="Sed quia consequuntur&#xD;&#xA;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="209" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
             <Button x:Name="NextButton" Content="Next" Height="42" Canvas.Left="214" Canvas.Top="419" Width="123" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="20" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1"/>
         </Canvas>
+        <local:DropDownMenuControl x:Name="dropDownMenuControl" Height="73" Canvas.Left="-187" Canvas.Top="315" Width="144"/>
+        <Button x:Name="MenuButton" Content="Button" Height="73" Canvas.Left="-187" Style="{DynamicResource ButtonStyle10}" Canvas.Top="315" Width="144"/>
 
     </Canvas>
 </Window>

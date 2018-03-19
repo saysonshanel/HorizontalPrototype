@@ -32,3 +32,4 @@ C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\Horizo
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.g.resources
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.Properties.Resources.resources
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.GenerateResource.Cache
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\GeneratedInternalTypeHelper.g.cs

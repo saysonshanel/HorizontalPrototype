@@ -49,7 +49,7 @@ namespace HorizontalPrototype
             this.GoogleButton.Click += LoginButtonComplete;
 
             //When toggle menu button is checked
-            this.MenuButton.Checked += UponToggleMenuButtonChecked;
+            this.MenuButton.Click += UponToggleMenuButtonChecked;
 
             //When toggle menu is collapsed
             Storyboard sb2 = this.FindResource("MenuCollapse") as Storyboard;
