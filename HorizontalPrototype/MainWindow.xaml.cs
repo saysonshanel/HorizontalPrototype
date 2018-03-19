@@ -36,6 +36,7 @@ namespace HorizontalPrototype
 
             //hide other canvas's
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
+            this.LoginScreenCanvas_Username.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Hidden;
 
@@ -83,17 +84,40 @@ namespace HorizontalPrototype
             //show the login screen
             this.LoginScreenCanvas.Visibility = Visibility.Visible;
 
-            //when login button is clicked, move to the edit profile screen
+            //when login button is clicked, check for required fields
+            //this.LoginScreenLoginButton.Click += OnLoginScreenLoginButtonClicked;
             this.LoginScreenLoginButton.Click += ToEditProfileScreen;
 
             //otherwise, if back button is clicked, go back to main screen
             this.BackButton.Click += OnBackButtonClicked;
 
+
         }
+
+      /*  private void OnLoginScreenLoginButtonClicked(object sender, RoutedEventArgs e)
+        {
+
+            if (UsernameTextbox.Text == string.Empty)
+            {
+                this.LoginScreenCanvas_Username.Visibility = Visibility.Visible;
+                MessageBox.Show("Please enter in a Username");
+            }
+            else
+            {
+                this.LoginScreenLoginButton.Click += ToEditProfileScreen;
+                this.LoginScreenLoginButton1.Click += ToEditProfileScreen;
+            }
+            
+               
+            
+        }
+        */
 
         //edit profile screen
         private void ToEditProfileScreen(object sender, RoutedEventArgs e)
         {
+
+            this.LoginScreenCanvas_Username.Visibility = Visibility.Hidden;
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Visible;
