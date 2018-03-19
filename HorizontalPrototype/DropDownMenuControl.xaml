@@ -5,14 +5,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:HorizontalPrototype"
              mc:Ignorable="d" 
-             d:DesignHeight="200" Width="75">
+             d:DesignHeight="200" Width="123">
     <UniformGrid x:Name="DropDownMenu">
         <Menu>
-            <MenuItem Header="Action1" Height="40" Width="75" FontWeight="Bold" FontFamily="Georgia" FontSize="14" Background="#FFE8BD5F" Foreground="White"/>
-            <MenuItem Header="Action2" Height="40" Width="75" FontFamily="Georgia" FontWeight="Bold" FontSize="14" Background="#FFE64646" Foreground="White"/>
-            <MenuItem Header="Action3" Height="40" Width="75" FontSize="14" FontFamily="Georgia" FontWeight="Bold" Background="Black" Foreground="White"/>
-            <MenuItem Header="Action4" Height="40" Width="75" FontFamily="Georgia" FontSize="14" FontWeight="Bold" Background="#FFE8BD5F" Foreground="White"/>
-            <MenuItem Header="Action5" Height="40" Width="75" FontSize="14" FontFamily="Georgia" FontWeight="Bold" Background="#FFE64646" Foreground="White"/>
+            <MenuItem x:Name="MatchesButton" Header="View matches" Height="40" Width="123" FontWeight="Bold" FontFamily="Georgia" FontSize="14" Background="#FFE8BD5F" Foreground="White"/>
+            <MenuItem x:Name="EditProfileButton" Header="Edit Profile" Height="40" Width="123" FontFamily="Georgia" FontWeight="Bold" FontSize="14" Background="#FFE64646" Foreground="White"/>
+            <MenuItem x:Name="Questionnaires" Header="Questionnaires" Height="40" Width="123" FontSize="14" FontFamily="Georgia" FontWeight="Bold" Background="Black" Foreground="White"/>
+            <MenuItem x:Name="Settings_button" Header="Settings" Height="40" Width="123" FontSize="14" FontFamily="Georgia" FontWeight="Bold" Background="#FFE64646" Foreground="White"/>
+            <MenuItem x:Name="Logout" Header="Logout" Height="40" Width="123" FontFamily="Georgia" FontSize="14" FontWeight="Bold" Background="#FFE8BD5F" Foreground="White"/>
         </Menu>
 
     </UniformGrid>
