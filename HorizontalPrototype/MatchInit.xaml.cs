@@ -10,20 +10,18 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace USeek
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for MatchInit.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MatchInit : Window
     {
-        public MainWindow()
+        public MatchInit()
         {
             InitializeComponent();
-
         }
     }
 }
