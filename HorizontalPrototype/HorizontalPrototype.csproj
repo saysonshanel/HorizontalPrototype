@@ -55,6 +55,12 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MatchInit.xaml.cs">
+      <DependentUpon>MatchInit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SwipeUp.xaml.cs">
+      <DependentUpon>SwipeUp.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ViewMatchesControl.xaml.cs">
       <DependentUpon>ViewMatchesControl.xaml</DependentUpon>
     </Compile>
@@ -77,6 +83,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="MatchInit.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SwipeUp.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="ViewMatchesControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

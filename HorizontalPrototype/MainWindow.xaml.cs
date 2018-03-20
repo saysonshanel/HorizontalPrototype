@@ -25,6 +25,7 @@ namespace HorizontalPrototype
         {
             InitializeComponent();
 
+
             //When the login button is pressed on the main screen, direct to login screen
             Storyboard lginsb = this.FindResource("SplashDisappear") as Storyboard;
             lginsb.Completed += ToLoginScreen;
@@ -36,60 +37,50 @@ namespace HorizontalPrototype
 
 
             //hide other canvas's
-            this.LoginScreenCanvas.Visibility = Visibility.Hidden;
-            this.SignupScreenCanvas.Visibility = Visibility.Hidden;
-            this.EditScreenViewer.Visibility = Visibility.Hidden;
-            this.dropDownMenuControl.Visibility = Visibility.Hidden;
-            this.ProfileScreenCanvas.Visibility = Visibility.Hidden;
-            this.QuizMainScreenCanvas.Visibility = Visibility.Hidden;
-            this.QuizQuestionScreen.Visibility = Visibility.Hidden;
-            this.ViewAllMatches.Visibility = Visibility.Hidden;
-            this.ViewMatch.Visibility = Visibility.Hidden;
-            this.MessagingScreen.Visibility = Visibility.Hidden;
-            this.dropDownMenuControl.Visibility = Visibility.Hidden;
-            this.MenuButton.Visibility = Visibility.Hidden;
-            this.HamburgerMenu.Visibility = Visibility.Hidden;
+            HideAll();
 
             //when facebook or google connection is clicked,  move to login
             this.FacebookButton.Click += ToLoginScreen;
             this.GoogleButton.Click += ToLoginScreen;
 
+
             //When toggle menu button is checked
-            this.MenuButton.Click += UponToggleMenuButtonChecked;
+           // this.MenuButton.Click += UponToggleMenuButtonChecked;
 
             //When toggle menu is collapsed
-            Storyboard sb2 = this.FindResource("MenuCollapse") as Storyboard;
-            sb2.Completed += DropDownMenuCollapseComplete;
+           // Storyboard sb2 = this.FindResource("MenuCollapse") as Storyboard;
+           // sb2.Completed += DropDownMenuCollapseComplete;
 
             //When save button is clicked, direct to profile screen
-            this.SaveButton.Click += UponEditProfileButtonClicked;
+            //this.SaveButton.Click += UponEditProfileButtonClicked;
 
             //Quiz button clicked, start quiz
-            this.Quiz1Button.Click += UponQuizButtonClicked;
+           // this.Quiz1Button.Click += UponQuizButtonClicked;
        
 
         }
 
-        private void UponQuizButtonClicked(object sender, RoutedEventArgs e)
-        {
-            QuizMainScreenCanvas.Visibility = Visibility.Hidden;
-            QuizQuestionScreen.Visibility = Visibility.Visible;
-        }
 
-        private void UponEditProfileButtonClicked(object sender, RoutedEventArgs e)
-        {
-            this.EditScreenCanvas.Visibility = Visibility.Hidden;
-        }
+        /*  private void UponQuizButtonClicked(object sender, RoutedEventArgs e)
+          {
+              QuizMainScreenCanvas.Visibility = Visibility.Hidden;
+              QuizQuestionScreen.Visibility = Visibility.Visible;
+          }
 
-        private void DropDownMenuCollapseComplete(object sender, EventArgs e)
-        {
-            this.dropDownMenuControl.Visibility = Visibility.Hidden;
-        }
+          private void UponEditProfileButtonClicked(object sender, RoutedEventArgs e)
+          {
+              this.EditScreenCanvas.Visibility = Visibility.Hidden;
+          }
 
-        private void UponToggleMenuButtonChecked(object sender, RoutedEventArgs e)
-        {
-            this.dropDownMenuControl.Visibility = Visibility.Visible;
-        }
+          private void DropDownMenuCollapseComplete(object sender, EventArgs e)
+          {
+              this.dropDownMenuControl.Visibility = Visibility.Hidden;
+          }
+
+          private void UponToggleMenuButtonChecked(object sender, RoutedEventArgs e)
+          {
+              this.dropDownMenuControl.Visibility = Visibility.Visible;
+          }*/
 
         //sign up screen
         private void SignupButtonComplete(object sender, EventArgs e)
@@ -145,6 +136,56 @@ namespace HorizontalPrototype
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Visible;
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
+
+            this.SaveButton.Click += SaveButton_Click;
+        }
+
+        private void HamburgerMenuButton_Click1(object sender, RoutedEventArgs e)
+        {
+            this.HamburgerMenu.Visibility = Visibility.Visible;
+            this.MainFeedTextbox.Click += MainFeedTextbox_Click;
+        }
+
+        private void MainFeedTextbox_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.MainFeedCanvas.Visibility = Visibility.Visible;
+        }
+
+        public void HideAll()
+        {
+            this.LoginScreenCanvas.Visibility = Visibility.Hidden;
+            this.SignupScreenCanvas.Visibility = Visibility.Hidden;
+            this.EditScreenViewer.Visibility = Visibility.Hidden;
+            this.dropDownMenuControl.Visibility = Visibility.Hidden;
+            this.ProfileScreenCanvas.Visibility = Visibility.Hidden;
+            this.QuizMainScreenCanvas.Visibility = Visibility.Hidden;
+            this.QuizQuestionScreen.Visibility = Visibility.Hidden;
+            this.ViewAllMatches.Visibility = Visibility.Hidden;
+            this.ViewMatch.Visibility = Visibility.Hidden;
+            this.MessagingScreen.Visibility = Visibility.Hidden;
+            this.dropDownMenuControl.Visibility = Visibility.Hidden;
+            this.MenuButton.Visibility = Visibility.Hidden;
+            this.HamburgerMenu.Visibility = Visibility.Hidden;
+            this.HamburgerMenuButton.Visibility = Visibility.Hidden;
+            this.MatchInitScreen.Visibility = Visibility.Hidden;
+            this.SwipeUp1.Visibility = Visibility.Hidden;
+            this.SwipeDown.Visibility = Visibility.Hidden;
+            this.MeetingScreen.Visibility = Visibility.Hidden;
+            this.MainFeedCanvas.Visibility = Visibility.Hidden;
+
+        }
+
+        //profile screen
+        private void SaveButton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+
         }
     }
 

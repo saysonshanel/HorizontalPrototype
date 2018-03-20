@@ -55,3 +55,27 @@ C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\Horizo
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.g.resources
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.Properties.Resources.resources
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.GenerateResource.Cache
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe.config
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.pdb
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\DropDownMenuControl.g.cs
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\MainWindow.g.cs
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\ViewMatchesControl.g.cs
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\App.g.cs
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype_MarkupCompile.cache
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype_MarkupCompile.lref
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\DropDownMenuControl.baml
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\MainWindow.baml
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\ViewMatchesControl.baml
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.g.resources
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.Properties.Resources.resources
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.GenerateResource.Cache
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.CoreCompileInputs.cache
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\MatchInit.g.cs
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\SwipeUp.g.cs
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\MatchInit.baml
+C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\SwipeUp.baml
