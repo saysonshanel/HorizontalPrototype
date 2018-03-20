@@ -752,7 +752,7 @@
             <Button x:Name="NextButton1" Content="Button" Height="94" Canvas.Left="205" Style="{DynamicResource ButtonStyle12}" Canvas.Top="526" Width="129"/>
             <Button x:Name="BackButton2" Content="Button" Height="94" Canvas.Left="30" Style="{DynamicResource ButtonStyle11}" Canvas.Top="527" Width="130"/>
         </Canvas>
-        <Button x:Name="HamburgerMenu" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
+        <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
         <Canvas x:Name="ViewMatch" Height="636" Width="367" d:IsHidden="True">
             <Ellipse Height="200" Canvas.Left="90" Stroke="Black" Canvas.Top="86" Width="200">
                 <Ellipse.Fill>
@@ -785,6 +785,13 @@
             <Button x:Name="SendButton" Content="Button" Height="41" Canvas.Left="321" Style="{DynamicResource ButtonStyle15}" Canvas.Top="585" Width="41"/>
             <TextBlock Height="37.5" Canvas.Left="128" TextWrapping="Wrap" Text="Name" Canvas.Top="31.5" Width="132" FontSize="20"/>
         </Canvas>
+        <Menu x:Name="HamburgerMenu" Canvas.Left="254" Width="113" Height="636">
+            <MenuItem Header="View Matches" Height="56" Width="113"/>
+            <MenuItem Header="Edit Profile" Height="56" Width="113"/>
+            <MenuItem Header="Questionnaires" Height="56" Width="113"/>
+            <MenuItem Header="Settings" Height="56" Width="113"/>
+            <MenuItem Header="Logout" Height="56" Width="113"/>
+        </Menu>
 
     </Canvas>
 </Window>
