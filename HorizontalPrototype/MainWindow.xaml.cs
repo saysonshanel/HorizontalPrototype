@@ -146,6 +146,48 @@ namespace HorizontalPrototype
         {
             this.HamburgerMenu.Visibility = Visibility.Visible;
             this.MainFeedTextbox.Click += MainFeedTextbox_Click;
+            this.ViewMatchesTextbox.Click += ViewMatchesTextbox_Click;
+            this.EditProfileTextbox.Click += EditProfileTextbox_Click;
+            this.QuestionnaireTextbox.Click += QuestionnaireTextbox_Click;
+            this.LogoutTextbox.Click += LogoutTextbox_Click;
+            this.BackTextbox.Click += BackTextbox_Click;
+        }
+
+        private void BackTextbox_Click(object sender, RoutedEventArgs e)
+        {
+            this.HamburgerMenu.Visibility = Visibility.Hidden;
+        }
+
+        private void LogoutTextbox_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.MainScreenCanvas.Visibility = Visibility.Hidden;
+            this.SignupScreenCanvas.Visibility = Visibility.Hidden;
+            //show the login screen
+            this.LoginScreenCanvas.Visibility = Visibility.Visible;
+
+            //when login button is clicked, move to the edit profile screen
+            this.LoginScreenLoginButton.Click += ToEditProfileScreen;
+
+            //otherwise, if back button is clicked, go back to main screen
+            this.BackButton.Click += OnBackButtonClicked;
+        }
+
+        private void QuestionnaireTextbox_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void EditProfileTextbox_Click(object sender, RoutedEventArgs e)
+        {
+            throw new NotImplementedException();
+        }
+
+        private void ViewMatchesTextbox_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.MatchInitScreen.Visibility = Visibility.Visible;
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
         }
 
         private void MainFeedTextbox_Click(object sender, RoutedEventArgs e)
