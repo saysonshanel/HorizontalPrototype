@@ -752,7 +752,7 @@
             <Button x:Name="NextButton1" Content="Button" Height="94" Canvas.Left="205" Style="{DynamicResource ButtonStyle12}" Canvas.Top="526" Width="129"/>
             <Button x:Name="BackButton2" Content="Button" Height="94" Canvas.Left="30" Style="{DynamicResource ButtonStyle11}" Canvas.Top="527" Width="130"/>
         </Canvas>
-        <Button x:Name="HamburgerMenu" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40"/>
+        <Button x:Name="HamburgerMenu" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
         <Canvas x:Name="ViewMatch" Height="636" Width="367" d:IsHidden="True">
             <Ellipse Height="200" Canvas.Left="90" Stroke="Black" Canvas.Top="86" Width="200">
                 <Ellipse.Fill>

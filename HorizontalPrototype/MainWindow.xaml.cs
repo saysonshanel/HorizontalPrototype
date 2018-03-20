@@ -27,7 +27,7 @@ namespace HorizontalPrototype
 
             //When the login button is pressed on the main screen, direct to login screen
             Storyboard lginsb = this.FindResource("SplashDisappear") as Storyboard;
-            lginsb.Completed += LoginButtonComplete;
+            lginsb.Completed += ToLoginScreen;
 
 
             //when the signup button is clicked, direct to registration screen
@@ -51,8 +51,8 @@ namespace HorizontalPrototype
             this.HamburgerMenu.Visibility = Visibility.Hidden;
 
             //when facebook or google connection is clicked,  move to login
-            this.FacebookButton.Click += LoginButtonComplete;
-            this.GoogleButton.Click += LoginButtonComplete;
+            this.FacebookButton.Click += ToLoginScreen;
+            this.GoogleButton.Click += ToLoginScreen;
 
             //When toggle menu button is checked
             this.MenuButton.Click += UponToggleMenuButtonChecked;
@@ -101,7 +101,7 @@ namespace HorizontalPrototype
             this.SignupScreenCanvas.Visibility = Visibility.Visible;
 
             //when signup button is clicked, direct to edit profile
-            this.RegisterSignupButton.Click += ToEditProfileScreen;
+            this.RegisterSignupButton.Click += ToLoginScreen;
 
             //otherwise back button is clicked, direct to main screen
             this.BackButton1.Click += OnBackButtonClicked;
@@ -123,10 +123,11 @@ namespace HorizontalPrototype
         }
 
         //loginscreen
-        private void LoginButtonComplete(object sender, EventArgs e)
+        private void ToLoginScreen(object sender, EventArgs e)
         {
             //hide the main screen
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
+            this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             //show the login screen
             this.LoginScreenCanvas.Visibility = Visibility.Visible;
 
