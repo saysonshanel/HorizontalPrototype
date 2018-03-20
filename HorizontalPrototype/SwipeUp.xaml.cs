@@ -10,17 +10,16 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace HorizontalPrototype
+namespace USeek
 {
     /// <summary>
-    /// Interaction logic for DropDownMenuControl.xaml
+    /// Interaction logic for SwipeUp.xaml
     /// </summary>
-    public partial class DropDownMenuControl : UserControl
+    public partial class SwipeUp : Window
     {
-        public DropDownMenuControl()
+        public SwipeUp()
         {
             InitializeComponent();
         }

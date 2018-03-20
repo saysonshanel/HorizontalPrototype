@@ -16,20 +16,23 @@ C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\De
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\DropDownMenuControl.g.cs
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\DropDownMenuControl.baml
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\DropDownMenuControl.g.cs
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MainWindow.g.cs
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\App.g.cs
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype_MarkupCompile.cache
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype_MarkupCompile.lref
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe.config
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\bin\Debug\HorizontalPrototype.pdb
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\DropDownMenuControl.baml
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MainWindow.baml
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.g.resources
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.Properties.Resources.resources
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.GenerateResource.Cache
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\GeneratedInternalTypeHelper.g.cs
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe.config
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.pdb
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\DropDownMenuControl.g.cs
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\MainWindow.g.cs
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\App.g.cs
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\GeneratedInternalTypeHelper.g.cs
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype_MarkupCompile.cache
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype_MarkupCompile.lref
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\DropDownMenuControl.baml
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\MainWindow.baml
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.g.resources
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.Properties.Resources.resources
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.GenerateResource.Cache
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.CoreCompileInputs.cache
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\ViewMatchesControl.g.cs
+U:\CPSC481\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\ViewMatchesControl.baml
