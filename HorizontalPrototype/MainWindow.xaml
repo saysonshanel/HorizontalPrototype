@@ -650,7 +650,7 @@
             <TextBlock x:Name="textBlock9" Height="22.848" Canvas.Left="153.519" TextWrapping="Wrap" Canvas.Top="410.5" Width="146" Text="Remember me" Foreground="White" Opacity="0.5" d:IsHidden="True"/>
 
         </Canvas>
-        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
+        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
             <TextBlock x:Name="textBlock5" Height="59.334" Canvas.Left="119.832" TextWrapping="Wrap" Text="sign-up" Width="139.334" FontSize="36" FontWeight="Bold" Canvas.Top="39.833" Foreground="#FF494848"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="125.334" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="197" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>

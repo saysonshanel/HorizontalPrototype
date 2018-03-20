@@ -43,6 +43,12 @@ namespace HorizontalPrototype
             this.ProfileScreenCanvas.Visibility = Visibility.Hidden;
             this.QuizMainScreenCanvas.Visibility = Visibility.Hidden;
             this.QuizQuestionScreen.Visibility = Visibility.Hidden;
+            this.ViewAllMatches.Visibility = Visibility.Hidden;
+            this.ViewMatch.Visibility = Visibility.Hidden;
+            this.MessagingScreen.Visibility = Visibility.Hidden;
+            this.dropDownMenuControl.Visibility = Visibility.Hidden;
+            this.MenuButton.Visibility = Visibility.Hidden;
+            this.HamburgerMenu.Visibility = Visibility.Hidden;
 
             //when facebook or google connection is clicked,  move to login
             this.FacebookButton.Click += LoginButtonComplete;
