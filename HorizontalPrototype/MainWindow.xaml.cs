@@ -122,7 +122,7 @@ namespace HorizontalPrototype
                 this.RepeatPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.EmailErrorCanvas.Visibility = Visibility.Visible;
                 this.VerifyErrorCanvas.Visibility = Visibility.Visible;
-            }*/
+            }
             if (this.FullNameTextbox.Text == string.Empty)
             {
                 MessageBox.Show("Please enter in your full name");
@@ -177,9 +177,9 @@ namespace HorizontalPrototype
                 this.VerifyErrorCanvas.Visibility = Visibility.Hidden;
             }
             else
-            {
-                this.RegisterSignupButton.Click += ToEditProfileScreen;
-            }
+            {*/
+                this.RegisterSignupButton.Click += LoginButtonComplete;
+            //}
         }
 
         //move back to main screen
@@ -201,6 +201,7 @@ namespace HorizontalPrototype
         {
             //hide the main screen
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
+            this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.UsernameErrorCanvas.Visibility = Visibility.Hidden;
             this.PasswordErrorCanvas.Visibility = Visibility.Hidden;
             //show the login screen
