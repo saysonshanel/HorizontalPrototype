@@ -199,6 +199,14 @@ namespace HorizontalPrototype
             this.QuestionnaireTextbox.Click += QuestionnaireTextbox_Click;
             this.LogoutTextbox.Click += LogoutTextbox_Click;
             this.BackTextbox.Click += BackTextbox_Click;
+            this.View_Profile.Click += View_Profile_Click;
+        }
+
+        private void View_Profile_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
         }
 
         private void BackTextbox_Click(object sender, RoutedEventArgs e)
@@ -236,9 +244,11 @@ namespace HorizontalPrototype
         private void QuizbuttonOnClick(object sender, RoutedEventArgs e)
         {
             HideAll();
-            this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.QuizQuestionScreen.Visibility = Visibility.Visible;
+            this.QuizSaveButton.Click += QuestionnaireTextbox_Click;
+            this.BackButton1_Copy.Click += QuestionnaireTextbox_Click;
         }
+
 
         private void EditProfileTextbox_Click(object sender, RoutedEventArgs e)
         {

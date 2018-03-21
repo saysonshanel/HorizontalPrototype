@@ -540,6 +540,63 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle16" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="White"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="A" Cursor="Hand"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle17" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="#FFE8BD5F"/>
+                            <ContentPresenter TextBlock.Foreground="White" TextBlock.FontWeight="Black" TextBlock.FontSize="48" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="1"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="QuizSaveButton" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="White" Opacity="0.3" RadiusY="5" RadiusX="5" StrokeThickness="4"/>
+                            <ContentPresenter TextBlock.Foreground="White" TextBlock.FontSize="15" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="save" Opacity="1"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -723,6 +780,17 @@
                 <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
                     <Ellipse x:Name="ProfileImage" Height="141" Stroke="Black" Width="137.146" Opacity="0.35" Fill="White" Canvas.Left="20.855" Canvas.Top="42"/>
+                    <Grid Height="180" Canvas.Left="229.501" Canvas.Top="35" Width="88">
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                    </Grid>
+                    <UniformGrid x:Name="Gallery" Height="173" Canvas.Top="220" Width="357">
+                        <Image Margin="0,0,0,-86.5"/>
+                        <Image Margin="0,0,0,-86.5"/>
+                    </UniformGrid>
                     <TextBlock x:Name="LogoText" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
                     <TextBlock x:Name="RealName" Height="27" TextWrapping="Wrap" Text="Tim Duncan" Canvas.Top="188" Width="142" FontFamily="Georgia" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFE8BD5F" Canvas.Left="20.001"/>
                     <Rectangle Stroke="White" Height="860"  Canvas.Bottom="0" Width="367" Fill="#FFE8BD5F" StrokeThickness="0"/>
@@ -735,33 +803,28 @@
                         </TextBlock.Foreground>
                     </TextBlock>
                     <TextBlock x:Name="SelfDesctiption" Height="212" Canvas.Left="10" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Canvas.Top="436.67" Width="234" FontFamily="Georgia" FontSize="14" TextAlignment="Center"/>
-                    <UniformGrid x:Name="Gallery" Height="173" Canvas.Top="220" Width="357">
-                        <Image Margin="0,0,0,-86.5"/>
-                        <Image Margin="0,0,0,-86.5"/>
-                    </UniformGrid>
                 </Canvas>
             </ScrollViewer>
-            <Grid Height="180" Canvas.Left="255" Canvas.Top="35" Width="88">
-                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-            </Grid>
         </Canvas>
-        <Canvas x:Name="QuizMainScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
+        <Canvas x:Name="QuizMainScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <Button x:Name="Quiz1Button" Content="New Comer" Height="50" Canvas.Left="94" Canvas.Top="180" Width="179" FontFamily="Georgia" FontWeight="Bold" FontSize="16"/>
             <Button x:Name="Quiz2Button" Content="Animal Type Test" Height="50" Canvas.Left="94" Canvas.Top="250" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
             <Button x:Name="Quiz3Button" Content="Archetype Test" Height="50" Canvas.Left="94" Canvas.Top="320" Width="179" FontWeight="Bold" FontFamily="Georgia" FontSize="16"/>
             <Button x:Name="Quiz4Button" Content="Soul Age Test" Height="50" Canvas.Left="94" Canvas.Top="390" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
         </Canvas>
-        <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
-            <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="39" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
-            <Button x:Name="Answer4Button" Content="Ab illo inventore veritatis&#xD;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="329" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="Answer1Button" Content="voluptatem sequi nesciunt" Height="42" Canvas.Left="30" Canvas.Top="149" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="Answer3Button" Content="Ut enim ad&#xD;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="269" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="Answer2Button" Content="Sed quia consequuntur&#xD;&#xA;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="209" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="NextButton" Content="Next" Height="42" Canvas.Left="214" Canvas.Top="419" Width="123" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="20" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1"/>
+        <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F">
+            <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="124" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
+            <Button x:Name="Answer4Button" Content="Ab illo inventore veritatis&#xD;&#xA;" Height="42" Canvas.Left="31" Canvas.Top="428" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Button x:Name="Answer1Button" Content="voluptatem sequi nesciunt" Height="42" Canvas.Left="31" Canvas.Top="248" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Button x:Name="Answer3Button" Content="Ut enim ad&#xD;&#xA;" Height="42" Canvas.Left="31" Canvas.Top="368" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Button x:Name="Answer2Button" Content="Sed quia consequuntur&#xD;&#xA;&#xA;" Height="42" Canvas.Left="31" Canvas.Top="308" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="247" Stretch="Fill" Canvas.Top="219.5" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.65"/>
+            <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="207.404" Stretch="Fill" Canvas.Top="219.5" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.5"/>
+            <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="284.5" Stretch="Fill" Canvas.Top="220" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.75"/>
+            <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.768" Canvas.Top="24.338"/>
+            <TextBlock x:Name="textBlock17" Height="43.333" Canvas.Left="221.67" TextWrapping="Wrap" Text="swipe to answer" Canvas.Top="206" Width="118" FontWeight="Bold" Foreground="White" Opacity="0.5"/>
+            <Button x:Name="BackButton1_Copy" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Button x:Name="QuizSaveButton" Content="Button" Height="42" Canvas.Left="142.168" Style="{DynamicResource QuizSaveButton}" Canvas.Top="512.167" Width="92.666" Cursor="Hand"/>
         </Canvas>
         <Canvas x:Name="ViewAllMatches" Height="636" Width="367" d:IsHidden="True">
             <local:ViewMatchesControl x:Name="MatchCenter" Height="616" Canvas.Left="86.5" Canvas.Top="10" Width="211.5"/>
@@ -1100,6 +1163,7 @@
         <Menu x:Name="HamburgerMenu" Canvas.Left="254" Width="113" Height="636" d:IsHidden="True">
             <MenuItem x:Name="MainFeedTextbox" Header="Main Feed" Height="56" Width="113"/>
             <MenuItem x:Name="ViewMatchesTextbox" Header="View Matches" Height="56" Width="113"/>
+            <MenuItem x:Name="View_Profile" Header="View Profile" Height="56" Width="113"/>
             <MenuItem x:Name="EditProfileTextbox" Header="Edit Profile" Height="56" Width="113"/>
             <MenuItem x:Name="QuestionnaireTextbox" Header="Questionnaires" Height="56" Width="113"/>
             <MenuItem x:Name="LogoutTextbox" Header="Logout" Height="56" Width="113"/>
