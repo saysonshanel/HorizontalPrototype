@@ -264,62 +264,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Storyboard x:Key="MenuExpand">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.005">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.007">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.5">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.667">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="MenuCollapse">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.01">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-101">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        <Storyboard x:Key="MenuExpand"/>
+        <Storyboard x:Key="MenuCollapse"/>
         <Storyboard x:Key="Answer1Selected">
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="Answer1Button">
                 <EasingColorKeyFrame KeyTime="0" Value="#FF494848">
@@ -634,16 +580,6 @@
         </EventTrigger>
     </Window.Triggers>
     <Canvas x:Name="Canvas">
-        <local:DropDownMenuControl x:Name="dropDownMenuControl" Height="200" Canvas.Left="282" Canvas.Top="50" Width="75" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
-            <local:DropDownMenuControl.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </local:DropDownMenuControl.RenderTransform>
-        </local:DropDownMenuControl>
         <ToggleButton x:Name="MenuButton" Content="Menu" Height="40" Canvas.Left="282" Canvas.Top="10" Width="75" Background="Black" Foreground="White" FontWeight="Bold" FontFamily="Georgia" FontSize="14" Cursor="Hand" d:IsHidden="True"/>
         <Canvas x:Name="MainScreenCanvas" Height="377.333" Canvas.Left="41" Canvas.Top="143.334" Width="284.334" d:IsHidden="True">
             <Canvas x:Name="Logo" Height="131.333" Canvas.Left="47.671" Width="208.666">
