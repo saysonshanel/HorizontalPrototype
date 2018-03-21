@@ -50,6 +50,24 @@ namespace HorizontalPrototype
                 person.ViewButton.Click += ViewButton_Click;
             }
             this.AddMatches.Width = 5 * 160;
+            this.LocationButton.Click += LocationButton_Click;
+            this.ChatButton.Click += ChatButton_Click;
+            this.BackToViewProfile.Click += ViewButton_Click;
+            this.ConfirmationButton.Click += ViewButton_Click;
+        }
+
+        private void ChatButton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.MessagingScreen.Visibility = Visibility.Visible;
+        }
+
+        private void LocationButton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.MeetingScreen.Visibility = Visibility.Visible;
         }
 
         private void ViewButton_Click(object sender, RoutedEventArgs e)
@@ -283,15 +301,12 @@ namespace HorizontalPrototype
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Hidden;
-            this.dropDownMenuControl.Visibility = Visibility.Hidden;
             this.ProfileScreenCanvas.Visibility = Visibility.Hidden;
             this.QuizMainScreenCanvas.Visibility = Visibility.Hidden;
             this.QuizQuestionScreen.Visibility = Visibility.Hidden;
             this.ViewAllMatches.Visibility = Visibility.Hidden;
             this.ViewMatch.Visibility = Visibility.Hidden;
             this.MessagingScreen.Visibility = Visibility.Hidden;
-            this.dropDownMenuControl.Visibility = Visibility.Hidden;
-            this.MenuButton.Visibility = Visibility.Hidden;
             this.HamburgerMenu.Visibility = Visibility.Hidden;
             this.HamburgerMenuButton.Visibility = Visibility.Hidden;
             this.MatchInitScreen.Visibility = Visibility.Hidden;

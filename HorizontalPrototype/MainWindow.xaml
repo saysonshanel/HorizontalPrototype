@@ -264,62 +264,8 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Storyboard x:Key="MenuExpand">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.005">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1.007">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-99.5">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="0.667">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <QuinticEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="1">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="MenuCollapse">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-0.01">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="dropDownMenuControl">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="-101">
-                    <EasingDoubleKeyFrame.EasingFunction>
-                        <BounceEase EasingMode="EaseOut"/>
-                    </EasingDoubleKeyFrame.EasingFunction>
-                </EasingDoubleKeyFrame>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
+        <Storyboard x:Key="MenuExpand"/>
+        <Storyboard x:Key="MenuCollapse"/>
         <Storyboard x:Key="Answer1Selected">
             <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(TextElement.Foreground).(SolidColorBrush.Color)" Storyboard.TargetName="Answer1Button">
                 <EasingColorKeyFrame KeyTime="0" Value="#FF494848">
@@ -373,7 +319,14 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid x:Name="Hamburger">
-                            <Ellipse Fill="#FF4BC71D" HorizontalAlignment="Left" Height="40" Margin="0" Stroke="#FF4BC71D" VerticalAlignment="Top" Width="40"/>
+                            <Ellipse HorizontalAlignment="Left" Height="40" Margin="0" VerticalAlignment="Top" Width="40">
+                                <Ellipse.Stroke>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Ellipse.Stroke>
+                                <Ellipse.Fill>
+                                    <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveCaptionColorKey}}"/>
+                                </Ellipse.Fill>
+                            </Ellipse>
                             <Rectangle Fill="Black" HorizontalAlignment="Left" Height="5" Margin="5.125,8,0,0" Stroke="Black" VerticalAlignment="Top" Width="29"/>
                             <Rectangle Fill="Black" HorizontalAlignment="Left" Height="5" Margin="5.125,27,0,0" Stroke="Black" VerticalAlignment="Top" Width="29"/>
                             <Rectangle Fill="Black" HorizontalAlignment="Left" Height="5" Margin="5.125,17.5,0,0" Stroke="Black" VerticalAlignment="Top" Width="29"/>
@@ -484,7 +437,7 @@
                     <ControlTemplate TargetType="{x:Type Label}">
                         <Grid>
                             <Rectangle Fill="#466A6A6A" RadiusY="5" RadiusX="7" Stroke="Black"/>
-                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="Stretch" Margin="5,5,0,20.04"/>
+                            <TextBox HorizontalAlignment="Left" Height="31" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="291" Margin="5,5,0,0" Background="{x:Null}" BorderBrush="{x:Null}"/>
                         </Grid>
                     </ControlTemplate>
                 </Setter.Value>
@@ -523,12 +476,6 @@
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton1">
             <BeginStoryboard x:Name="SplashAppear_BeginStoryboard1" Storyboard="{StaticResource SplashAppear}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="ToggleButton.Checked" SourceName="MenuButton">
-            <BeginStoryboard x:Name="MenuExpand_BeginStoryboard1" Storyboard="{StaticResource MenuExpand}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="ToggleButton.Unchecked" SourceName="MenuButton">
-            <BeginStoryboard x:Name="MenuCollapse_BeginStoryboard" Storyboard="{StaticResource MenuCollapse}"/>
-        </EventTrigger>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="Answer1Button">
             <BeginStoryboard x:Name="Answer1Selected_BeginStoryboard1" Storyboard="{StaticResource Answer1Selected}"/>
         </EventTrigger>
@@ -546,17 +493,6 @@
         </EventTrigger>
     </Window.Triggers>
     <Canvas x:Name="Canvas">
-        <local:DropDownMenuControl x:Name="dropDownMenuControl" Height="200" Canvas.Left="282" Canvas.Top="50" Width="75" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
-            <local:DropDownMenuControl.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </local:DropDownMenuControl.RenderTransform>
-        </local:DropDownMenuControl>
-        <ToggleButton x:Name="MenuButton" Content="Menu" Height="40" Canvas.Left="282" Canvas.Top="10" Width="75" Background="Black" Foreground="White" FontWeight="Bold" FontFamily="Georgia" FontSize="14" Cursor="Hand" d:IsHidden="True"/>
         <Canvas x:Name="MainScreenCanvas" Height="377.333" Canvas.Left="41" Canvas.Top="143.334" Width="284.334" d:IsHidden="True">
             <Canvas x:Name="Logo" Height="131.333" Canvas.Left="47.671" Width="208.666">
                 <TextBlock x:Name="useekLogo" Height="99.333" TextWrapping="Wrap" FontSize="72" FontWeight="Bold" Canvas.Top="32" Width="208.666"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
@@ -725,12 +661,12 @@
             <Button x:Name="Quiz4Button" Content="Soul Age Test" Height="50" Canvas.Left="94" Canvas.Top="390" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
         </Canvas>
         <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
-            <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="39" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
-            <Button x:Name="Answer4Button" Content="Ab illo inventore veritatis&#xD;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="329" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="Answer1Button" Content="voluptatem sequi nesciunt" Height="42" Canvas.Left="30" Canvas.Top="149" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="Answer3Button" Content="Ut enim ad&#xD;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="269" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="Answer2Button" Content="Sed quia consequuntur&#xD;&#xA;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="209" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
-            <Button x:Name="NextButton" Content="Next" Height="42" Canvas.Left="214" Canvas.Top="419" Width="123" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="20" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1"/>
+            <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="76" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
+            <Button x:Name="Answer4Button" Content="Ab illo inventore veritatis&#xD;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="366" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Button x:Name="Answer1Button" Content="voluptatem sequi nesciunt" Height="42" Canvas.Left="30" Canvas.Top="186" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Button x:Name="Answer3Button" Content="Ut enim ad&#xD;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="306" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Button x:Name="Answer2Button" Content="Sed quia consequuntur&#xD;&#xA;&#xA;" Height="42" Canvas.Left="30" Canvas.Top="246" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
+            <Button x:Name="NextButton" Content="Next" Height="42" Canvas.Left="214" Canvas.Top="456" Width="123" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="20" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1"/>
         </Canvas>
         <Canvas x:Name="ViewAllMatches" Height="636" Width="367" d:IsHidden="True">
             <Button x:Name="NextButton1" Content="Button" Height="94" Canvas.Left="205" Style="{DynamicResource ButtonStyle12}" Canvas.Top="526" Width="129"/>
@@ -739,16 +675,6 @@
             <Path Data="M213.33333,109 C209.11147,104.30904 205.96678,99.627914 202,95 197.63872,89.911834 197.33333,86.224878 197.33333,79 197.33333,75.316318 212,57.898522 212,83 212,79.242719 211.24817,78.276682 213.33333,75 215.44579,71.680421 215.53654,71 220.66667,71 227.17967,71 230.66667,73.20638 230.66667,83.666667 230.66667,97.451684 224.44886,99.425238 213.33333,109 z" Fill="#FFDC1717" HorizontalAlignment="Left" Height="39.313" Stretch="Fill" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" Width="33.334" Canvas.Left="197.333" Canvas.Top="69.687"/>
             <TextBlock x:Name="textBlock10_Copy4" Height="32" TextWrapping="Wrap" FontWeight="Bold" FontSize="20" VerticalAlignment="Top" Canvas.Left="161.001" Canvas.Top="10" Width="63.5"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
             <local:ViewMatch Height="200" Canvas.Left="112" Canvas.Top="204" Width="150"/>
-            <ScrollViewer Height="200" Canvas.Top="204" Width="383">
-                <UniformGrid Height="200" Width="1074" Columns="6" Rows="1">
-                    <local:ViewMatch Margin="0,0,924,0"/>
-                    <local:ViewMatch Margin="0,0,387,-100"/>
-                    <local:ViewMatch Margin="0,0,387,-100"/>
-                    <local:ViewMatch Margin="0,0,387,-100"/>
-                    <local:ViewMatch Margin="0,0,208,-133.333"/>
-                    <local:ViewMatch Margin="0,0,208,-133.333"/>
-                </UniformGrid>
-            </ScrollViewer>
         </Canvas>
         <Canvas x:Name="ViewMatch" Height="636" Width="367" d:IsHidden="True">
             <Ellipse Height="200" Canvas.Left="85" Stroke="Black" Canvas.Top="86" Width="200">
@@ -781,8 +707,9 @@
             <Label Height="41" Canvas.Left="10" Style="{DynamicResource LabelStyle1}" Canvas.Top="585" Width="306"/>
             <Button x:Name="SendButton" Content="Button" Height="41" Canvas.Left="321" Style="{DynamicResource ButtonStyle15}" Canvas.Top="585" Width="41"/>
             <TextBlock Height="37.5" Canvas.Left="128" TextWrapping="Wrap" Text="Name" Canvas.Top="31.5" Width="132" FontSize="20"/>
+            <Button x:Name="BackToViewProfile" Content="Button" Height="100" Canvas.Left="10" Canvas.Top="10" Width="100" Opacity="0"/>
         </Canvas>
-        <Grid x:Name="MatchInitScreen" Height="636" Width="367">
+        <Grid x:Name="MatchInitScreen" Height="636" Width="367" d:IsHidden="True">
             <Canvas x:Name="Logo1_Copy" Margin="124.492,50,62,476.216">
                 <Path x:Name="HeartLogo_Copy2" Fill="#FFE64646" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="109.784" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Width="106.099">
                     <Path.RenderTransform>
@@ -1024,9 +951,9 @@
                 <Path Width="52.166" Canvas.Top="42.833" Stroke="Black" Stretch="Fill" Canvas.Left="27.333" Height="47.667" Fill="Red" Data="M27.332667,45.333333 L52.499,89.500332 78.499679,42.833665"/>
                 <Ellipse Width="25" Canvas.Top="15" Stroke="Black" Canvas.Left="40" Height="25" Fill="White"/>
             </Canvas>
-            <TextBlock x:Name="LocationText" Height="46" Canvas.Left="153" TextWrapping="Wrap" Text="MacHall Starbucks" Canvas.Top="365.744" Width="165" FontSize="18"/>
-            <TextBlock x:Name="TimeText" Height="53.333" Canvas.Left="153" TextWrapping="Wrap" Canvas.Top="475.667" Width="165" FontSize="18"><Run Text="April 1 2018"/><LineBreak/><Run Text="3:00 pm"/></TextBlock>
             <Button x:Name="ConfirmationButton" Content="Confirm" Height="37" Canvas.Left="114" Canvas.Top="573" Width="149" FontSize="18" Background="#FFC7C7C7"/>
+            <TextBox x:Name="LocationText" Height="46" Canvas.Left="153" TextWrapping="Wrap" Text="Starbucks" Canvas.Top="365.744" Width="165" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <TextBox x:Name="TimeText" Height="54.333" Canvas.Left="153" TextWrapping="Wrap" Text="Aprill 1 2018&#xD;&#xA;3:00 pm" Canvas.Top="475.667" Width="165" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
         </Canvas>
         <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
             <Rectangle Fill="#FF817F89" Height="313" Canvas.Left="10" Stroke="Black" Canvas.Top="50" Width="347"/>
@@ -1095,7 +1022,7 @@
             </Grid>
             <TextBlock x:Name="textBlock10_Copy3" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
-        <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
+        <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40"/>
         <Menu x:Name="HamburgerMenu" Canvas.Left="254" Width="113" Height="636" d:IsHidden="True">
             <MenuItem x:Name="MainFeedTextbox" Header="Main Feed" Height="56" Width="113"/>
             <MenuItem x:Name="ViewMatchesTextbox" Header="View Matches" Height="56" Width="113"/>
