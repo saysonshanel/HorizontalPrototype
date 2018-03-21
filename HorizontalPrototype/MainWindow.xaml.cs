@@ -42,7 +42,39 @@ namespace HorizontalPrototype
             //when facebook or google connection is clicked,  move to login
             this.FacebookButton.Click += ToLoginScreen;
             this.GoogleButton.Click += ToLoginScreen;
+            
+            for(int i = 0; i < 5; i++)
+            {
+                ViewMatch person = new ViewMatch();
+                this.AddMatches.Children.Add(person);
+                person.ViewButton.Click += ViewButton_Click;
+            }
+            this.AddMatches.Width = 5 * 160;
+            this.LocationButton.Click += LocationButton_Click;
+            this.ChatButton.Click += ChatButton_Click;
+            this.BackToViewProfile.Click += ViewButton_Click;
+            this.ConfirmationButton.Click += ViewButton_Click;
+        }
 
+        private void ChatButton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.MessagingScreen.Visibility = Visibility.Visible;
+        }
+
+        private void LocationButton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.MeetingScreen.Visibility = Visibility.Visible;
+        }
+
+        private void ViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ViewMatch.Visibility = Visibility.Visible;
         }
 
 
@@ -193,25 +225,20 @@ namespace HorizontalPrototype
         private void HamburgerMenuButton_Click1(object sender, RoutedEventArgs e)
         {
             this.HamburgerMenu.Visibility = Visibility.Visible;
+            this.HamburgerBack.Visibility = Visibility.Visible;
             this.MainFeedTextbox.Click += MainFeedTextbox_Click;
             this.ViewMatchesTextbox.Click += ViewMatchesTextbox_Click;
             this.EditProfileTextbox.Click += EditProfileTextbox_Click;
             this.QuestionnaireTextbox.Click += QuestionnaireTextbox_Click;
             this.LogoutTextbox.Click += LogoutTextbox_Click;
             this.BackTextbox.Click += BackTextbox_Click;
-            this.View_Profile.Click += View_Profile_Click;
-        }
-
-        private void View_Profile_Click(object sender, RoutedEventArgs e)
-        {
-            HideAll();
-            this.HamburgerMenuButton.Visibility = Visibility.Visible;
-            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+            this.HamburgerBack.Click += BackTextbox_Click;
         }
 
         private void BackTextbox_Click(object sender, RoutedEventArgs e)
         {
             this.HamburgerMenu.Visibility = Visibility.Hidden;
+            this.HamburgerBack.Visibility = Visibility.Hidden;
         }
 
         private void LogoutTextbox_Click(object sender, RoutedEventArgs e)
@@ -244,11 +271,9 @@ namespace HorizontalPrototype
         private void QuizbuttonOnClick(object sender, RoutedEventArgs e)
         {
             HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.QuizQuestionScreen.Visibility = Visibility.Visible;
-            this.QuizSaveButton.Click += QuestionnaireTextbox_Click;
-            this.BackButton1_Copy.Click += QuestionnaireTextbox_Click;
         }
-
 
         private void EditProfileTextbox_Click(object sender, RoutedEventArgs e)
         {
@@ -276,15 +301,12 @@ namespace HorizontalPrototype
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Hidden;
-            this.dropDownMenuControl.Visibility = Visibility.Hidden;
             this.ProfileScreenCanvas.Visibility = Visibility.Hidden;
             this.QuizMainScreenCanvas.Visibility = Visibility.Hidden;
             this.QuizQuestionScreen.Visibility = Visibility.Hidden;
             this.ViewAllMatches.Visibility = Visibility.Hidden;
             this.ViewMatch.Visibility = Visibility.Hidden;
             this.MessagingScreen.Visibility = Visibility.Hidden;
-            this.dropDownMenuControl.Visibility = Visibility.Hidden;
-            this.MenuButton.Visibility = Visibility.Hidden;
             this.HamburgerMenu.Visibility = Visibility.Hidden;
             this.HamburgerMenuButton.Visibility = Visibility.Hidden;
             this.MatchInitScreen.Visibility = Visibility.Hidden;
@@ -292,6 +314,7 @@ namespace HorizontalPrototype
             this.SwipeDown.Visibility = Visibility.Hidden;
             this.MeetingScreen.Visibility = Visibility.Hidden;
             this.MainFeedCanvas.Visibility = Visibility.Hidden;
+            this.HamburgerBack.Visibility = Visibility.Hidden;
         }
 
         //profile screen
