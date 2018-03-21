@@ -103,3 +103,7 @@ C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\obj\De
 \\samba.cs.ucalgary.ca\cameron.davies2\Documents\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
 \\samba.cs.ucalgary.ca\cameron.davies2\Documents\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
 \\samba.cs.ucalgary.ca\cameron.davies2\Documents\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MatchInit.g.cs
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\SwipeUp.g.cs
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MatchInit.baml
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\SwipeUp.baml

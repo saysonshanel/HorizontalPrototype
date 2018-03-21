@@ -88,15 +88,60 @@ namespace HorizontalPrototype
             //hide other screens
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
+            this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
+            this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
+            this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
             //show signup screen
             this.SignupScreenCanvas.Visibility = Visibility.Visible;
 
             //when signup button is clicked, direct to edit profile
-            this.RegisterSignupButton.Click += ToLoginScreen;
-
+            //this.RegisterSignupButton.Click += ToLoginScreen;
+            this.RegisterSignupButton.Click += CheckSignupFieldsOnClicked;
             //otherwise back button is clicked, direct to main screen
             this.BackButton1.Click += OnBackButtonClicked;
 
+        }
+
+        private void CheckSignupFieldsOnClicked(object sender, RoutedEventArgs e)
+        {
+            if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
+            {
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
+            }else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty))
+            {
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
+                this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
+            }else if((this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
+            {
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
+            
+
+            }else if(this.SignupUsernameTextbox.Text == string.Empty)
+            {
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
+                this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
+            }else if(this.SignupPasswordTextbox.Password == string.Empty)
+            {
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
+                this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
+
+            }else if(this.SignupPwRepeatTextbox.Password == string.Empty)
+            {
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
+
+            }else
+            {
+                this.RegisterSignupButton.Click += ToLoginScreen;
+            }
         }
 
         //move back to main screen
@@ -119,15 +164,41 @@ namespace HorizontalPrototype
             //hide the main screen
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
+            this.LoginUsernameErrorCanvas.Visibility = Visibility.Hidden;
+            this.LoginPasswordErrorCanvas.Visibility = Visibility.Hidden;
             //show the login screen
             this.LoginScreenCanvas.Visibility = Visibility.Visible;
 
             //when login button is clicked, move to the edit profile screen
-            this.LoginScreenLoginButton.Click += ToEditProfileScreen;
+            //  this.LoginScreenLoginButton.Click += ToEditProfileScreen;
+            this.LoginScreenLoginButton.Click += CheckLoginScreenFieldsOnClicked;
 
             //otherwise, if back button is clicked, go back to main screen
             this.BackButton.Click += OnBackButtonClicked;
 
+        }
+
+        private void CheckLoginScreenFieldsOnClicked(object sender, RoutedEventArgs e)
+        {
+            if((this.UsernameTextbox.Text == string.Empty) && (this.PasswordBox.Password == string.Empty))
+            {
+                this.LoginUsernameErrorCanvas.Visibility = Visibility.Visible;
+                this.LoginPasswordErrorCanvas.Visibility = Visibility.Visible;
+
+            }
+            else if(this.UsernameTextbox.Text == string.Empty)
+            {
+                this.LoginPasswordErrorCanvas.Visibility = Visibility.Hidden;
+
+                this.LoginUsernameErrorCanvas.Visibility = Visibility.Visible;
+            }else if(this.PasswordBox.Password == string.Empty)
+            {
+                this.LoginUsernameErrorCanvas.Visibility = Visibility.Hidden;
+                this.LoginPasswordErrorCanvas.Visibility = Visibility.Visible;
+            }else
+            {
+                this.LoginScreenLoginButton.Click += ToEditProfileScreen;
+            }
         }
 
         //edit profile screen

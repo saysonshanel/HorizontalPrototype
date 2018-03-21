@@ -648,9 +648,15 @@
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Canvas.Left="314.02" Stretch="Fill" Stroke="White" StrokeThickness="4" Canvas.Top="25.333" Width="18.563" Cursor="Hand"/>
             <CheckBox x:Name="RememberMeCheck" Content="CheckBox" Height="19.333" Canvas.Left="131.685" Canvas.Top="411.667" Width="18.667"/>
             <TextBlock x:Name="textBlock9" Height="22.848" Canvas.Left="153.519" TextWrapping="Wrap" Canvas.Top="410.5" Width="146" Text="Remember me" Foreground="White" Opacity="0.5"/>
+            <Canvas x:Name="LoginUsernameErrorCanvas" Height="64" Canvas.Left="244" Canvas.Top="237" Width="54">
+                <TextBlock x:Name="textBlock11" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
+            </Canvas>
+            <Canvas x:Name="LoginPasswordErrorCanvas" Height="64" Canvas.Left="209.499" Canvas.Top="299.784" Width="54">
+                <TextBlock x:Name="textBlock13" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
+            </Canvas>
 
         </Canvas>
-        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
+        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
             <TextBlock x:Name="textBlock5" Height="59.334" Canvas.Left="119.832" TextWrapping="Wrap" Text="sign-up" Width="139.334" FontSize="36" FontWeight="Bold" Canvas.Top="39.833" Foreground="#FF494848"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="125.334" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="197" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
@@ -668,6 +674,20 @@
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Canvas.Left="314.02" Stretch="Fill" Stroke="White" StrokeThickness="4" Canvas.Top="25.333" Width="18.563" Cursor="Hand"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="415.334" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="68" Opacity="0.5"/>
             <TextBlock x:Name="textBlock6_Copy3" Height="37.333" TextWrapping="Wrap" Text="full name" Width="100.667" Foreground="White" FontSize="20" Opacity="0.5" Canvas.Left="141.333" Canvas.Top="105.251"/>
+            <Canvas x:Name="SignupUsernameErrorCanvas" Height="64" Canvas.Left="219.165" Canvas.Top="147.584" Width="54">
+                <TextBlock x:Name="textBlock14" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
+            </Canvas>
+            <Canvas x:Name="SignupPasswordErrorCanvas" Height="64" Canvas.Left="218.165" Canvas.Top="218.834" Width="54">
+                <TextBlock x:Name="textBlock15" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
+            </Canvas>
+            <Canvas x:Name="SignupRepeatErrorCanvas" Height="64" Canvas.Left="250.834" Canvas.Top="289.917" Width="54">
+                <TextBlock x:Name="textBlock16" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
+            </Canvas>
+            <PasswordBox x:Name="SignupPasswordTextbox" Height="40.667" Canvas.Left="84.5" Canvas.Top="269.417" Width="205.334" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Foreground="White" Opacity="0.65" Cursor="IBeam" SelectionOpacity="0" BorderThickness="0"/>
+            <PasswordBox x:Name="SignupPwRepeatTextbox" Height="40.667" Canvas.Left="84.5" Canvas.Top="341.167" Width="205.334" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Foreground="White" Opacity="0.65" Cursor="IBeam" SelectionOpacity="0" BorderThickness="0"/>
+            <TextBox x:Name="SignupUsernameTextbox" Height="40.667" Canvas.Left="84.5" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="197" Width="205.334" TextAlignment="Left"/>
+            <TextBox x:Name="SignupFullnameTextbox" Height="40.667" Canvas.Left="84.5" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="125.334" Width="205.334" TextAlignment="Left"/>
+            <TextBox x:Name="SignupEmailTextbox" Height="40.667" Canvas.Left="84.5" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="415.334" Width="205.334" TextAlignment="Left"/>
 
         </Canvas>
         <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388" d:IsHidden="True">
@@ -1001,7 +1021,7 @@
             <TextBlock x:Name="TimeText" Height="53.333" Canvas.Left="153" TextWrapping="Wrap" Canvas.Top="475.667" Width="165" FontSize="18"><Run Text="April 1 2018"/><LineBreak/><Run Text="3:00 pm"/></TextBlock>
             <Button x:Name="ConfirmationButton" Content="Confirm" Height="37" Canvas.Left="114" Canvas.Top="573" Width="149" FontSize="18" Background="#FFC7C7C7"/>
         </Canvas>
-        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367">
+        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
             <Rectangle Fill="#FF817F89" Height="341" Canvas.Left="10" Stroke="Black" Canvas.Top="22" Width="347"/>
             <TextBlock Height="192" Canvas.Left="26" TextWrapping="Wrap" Canvas.Top="50" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Bio"/><LineBreak/><Run/><LineBreak/><Run Text="words"/></TextBlock>
             <Ellipse Fill="#FF4D4B4D" Height="90" Canvas.Left="267" Stroke="Black" Canvas.Top="273" Width="90"/>
