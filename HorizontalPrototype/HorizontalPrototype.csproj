@@ -61,8 +61,8 @@
     <Compile Include="SwipeUp.xaml.cs">
       <DependentUpon>SwipeUp.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewMatchesControl.xaml.cs">
-      <DependentUpon>ViewMatchesControl.xaml</DependentUpon>
+    <Compile Include="ViewMatch.xaml.cs">
+      <DependentUpon>ViewMatch.xaml</DependentUpon>
     </Compile>
     <Page Include="DropDownMenuControl.xaml">
       <SubType>Designer</SubType>
@@ -87,11 +87,15 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="SwipeUp.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Page Include="ViewMatchesControl.xaml">
+    <Page Include="ViewMatch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

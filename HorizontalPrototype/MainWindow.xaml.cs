@@ -42,7 +42,21 @@ namespace HorizontalPrototype
             //when facebook or google connection is clicked,  move to login
             this.FacebookButton.Click += ToLoginScreen;
             this.GoogleButton.Click += ToLoginScreen;
+            
+            for(int i = 0; i < 5; i++)
+            {
+                ViewMatch person = new ViewMatch();
+                this.AddMatches.Children.Add(person);
+                person.ViewButton.Click += ViewButton_Click;
+            }
+            this.AddMatches.Width = 5 * 160;
+        }
 
+        private void ViewButton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ViewMatch.Visibility = Visibility.Visible;
         }
 
 
@@ -193,17 +207,20 @@ namespace HorizontalPrototype
         private void HamburgerMenuButton_Click1(object sender, RoutedEventArgs e)
         {
             this.HamburgerMenu.Visibility = Visibility.Visible;
+            this.HamburgerBack.Visibility = Visibility.Visible;
             this.MainFeedTextbox.Click += MainFeedTextbox_Click;
             this.ViewMatchesTextbox.Click += ViewMatchesTextbox_Click;
             this.EditProfileTextbox.Click += EditProfileTextbox_Click;
             this.QuestionnaireTextbox.Click += QuestionnaireTextbox_Click;
             this.LogoutTextbox.Click += LogoutTextbox_Click;
             this.BackTextbox.Click += BackTextbox_Click;
+            this.HamburgerBack.Click += BackTextbox_Click;
         }
 
         private void BackTextbox_Click(object sender, RoutedEventArgs e)
         {
             this.HamburgerMenu.Visibility = Visibility.Hidden;
+            this.HamburgerBack.Visibility = Visibility.Hidden;
         }
 
         private void LogoutTextbox_Click(object sender, RoutedEventArgs e)
@@ -282,6 +299,7 @@ namespace HorizontalPrototype
             this.SwipeDown.Visibility = Visibility.Hidden;
             this.MeetingScreen.Visibility = Visibility.Hidden;
             this.MainFeedCanvas.Visibility = Visibility.Hidden;
+            this.HamburgerBack.Visibility = Visibility.Hidden;
         }
 
         //profile screen
