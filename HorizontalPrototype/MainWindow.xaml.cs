@@ -104,7 +104,13 @@ namespace HorizontalPrototype
 
         private void CheckSignupFieldsOnClicked(object sender, RoutedEventArgs e)
         {
-            if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
+
+            if(SignupPasswordTextbox.Password != SignupPwRepeatTextbox.Password)
+            {
+                MessageBox.Show("Passwords do not match.");
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
+            }else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
@@ -121,7 +127,13 @@ namespace HorizontalPrototype
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
             
 
-            }else if(this.SignupUsernameTextbox.Text == string.Empty)
+            }else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
+            {
+                this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
+                this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
+                this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
+            }
+            else if(this.SignupUsernameTextbox.Text == string.Empty)
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;

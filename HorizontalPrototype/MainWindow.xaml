@@ -656,7 +656,7 @@
             </Canvas>
 
         </Canvas>
-        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
+        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <TextBlock x:Name="textBlock5" Height="59.334" Canvas.Left="119.832" TextWrapping="Wrap" Text="sign-up" Width="139.334" FontSize="36" FontWeight="Bold" Canvas.Top="39.833" Foreground="#FF494848"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="125.334" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="197" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
@@ -720,11 +720,11 @@
         </ScrollViewer>
         <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367" d:IsHidden="True">
             <ScrollViewer Height="636" Width="367">
-                <Canvas Height="1080" Width="367" Background="Black">
+                <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
-                    <Ellipse x:Name="ProfileImage" Height="91.784" Stroke="White" Width="89.275" Opacity="0.35" Fill="#FFFF6D6D" Canvas.Left="35.226" Canvas.Top="42"/>
+                    <Ellipse x:Name="ProfileImage" Height="141" Stroke="Black" Width="137.146" Opacity="0.35" Fill="White" Canvas.Left="20.855" Canvas.Top="42"/>
                     <TextBlock x:Name="LogoText" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
-                    <TextBlock x:Name="RealName" Height="27" TextWrapping="Wrap" Text="Tim Duncan" Canvas.Top="147.784" Width="142" FontFamily="Georgia" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFE8BD5F" Canvas.Left="10"/>
+                    <TextBlock x:Name="RealName" Height="27" TextWrapping="Wrap" Text="Tim Duncan" Canvas.Top="188" Width="142" FontFamily="Georgia" FontSize="14" FontWeight="Bold" TextAlignment="Center" Foreground="#FFE8BD5F" Canvas.Left="20.001"/>
                     <Rectangle Stroke="White" Height="860"  Canvas.Bottom="0" Width="367" Fill="#FFE8BD5F" StrokeThickness="0"/>
                     <TextBlock x:Name="PersonalityType" Height="31" Canvas.Left="244" TextWrapping="Wrap" Text="The Ailen" Canvas.Top="436.67" Width="100" FontFamily="Georgia" FontSize="18" FontWeight="Bold" TextAlignment="Center" Margin="0" Padding="0,8,0,0">
                         <TextBlock.Foreground>
@@ -741,6 +741,13 @@
                     </UniformGrid>
                 </Canvas>
             </ScrollViewer>
+            <Grid Height="180" Canvas.Left="255" Canvas.Top="35" Width="88">
+                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+            </Grid>
         </Canvas>
         <Canvas x:Name="QuizMainScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <Button x:Name="Quiz1Button" Content="New Comer" Height="50" Canvas.Left="94" Canvas.Top="180" Width="179" FontFamily="Georgia" FontWeight="Bold" FontSize="16"/>
@@ -773,14 +780,14 @@
             <Button x:Name="BackButton2" Content="Button" Height="94" Canvas.Left="30" Style="{DynamicResource ButtonStyle11}" Canvas.Top="527" Width="130"/>
         </Canvas>
         <Canvas x:Name="ViewMatch" Height="636" Width="367" d:IsHidden="True">
-            <Ellipse Height="200" Canvas.Left="90" Stroke="Black" Canvas.Top="86" Width="200">
+            <Ellipse Height="200" Canvas.Left="85" Stroke="Black" Canvas.Top="86" Width="200">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="TestFace.png"/>
                 </Ellipse.Fill>
             </Ellipse>
-            <TextBlock Height="50" Canvas.Left="90" TextWrapping="Wrap" Text="[Name of match]" Canvas.Top="291" Width="200" FontSize="20"/>
-            <Button x:Name="ChatButton" Content="Button" Height="100" Canvas.Left="57" Style="{DynamicResource ButtonStyle13}" Canvas.Top="428.5" Width="100"/>
-            <Button x:Name="LocationButton" Content="Button" Height="100" Canvas.Left="211.834" Style="{DynamicResource ButtonStyle14}" Canvas.Top="428.5" Width="100"/>
+            <TextBlock Height="50" Canvas.Left="113.834" TextWrapping="Wrap" Text="[Name of match]" Canvas.Top="291" Width="161" FontSize="20"/>
+            <Button x:Name="ChatButton" Content="Button" Height="100" Canvas.Left="42" Style="{DynamicResource ButtonStyle13}" Canvas.Top="417.5" Width="100"/>
+            <Button x:Name="LocationButton" Content="Button" Height="100" Canvas.Left="235.834" Style="{DynamicResource ButtonStyle14}" Canvas.Top="417.5" Width="100"/>
         </Canvas>
         <Canvas x:Name="MessagingScreen" Height="636" Width="367" d:IsHidden="True">
             <Ellipse Height="100" Canvas.Left="10" Stroke="Black" Canvas.Top="10" Width="100">
@@ -805,7 +812,6 @@
             <TextBlock Height="37.5" Canvas.Left="128" TextWrapping="Wrap" Text="Name" Canvas.Top="31.5" Width="132" FontSize="20"/>
         </Canvas>
         <Grid x:Name="MatchInitScreen" Height="636" Width="367" d:IsHidden="True">
-            <TextBlock HorizontalAlignment="Left" Height="35" Margin="144.5,10,0,0" TextWrapping="Wrap" Text="USeek" VerticalAlignment="Top" Width="81" FontSize="24"/>
             <Path Data="M182,112.33333 C164.39472,100.18569 155.47782,84.737227 150,61 147.15254,48.661006 140.79522,37.899602 170,40.333333 184.02072,41.501726 183.76143,49.568585 186.66667,67 186.66667,63.325375 185.073,59.065682 186,55.666667 186.911,52.326346 189.15678,50.10371 192,47.666667 200.01755,40.794484 205.3026,37.060413 218.66667,43 227.29768,46.836008 232.55681,47.979183 224,63.666667 220.73492,69.652646 216.15315,78.237612&#xA;210.66667,81.666667 207.39978,91.46732 194.3862,98.682784 192.66667,109 183.30054,112.12204 186.95568,112.1596 178.66667,109.66667" Fill="#FFDC1717" HorizontalAlignment="Left" Height="72.346" Margin="147.376,39.987,0,0" Stretch="Fill" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="80.981"/>
             <Path Data="M213.33333,109 C209.11147,104.30904 205.96678,99.627914 202,95 197.63872,89.911834 197.33333,86.224878 197.33333,79 197.33333,75.316318 212,57.898522 212,83 212,79.242719 211.24817,78.276682 213.33333,75 215.44579,71.680421 215.53654,71 220.66667,71 227.17967,71 230.66667,73.20638 230.66667,83.666667 230.66667,97.451684 224.44886,99.425238 213.33333,109 z" Fill="#FFDC1717" HorizontalAlignment="Left" Height="39.313" Margin="197.333,69.687,0,0" Stretch="Fill" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" Width="33.334"/>
             <Grid Margin="95.758,180,87.747,274.5">
@@ -882,15 +888,15 @@
                     </TransformGroup>
                 </Path.RenderTransform>
             </Path>
+            <TextBlock x:Name="textBlock10_Copy" Height="32" TextWrapping="Wrap" FontWeight="Bold" FontSize="20" Margin="161.001,10,142.499,0" VerticalAlignment="Top"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
 
         </Grid>
         <Canvas x:Name="SwipeUp1" Height="636" Width="367" d:IsHidden="True">
-            <TextBlock Height="56.5" Canvas.Left="119" TextWrapping="Wrap" Text="USeek" Width="136.5" FontSize="48" Canvas.Top="10"/>
-            <Rectangle Fill="#FFD8D8D8" Height="406.5" Canvas.Left="30.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="90" Width="326.5"/>
-            <TextBlock Height="94.5" Canvas.Left="30.5" TextWrapping="Wrap" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem I" Canvas.Top="90" Width="225"/>
-            <Ellipse Fill="#FFAEADAC" Height="96.5" Canvas.Left="260.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="90" Width="96.5"/>
-            <Ellipse Fill="#FFECD69C" Height="33" Canvas.Left="294.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="106.5" Width="33"/>
-            <Ellipse Fill="#FFF03C3C" Height="45" Canvas.Left="294.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="139.5" Width="33"/>
+            <Rectangle Fill="#FFD8D8D8" Height="406.5" Canvas.Left="21.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="90" Width="326.5"/>
+            <TextBlock Height="94.5" Canvas.Left="30.5" TextWrapping="Wrap" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem I" Canvas.Top="90" Width="205"/>
+            <Ellipse Fill="#FFAEADAC" Height="96.5" Canvas.Left="242.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="99" Width="96.5"/>
+            <Ellipse Fill="#FFECD69C" Height="33" Canvas.Left="276.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="115.5" Width="33"/>
+            <Ellipse Fill="#FFF03C3C" Height="45" Canvas.Left="276.5" Stroke="#FFF9F030" StrokeThickness="0" Canvas.Top="148.5" Width="33"/>
             <TextBlock Height="30" Canvas.Left="30.5" TextWrapping="Wrap" Canvas.Top="208.5" Width="280.5"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
             <TextBlock Height="30" Canvas.Left="30.5" TextWrapping="Wrap" Canvas.Top="265.5" Width="280.5"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
             <TextBlock Height="30" Canvas.Left="30.5" TextWrapping="Wrap" Canvas.Top="321" Width="280.5"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor"/><LineBreak/><Run/><LineBreak/><Run/></TextBlock>
@@ -916,6 +922,7 @@
                 </Path.RenderTransform>
             </Path>
             <TextBlock Height="21" Canvas.Left="153.668" TextWrapping="Wrap" Text="Swipe Up" Canvas.Top="615" Width="114.666"/>
+            <TextBlock x:Name="textBlock10_Copy1" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="SwipeDown" Height="636" Width="367" d:IsHidden="True">
             <Grid Height="636" Width="367">
@@ -932,6 +939,7 @@
             <Ellipse Fill="#FF8D8C8C" Height="75" Canvas.Left="264" Stroke="Black" Canvas.Top="295" Width="76"/>
             <Ellipse Fill="#FFEABEB1" Height="25" Canvas.Left="292" Stroke="Black" Canvas.Top="308" Width="24"/>
             <Ellipse Fill="#FFF93030" Height="37" Canvas.Left="290.886" Stroke="Black" Canvas.Top="333" Width="25.228"/>
+            <TextBlock x:Name="textBlock10_Copy2" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="MeetingScreen" Height="636" Width="367" d:IsHidden="True">
             <Ellipse x:Name="YourMatchPic" Height="100" Canvas.Left="42.5" Stroke="Black" Canvas.Top="157.5" Width="100">
@@ -1022,11 +1030,11 @@
             <Button x:Name="ConfirmationButton" Content="Confirm" Height="37" Canvas.Left="114" Canvas.Top="573" Width="149" FontSize="18" Background="#FFC7C7C7"/>
         </Canvas>
         <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
-            <Rectangle Fill="#FF817F89" Height="341" Canvas.Left="10" Stroke="Black" Canvas.Top="22" Width="347"/>
-            <TextBlock Height="192" Canvas.Left="26" TextWrapping="Wrap" Canvas.Top="50" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Bio"/><LineBreak/><Run/><LineBreak/><Run Text="words"/></TextBlock>
-            <Ellipse Fill="#FF4D4B4D" Height="90" Canvas.Left="267" Stroke="Black" Canvas.Top="273" Width="90"/>
-            <Ellipse Fill="#FF060103" Height="28" Canvas.Left="301" Stroke="Black" Canvas.Top="283" Width="28"/>
-            <Ellipse Fill="#FFE82B2B" Height="52" Canvas.Left="290" Stroke="Black" Canvas.Top="311" Width="52"/>
+            <Rectangle Fill="#FF817F89" Height="313" Canvas.Left="10" Stroke="Black" Canvas.Top="50" Width="347"/>
+            <TextBlock Height="192" Canvas.Left="26" TextWrapping="Wrap" Canvas.Top="80" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Bio"/><LineBreak/><Run/><LineBreak/><Run Text="Short Bio"/></TextBlock>
+            <Ellipse Fill="#FF4D4B4D" Height="90" Canvas.Left="239" Stroke="Black" Canvas.Top="311" Width="90"/>
+            <Ellipse Fill="#FF060103" Height="28" Canvas.Left="273" Stroke="Black" Canvas.Top="321" Width="28"/>
+            <Ellipse Fill="#FFE82B2B" Height="52" Canvas.Left="262" Stroke="Black" Canvas.Top="349" Width="52"/>
             <Canvas Height="144.141" Canvas.Left="16.062" Canvas.Top="441.712" Width="113.791">
                 <Rectangle HorizontalAlignment="Left" Height="65.186" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="47.69" Fill="#FFE8BD5F" RenderTransformOrigin="0.5,0.5">
                     <Rectangle.RenderTransform>
@@ -1049,7 +1057,7 @@
                     </Path.RenderTransform>
                 </Path>
             </Canvas>
-            <Canvas Height="144.141" Canvas.Left="193.062" Canvas.Top="426.712" Width="113.791" RenderTransformOrigin="0.5,0.5">
+            <Canvas Height="144.141" Canvas.Left="238.062" Canvas.Top="428.712" Width="113.791" RenderTransformOrigin="0.5,0.5">
                 <Canvas.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1068,7 +1076,7 @@
                         </TransformGroup>
                     </Rectangle.RenderTransform>
                 </Rectangle>
-                <Path Data="M179,594 L111.5,526.5 235,526.5" Fill="#FFE8BD5F" HorizontalAlignment="Left" Height="31.206" Stretch="Fill" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="85.5" Canvas.Left="28.291" Canvas.Top="112.935" RenderTransformOrigin="0.5,0.5">
+                <Path Data="M179,594 L111.5,526.5 235,526.5" Fill="#FFE8BD5F" HorizontalAlignment="Left" Height="31.206" Stretch="Fill" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="85.5" Canvas.Left="27.291" Canvas.Top="115.935" RenderTransformOrigin="0.5,0.5">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform ScaleX="0.55"/>
@@ -1079,13 +1087,14 @@
                     </Path.RenderTransform>
                 </Path>
             </Canvas>
-            <Grid Height="201" Canvas.Left="254" Canvas.Top="41" Width="88">
+            <Grid Height="201" Canvas.Left="244" Canvas.Top="80" Width="88">
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
             </Grid>
+            <TextBlock x:Name="textBlock10_Copy3" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
         <Menu x:Name="HamburgerMenu" Canvas.Left="254" Width="113" Height="636" d:IsHidden="True">
