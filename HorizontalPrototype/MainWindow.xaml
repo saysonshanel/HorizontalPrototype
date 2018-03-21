@@ -543,6 +543,115 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle18" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="#FFF4F4F5" RadiusY="5" RadiusX="5" Stroke="Black" Cursor="Hand"/>
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="Undo" Cursor="Hand"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle19" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Canvas RenderTransformOrigin="0.5,0.5">
+                            <Canvas.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="90.052"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Canvas.RenderTransform>
+                            <Rectangle Width="47.69" VerticalAlignment="Top" StrokeThickness="0" Stroke="#FFF9F030" RenderTransformOrigin="0.5,0.5" Height="65.186" HorizontalAlignment="Left" Fill="#FFE8BD5F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="0.55"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform X="25.25" Y="32.75"/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Path Width="85.5" VerticalAlignment="Top" Canvas.Top="112.935" StrokeThickness="0" Stroke="#FFF9F030" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28.291" Height="31.206" HorizontalAlignment="Left" Fill="#FFE8BD5F" Data="M179,594 L111.5,526.5 235,526.5">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="0.55"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform X="-65.75" Y="-65.75"/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                        </Canvas>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle20" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Canvas RenderTransformOrigin="0.5,0.5">
+                            <Canvas.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-89.733"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Canvas.RenderTransform>
+                            <Rectangle Width="47.69" VerticalAlignment="Top" StrokeThickness="0" Stroke="#FFF9F030" RenderTransformOrigin="0.5,0.5" Height="65.186" HorizontalAlignment="Left" Fill="#FFE8BD5F">
+                                <Rectangle.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="0.55"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform X="25.25" Y="32.75"/>
+                                    </TransformGroup>
+                                </Rectangle.RenderTransform>
+                            </Rectangle>
+                            <Path Width="85.5" VerticalAlignment="Top" Canvas.Top="112.935" StrokeThickness="0" Stroke="#FFF9F030" Stretch="Fill" RenderTransformOrigin="0.5,0.5" Canvas.Left="28.291" Height="31.206" HorizontalAlignment="Left" Fill="#FFE8BD5F" Data="M179,594 L111.5,526.5 235,526.5">
+                                <Path.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform ScaleX="0.55"/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="90"/>
+                                        <TranslateTransform X="-65.75" Y="-65.75"/>
+                                    </TransformGroup>
+                                </Path.RenderTransform>
+                            </Path>
+                        </Canvas>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -748,7 +857,7 @@
             <Button x:Name="Quiz3Button" Content="Archetype Test" Height="50" Canvas.Left="94" Canvas.Top="320" Width="179" FontWeight="Bold" FontFamily="Georgia" FontSize="16"/>
             <Button x:Name="Quiz4Button" Content="Soul Age Test" Height="50" Canvas.Left="94" Canvas.Top="390" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
         </Canvas>
-        <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F">
+        <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="124" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
             <Button x:Name="Answer4Button" Content="Ab illo inventore veritatis&#xD;&#xA;" Height="42" Canvas.Left="31" Canvas.Top="428" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
             <Button x:Name="Answer1Button" Content="voluptatem sequi nesciunt" Height="42" Canvas.Left="31" Canvas.Top="248" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
@@ -929,16 +1038,17 @@
                 <TextBlock HorizontalAlignment="Left" Height="159" Margin="60.5,132,0,0" TextWrapping="Wrap" Text="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets" VerticalAlignment="Top" Width="244.5"/>
                 <Ellipse HorizontalAlignment="Left" Height="189.5" Margin="90.5,123,0,0" Stroke="#FFF93030" VerticalAlignment="Top" Width="189.5" StrokeThickness="17"/>
                 <Path Data="M130,165 L245,270" HorizontalAlignment="Left" Height="125" Margin="117,154,0,0" Stretch="Fill" Stroke="#FFF93030" StrokeThickness="17" VerticalAlignment="Top" Width="137"/>
-                <Rectangle HorizontalAlignment="Left" Height="141" Margin="143,395,0,0" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="70" Fill="#FFE8BD5F"/>
+                <Rectangle HorizontalAlignment="Left" Height="141" Margin="143,325.632,0,0" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="70" Fill="#FFE8BD5F"/>
                 <Path Data="M143,536 L102,536" Fill="#FFE8BD5F" HorizontalAlignment="Left" Height="0" Margin="102,536,0,0" Stretch="Fill" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="41"/>
-                <Path Data="M179,594 L111.5,526.5 235,526.5" Fill="#FFE8BD5F" HorizontalAlignment="Left" Height="67.5" Margin="111.5,526.5,0,0" Stretch="Fill" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="125.5"/>
-                <TextBlock HorizontalAlignment="Left" Height="21" Margin="102,599,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"><Run Text="Swipe Down to Remove Profile"/><LineBreak/><Run/></TextBlock>
+                <Path Data="M179,594 L111.5,526.5 235,526.5" Fill="#FFE8BD5F" HorizontalAlignment="Left" Height="67.5" Margin="111.5,457.132,0,0" Stretch="Fill" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="125.5"/>
+                <TextBlock HorizontalAlignment="Left" Height="21" Margin="102,529.632,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211"><Run Text="Swipe Down to Remove Profile"/><LineBreak/><Run/></TextBlock>
 
             </Grid>
             <Ellipse Fill="#FF8D8C8C" Height="75" Canvas.Left="264" Stroke="Black" Canvas.Top="295" Width="76"/>
             <Ellipse Fill="#FFEABEB1" Height="25" Canvas.Left="292" Stroke="Black" Canvas.Top="308" Width="24"/>
             <Ellipse Fill="#FFF93030" Height="37" Canvas.Left="290.886" Stroke="Black" Canvas.Top="333" Width="25.228"/>
             <TextBlock x:Name="textBlock10_Copy2" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
+            <Button x:Name="button" Content="Button" Height="51.333" Canvas.Left="133.669" Style="{DynamicResource ButtonStyle18}" Canvas.Top="567.334" Width="95.333"/>
         </Canvas>
         <Canvas x:Name="MeetingScreen" Height="636" Width="367" d:IsHidden="True">
             <Ellipse x:Name="YourMatchPic" Height="100" Canvas.Left="42.5" Stroke="Black" Canvas.Top="157.5" Width="100">
@@ -1028,7 +1138,7 @@
             <TextBlock x:Name="TimeText" Height="53.333" Canvas.Left="153" TextWrapping="Wrap" Canvas.Top="475.667" Width="165" FontSize="18"><Run Text="April 1 2018"/><LineBreak/><Run Text="3:00 pm"/></TextBlock>
             <Button x:Name="ConfirmationButton" Content="Confirm" Height="37" Canvas.Left="114" Canvas.Top="573" Width="149" FontSize="18" Background="#FFC7C7C7"/>
         </Canvas>
-        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
+        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367">
             <Rectangle Fill="#FF817F89" Height="313" Canvas.Left="10" Stroke="Black" Canvas.Top="50" Width="347"/>
             <TextBlock Height="192" Canvas.Left="26" TextWrapping="Wrap" Canvas.Top="80" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Bio"/><LineBreak/><Run/><LineBreak/><Run Text="Short Bio"/></TextBlock>
             <Ellipse Fill="#FF4D4B4D" Height="90" Canvas.Left="239" Stroke="Black" Canvas.Top="311" Width="90"/>
@@ -1094,6 +1204,8 @@
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
             </Grid>
             <TextBlock x:Name="textBlock10_Copy3" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
+            <Button x:Name="SwipeUpControl" Content="Button" Height="144.141" Canvas.Left="116.062" Style="{DynamicResource ButtonStyle19}" Canvas.Top="379.712" Width="113.791"/>
+            <Button x:Name="SwipeDownControl" Content="Button" Height="144.141" Canvas.Left="130.062" Style="{DynamicResource ButtonStyle20}" Canvas.Top="486.712" Width="113.791"/>
         </Canvas>
         <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
         <Menu x:Name="HamburgerMenu" Canvas.Left="254" Width="113" Height="636" d:IsHidden="True">

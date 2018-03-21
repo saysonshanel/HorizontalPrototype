@@ -225,14 +225,14 @@ namespace HorizontalPrototype
         private void HamburgerMenuButton_Click1(object sender, RoutedEventArgs e)
         {
             this.HamburgerMenu.Visibility = Visibility.Visible;
-            this.HamburgerBack.Visibility = Visibility.Visible;
+         //   this.HamburgerBack.Visibility = Visibility.Visible;
             this.MainFeedTextbox.Click += MainFeedTextbox_Click;
             this.ViewMatchesTextbox.Click += ViewMatchesTextbox_Click;
             this.EditProfileTextbox.Click += EditProfileTextbox_Click;
             this.QuestionnaireTextbox.Click += QuestionnaireTextbox_Click;
             this.LogoutTextbox.Click += LogoutTextbox_Click;
             this.BackTextbox.Click += BackTextbox_Click;
-            this.HamburgerBack.Click += BackTextbox_Click;
+         //   this.HamburgerBack.Click += BackTextbox_Click;
         }
 
         private void BackTextbox_Click(object sender, RoutedEventArgs e)
@@ -294,6 +294,22 @@ namespace HorizontalPrototype
             HideAll();
             this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.MainFeedCanvas.Visibility = Visibility.Visible;
+            this.SwipeUpControl.Click += SwipeUpControl_Click;
+            this.SwipeDownControl.Click += SwipeDownControl_Click;
+        }
+
+        private void SwipeDownControl_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.SwipeDown.Visibility = Visibility.Visible;
+        }
+
+        private void SwipeUpControl_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.SwipeUp1.Visibility = Visibility.Visible;
         }
 
         public void HideAll()
