@@ -821,7 +821,7 @@
             </Canvas>
         </ScrollViewer>
         <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367" d:IsHidden="True">
-            <ScrollViewer Height="636" Width="367">
+            <ScrollViewer Height="636" Width="384">
                 <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
                     <Ellipse x:Name="ProfileImage" Height="141" Stroke="Black" Width="137.146" Opacity="0.35" Fill="White" Canvas.Left="20.855" Canvas.Top="42"/>
@@ -852,10 +852,14 @@
             </ScrollViewer>
         </Canvas>
         <Canvas x:Name="QuizMainScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
+
+            <Rectangle Fill="#FFF4F4F5" Height="50.151" Width="367"/>
+
             <Button x:Name="Quiz1Button" Content="New Comer" Height="50" Canvas.Left="94" Canvas.Top="180" Width="179" FontFamily="Georgia" FontWeight="Bold" FontSize="16"/>
             <Button x:Name="Quiz2Button" Content="Animal Type Test" Height="50" Canvas.Left="94" Canvas.Top="250" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
             <Button x:Name="Quiz3Button" Content="Archetype Test" Height="50" Canvas.Left="94" Canvas.Top="320" Width="179" FontWeight="Bold" FontFamily="Georgia" FontSize="16"/>
             <Button x:Name="Quiz4Button" Content="Soul Age Test" Height="50" Canvas.Left="94" Canvas.Top="390" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
+            <TextBlock x:Name="textBlock10_Copy5" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="124" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
@@ -866,10 +870,12 @@
             <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="247" Stretch="Fill" Canvas.Top="219.5" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.65"/>
             <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="207.404" Stretch="Fill" Canvas.Top="219.5" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.5"/>
             <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="284.5" Stretch="Fill" Canvas.Top="220" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.75"/>
-            <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.768" Canvas.Top="24.338"/>
+            <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="311.201" Canvas.Top="75.667"/>
             <TextBlock x:Name="textBlock17" Height="43.333" Canvas.Left="221.67" TextWrapping="Wrap" Text="swipe to answer" Canvas.Top="206" Width="118" FontWeight="Bold" Foreground="White" Opacity="0.5"/>
-            <Button x:Name="BackButton1_Copy" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
             <Button x:Name="QuizSaveButton" Content="Button" Height="42" Canvas.Left="142.168" Style="{DynamicResource QuizSaveButton}" Canvas.Top="512.167" Width="92.666" Cursor="Hand"/>
+            <Button x:Name="BackButton1_Copy" Height="43.333" Canvas.Left="300.339" Style="{DynamicResource ButtonStyle6}" Canvas.Top="70.998" Width="44.667" Cursor="Hand"/>
+            <Rectangle Fill="#FFF4F4F5" Height="50.151" Width="367"/>
+            <TextBlock x:Name="textBlock10_Copy4" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="ViewAllMatches" Height="636" Width="367" d:IsHidden="True">
             <local:ViewMatchesControl x:Name="MatchCenter" Height="616" Canvas.Left="86.5" Canvas.Top="10" Width="211.5"/>
@@ -896,14 +902,15 @@
             <TextBlock Height="50" Canvas.Left="113.834" TextWrapping="Wrap" Text="[Name of match]" Canvas.Top="291" Width="161" FontSize="20"/>
             <Button x:Name="ChatButton" Content="Button" Height="100" Canvas.Left="42" Style="{DynamicResource ButtonStyle13}" Canvas.Top="417.5" Width="100"/>
             <Button x:Name="LocationButton" Content="Button" Height="100" Canvas.Left="235.834" Style="{DynamicResource ButtonStyle14}" Canvas.Top="417.5" Width="100"/>
+            <TextBlock x:Name="textBlock10_Copy6" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="MessagingScreen" Height="636" Width="367" d:IsHidden="True">
-            <Ellipse Height="100" Canvas.Left="10" Stroke="Black" Canvas.Top="10" Width="100">
+            <Ellipse Height="100" Canvas.Left="10" Stroke="Black" Canvas.Top="59" Width="100">
                 <Ellipse.Fill>
                     <ImageBrush ImageSource="TestFace.png"/>
                 </Ellipse.Fill>
             </Ellipse>
-            <ScrollViewer x:Name="MessageScroller" Height="463.5" Canvas.Top="115" Width="367">
+            <ScrollViewer x:Name="MessageScroller" Height="414.5" Canvas.Top="164" Width="367">
                 <Grid x:Name="Messages" Height="463.5" Width="351">
                     <Grid x:Name="TestMessage" Margin="10,10,83.5,402.5">
                         <Rectangle HorizontalAlignment="Left" Height="51" Stroke="Black" VerticalAlignment="Top" Width="257.5" Fill="#7023FF00" RadiusX="20" RadiusY="10"/>
@@ -917,7 +924,8 @@
             </ScrollViewer>
             <Label Height="41" Canvas.Left="10" Style="{DynamicResource LabelStyle1}" Canvas.Top="585" Width="306"/>
             <Button x:Name="SendButton" Content="Button" Height="41" Canvas.Left="321" Style="{DynamicResource ButtonStyle15}" Canvas.Top="585" Width="41"/>
-            <TextBlock Height="37.5" Canvas.Left="128" TextWrapping="Wrap" Text="Name" Canvas.Top="31.5" Width="132" FontSize="20"/>
+            <TextBlock Height="37.5" Canvas.Left="129" TextWrapping="Wrap" Text="Name" Canvas.Top="59" Width="132" FontSize="20"/>
+            <TextBlock x:Name="textBlock10_Copy7" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Grid x:Name="MatchInitScreen" Height="636" Width="367" d:IsHidden="True">
             <Path Data="M182,112.33333 C164.39472,100.18569 155.47782,84.737227 150,61 147.15254,48.661006 140.79522,37.899602 170,40.333333 184.02072,41.501726 183.76143,49.568585 186.66667,67 186.66667,63.325375 185.073,59.065682 186,55.666667 186.911,52.326346 189.15678,50.10371 192,47.666667 200.01755,40.794484 205.3026,37.060413 218.66667,43 227.29768,46.836008 232.55681,47.979183 224,63.666667 220.73492,69.652646 216.15315,78.237612&#xA;210.66667,81.666667 207.39978,91.46732 194.3862,98.682784 192.66667,109 183.30054,112.12204 186.95568,112.1596 178.66667,109.66667" Fill="#FFDC1717" HorizontalAlignment="Left" Height="72.346" Margin="147.376,39.987,0,0" Stretch="Fill" Stroke="#FFF9F030" StrokeThickness="0" VerticalAlignment="Top" Width="80.981"/>
@@ -1137,8 +1145,9 @@
             <TextBlock x:Name="LocationText" Height="46" Canvas.Left="153" TextWrapping="Wrap" Text="MacHall Starbucks" Canvas.Top="365.744" Width="165" FontSize="18"/>
             <TextBlock x:Name="TimeText" Height="53.333" Canvas.Left="153" TextWrapping="Wrap" Canvas.Top="475.667" Width="165" FontSize="18"><Run Text="April 1 2018"/><LineBreak/><Run Text="3:00 pm"/></TextBlock>
             <Button x:Name="ConfirmationButton" Content="Confirm" Height="37" Canvas.Left="114" Canvas.Top="573" Width="149" FontSize="18" Background="#FFC7C7C7"/>
+            <TextBlock x:Name="textBlock10_Copy8" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
-        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367">
+        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
             <Rectangle Fill="#FF817F89" Height="313" Canvas.Left="10" Stroke="Black" Canvas.Top="50" Width="347"/>
             <TextBlock Height="192" Canvas.Left="26" TextWrapping="Wrap" Canvas.Top="80" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Bio"/><LineBreak/><Run/><LineBreak/><Run Text="Short Bio"/></TextBlock>
             <Ellipse Fill="#FF4D4B4D" Height="90" Canvas.Left="239" Stroke="Black" Canvas.Top="311" Width="90"/>
@@ -1207,7 +1216,7 @@
             <Button x:Name="SwipeUpControl" Content="Button" Height="144.141" Canvas.Left="116.062" Style="{DynamicResource ButtonStyle19}" Canvas.Top="379.712" Width="113.791"/>
             <Button x:Name="SwipeDownControl" Content="Button" Height="144.141" Canvas.Left="130.062" Style="{DynamicResource ButtonStyle20}" Canvas.Top="486.712" Width="113.791"/>
         </Canvas>
-        <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
+        <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="315" Style="{DynamicResource ButtonStyle10}" Canvas.Top="7" Width="40" d:IsHidden="True"/>
         <Menu x:Name="HamburgerMenu" Canvas.Left="254" Width="113" Height="636" d:IsHidden="True">
             <MenuItem x:Name="MainFeedTextbox" Header="Main Feed" Height="56" Width="113"/>
             <MenuItem x:Name="ViewMatchesTextbox" Header="View Matches" Height="56" Width="113"/>
