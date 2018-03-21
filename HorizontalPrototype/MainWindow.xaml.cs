@@ -43,44 +43,8 @@ namespace HorizontalPrototype
             this.FacebookButton.Click += ToLoginScreen;
             this.GoogleButton.Click += ToLoginScreen;
 
-
-            //When toggle menu button is checked
-           // this.MenuButton.Click += UponToggleMenuButtonChecked;
-
-            //When toggle menu is collapsed
-           // Storyboard sb2 = this.FindResource("MenuCollapse") as Storyboard;
-           // sb2.Completed += DropDownMenuCollapseComplete;
-
-            //When save button is clicked, direct to profile screen
-            //this.SaveButton.Click += UponEditProfileButtonClicked;
-
-            //Quiz button clicked, start quiz
-           // this.Quiz1Button.Click += UponQuizButtonClicked;
-       
-
         }
 
-
-        /*  private void UponQuizButtonClicked(object sender, RoutedEventArgs e)
-          {
-              QuizMainScreenCanvas.Visibility = Visibility.Hidden;
-              QuizQuestionScreen.Visibility = Visibility.Visible;
-          }
-
-          private void UponEditProfileButtonClicked(object sender, RoutedEventArgs e)
-          {
-              this.EditScreenCanvas.Visibility = Visibility.Hidden;
-          }
-
-          private void DropDownMenuCollapseComplete(object sender, EventArgs e)
-          {
-              this.dropDownMenuControl.Visibility = Visibility.Hidden;
-          }
-
-          private void UponToggleMenuButtonChecked(object sender, RoutedEventArgs e)
-          {
-              this.dropDownMenuControl.Visibility = Visibility.Visible;
-          }*/
 
         //sign up screen
         private void SignupButtonComplete(object sender, EventArgs e)
@@ -110,6 +74,7 @@ namespace HorizontalPrototype
                 MessageBox.Show("Passwords do not match.");
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
+
             }else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
@@ -260,8 +225,19 @@ namespace HorizontalPrototype
         {
             HideAll();
             this.HamburgerMenuButton.Visibility = Visibility.Visible;
-
             this.QuizMainScreenCanvas.Visibility = Visibility.Visible;
+
+            this.Quiz1Button.Click += QuizbuttonOnClick;
+            this.Quiz2Button.Click += QuizbuttonOnClick;
+            this.Quiz3Button.Click += QuizbuttonOnClick;
+            this.Quiz4Button.Click += QuizbuttonOnClick;
+        }
+
+        private void QuizbuttonOnClick(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.QuizQuestionScreen.Visibility = Visibility.Visible;
         }
 
         private void EditProfileTextbox_Click(object sender, RoutedEventArgs e)

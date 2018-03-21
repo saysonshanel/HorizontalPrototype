@@ -749,11 +749,11 @@
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
             </Grid>
         </Canvas>
-        <Canvas x:Name="QuizMainScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
+        <Canvas x:Name="QuizMainScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
             <Button x:Name="Quiz1Button" Content="New Comer" Height="50" Canvas.Left="94" Canvas.Top="180" Width="179" FontFamily="Georgia" FontWeight="Bold" FontSize="16"/>
             <Button x:Name="Quiz2Button" Content="Animal Type Test" Height="50" Canvas.Left="94" Canvas.Top="250" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
             <Button x:Name="Quiz3Button" Content="Archetype Test" Height="50" Canvas.Left="94" Canvas.Top="320" Width="179" FontWeight="Bold" FontFamily="Georgia" FontSize="16"/>
-            <Button x:Name="Quizz4Button" Content="Soul Age Test" Height="50" Canvas.Left="94" Canvas.Top="390" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
+            <Button x:Name="Quiz4Button" Content="Soul Age Test" Height="50" Canvas.Left="94" Canvas.Top="390" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
         </Canvas>
         <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="39" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
