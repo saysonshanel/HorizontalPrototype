@@ -258,12 +258,17 @@ namespace HorizontalPrototype
 
         private void QuestionnaireTextbox_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+
+            this.QuizMainScreenCanvas.Visibility = Visibility.Visible;
         }
 
         private void EditProfileTextbox_Click(object sender, RoutedEventArgs e)
         {
-            throw new NotImplementedException();
+            HideAll();
+            this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.EditScreenViewer.Visibility = Visibility.Visible;
         }
 
         private void ViewMatchesTextbox_Click(object sender, RoutedEventArgs e)
@@ -301,7 +306,6 @@ namespace HorizontalPrototype
             this.SwipeDown.Visibility = Visibility.Hidden;
             this.MeetingScreen.Visibility = Visibility.Hidden;
             this.MainFeedCanvas.Visibility = Visibility.Hidden;
-
         }
 
         //profile screen
