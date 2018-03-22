@@ -64,9 +64,6 @@
     <Compile Include="ViewMatch.xaml.cs">
       <DependentUpon>ViewMatch.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ViewMatchesControl.xaml.cs">
-      <DependentUpon>ViewMatchesControl.xaml</DependentUpon>
-    </Compile>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -94,10 +91,6 @@
     <Page Include="ViewMatch.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="ViewMatchesControl.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
   <ItemGroup>
