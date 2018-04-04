@@ -25,7 +25,6 @@ namespace HorizontalPrototype
         {
             InitializeComponent();
 
-
             //When the login button is pressed on the main screen, direct to login screen
             Storyboard lginsb = this.FindResource("SplashDisappear") as Storyboard;
             lginsb.Completed += ToLoginScreen;
@@ -38,10 +37,11 @@ namespace HorizontalPrototype
 
             //hide other canvas's
             HideAll();
+            this.MainScreenCanvas.Visibility = Visibility.Visible;
 
             //when facebook or google connection is clicked,  move to login
-            this.FacebookButton.Click += ToLoginScreen;
-            this.GoogleButton.Click += ToLoginScreen;
+            this.FacebookButton.Click += ToEditProfileScreen;
+            this.GoogleButton.Click += ToEditProfileScreen;
             
             for(int i = 0; i < 5; i++)
             {
@@ -213,8 +213,7 @@ namespace HorizontalPrototype
         //edit profile screen
         private void ToEditProfileScreen(object sender, RoutedEventArgs e)
         {
-            this.LoginScreenCanvas.Visibility = Visibility.Hidden;
-            this.SignupScreenCanvas.Visibility = Visibility.Hidden;
+            HideAll();
             this.EditScreenViewer.Visibility = Visibility.Visible;
             this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
@@ -323,6 +322,7 @@ namespace HorizontalPrototype
 
         public void HideAll()
         {
+            this.MainScreenCanvas.Visibility = Visibility.Hidden;
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.EditScreenViewer.Visibility = Visibility.Hidden;
