@@ -251,6 +251,8 @@ namespace HorizontalPrototype
         private void LogoutTextbox_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
+            this.LoginUsernameErrorCanvas.Visibility = Visibility.Hidden;
+            this.LoginPasswordErrorCanvas.Visibility = Visibility.Hidden;
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             //show the login screen
@@ -302,23 +304,18 @@ namespace HorizontalPrototype
             HideAll();
             this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.MainFeedCanvas.Visibility = Visibility.Visible;
-            this.SwipeUpControl.Click += SwipeUpControl_Click;
-            this.SwipeDownControl.Click += SwipeDownControl_Click;
+            this.SignifierDown.Click += SignifierDown_Click;
+            this.SwipeUpButton.Click += View_Profile_Click;
         }
- 
-        private void SwipeDownControl_Click(object sender, RoutedEventArgs e)
+
+        private void SignifierDown_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
             this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.SwipeDown.Visibility = Visibility.Visible;
+            this.UndoButton.Click += MainFeedTextbox_Click;
         }
 
-         private void SwipeUpControl_Click(object sender, RoutedEventArgs e)
-         {
-             HideAll();
-             this.HamburgerMenuButton.Visibility = Visibility.Visible;
-             this.SwipeUp1.Visibility = Visibility.Visible;
-        }
 
         public void HideAll()
         {
