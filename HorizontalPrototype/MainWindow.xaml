@@ -822,31 +822,35 @@
             <TextBox x:Name="SignupEmailTextbox" Height="40.667" Canvas.Left="84.5" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="415.334" Width="205.334" TextAlignment="Left"/>
 
         </Canvas>
-        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388" d:IsHidden="True">
+        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388">
             <Canvas x:Name="EditScreenCanvas" Height="966.763" Width="367">
                 <TextBlock x:Name="textBlock10" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
-                <Ellipse x:Name="ImageOfUser" Height="137.783" Canvas.Left="114" Stroke="Black" Canvas.Top="45" Width="142.549" Opacity="0.35"/>
-                <Button x:Name="ChangePhotoButton" Content="Button" Height="39.099" Canvas.Left="103.885" Style="{DynamicResource ButtonStyle8}" Canvas.Top="192.783" Width="167.999" Cursor="Hand"/>
-                <TextBlock x:Name="textBlock12" Height="21.333" Canvas.Left="4.667" TextWrapping="Wrap" Text="Username" Canvas.Top="287.834" Width="78.793" Foreground="Black" FontSize="16"/>
-                <TextBlock x:Name="textBlock12_Copy" Height="21.333" Canvas.Left="4.667" TextWrapping="Wrap" Text="Interests" Canvas.Top="337.833" Width="59.398" Foreground="Black" FontSize="16"/>
-                <TextBlock x:Name="textBlock12_Copy2" Height="21.333" Canvas.Left="4.667" TextWrapping="Wrap" Text="Description" Canvas.Top="389.797" Width="81.822" Foreground="Black" FontSize="16"/>
-                <TextBlock x:Name="textBlock12_Copy3" Height="21.333" Canvas.Left="4.667" TextWrapping="Wrap" Text="Bio" Canvas.Top="478.328" Width="81.822" Foreground="Black" FontSize="16"/>
-                <TextBlock x:Name="textBlock13_Copy" Height="27.864" Canvas.Left="4.667" TextWrapping="Wrap" Text="Private information" Canvas.Top="740.13" Width="251.882" FontWeight="Bold" Foreground="Black" FontSize="18"/>
-                <TextBlock x:Name="textBlock12_Copy1" Height="21.333" Canvas.Left="4.667" TextWrapping="Wrap" Text="E-mail Address" Canvas.Top="772.994" Width="126.152" Foreground="Black" FontSize="16"/>
-                <TextBlock x:Name="textBlock12_Copy4" Height="21.333" Canvas.Left="4.667" TextWrapping="Wrap" Text="Gender" Canvas.Top="822.833" Width="126.152" Foreground="Black" FontSize="16"/>
-                <Button x:Name="SaveButton" Content="Button" Height="48.667" Canvas.Left="127.168" Style="{DynamicResource ButtonStyle9}" Canvas.Top="884.004" Width="97.333" Cursor="Hand"/>
-                <TextBox x:Name="NameTextbox" Height="18.667" Canvas.Left="1.996" TextWrapping="Wrap" Text="Name" Canvas.Top="260.999" Width="348.337" BorderBrush="{x:Null}" Background="{x:Null}" Opacity="0.25" FontSize="14"/>
-                <TextBlock x:Name="textBlock12_Copy5" Height="21.333" Canvas.Left="4.667" TextWrapping="Wrap" Text="Full Name" Canvas.Top="238.501" Width="78.793" Foreground="Black" FontSize="16"/>
-                <TextBox x:Name="UsernameTextbox1" Height="18.667" TextWrapping="Wrap" Text="Username" Canvas.Top="312.166" Width="348.332" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="2.001" Opacity="0.25" FontSize="14"/>
-                <TextBox x:Name="InterestTextbox" Height="18.667" TextWrapping="Wrap" Text="Interests" Canvas.Top="363.499" Width="348.334" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="1.999" Opacity="0.25" FontSize="14"/>
-                <TextBox x:Name="DescriptionTextbox" Height="62.198" TextWrapping="Wrap" Text="Description" Canvas.Top="416.13" Width="348.334" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="1.999" Opacity="0.25" FontSize="14"/>
-                <TextBox x:Name="BioTextbox" Height="232.668" TextWrapping="Wrap" Text="Bio" Canvas.Top="502.462" Width="348.332" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="2.001" Opacity="0.25" FontSize="14"/>
-                <TextBox x:Name="EmailTextbox" Height="18.667" TextWrapping="Wrap" Text="E-mail" Canvas.Top="796.166" Width="348.666" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="1.667" Opacity="0.25" FontSize="14"/>
-                <ComboBox x:Name="GenderConboBox" Height="32.666" Canvas.Left="-1.339" Canvas.Top="846.338" Width="358.339" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" IsSynchronizedWithCurrentItem="False" FontSize="14" OpacityMask="#FF494747">
+                <Button x:Name="ChangePhotoButton" Content="Button" Height="39.099" Canvas.Left="109.885" Style="{DynamicResource ButtonStyle8}" Canvas.Top="410.783" Width="167.999" Cursor="Hand"/>
+                <TextBlock x:Name="textBlock12" Height="21.333" Canvas.Left="10.667" TextWrapping="Wrap" Text="Username" Canvas.Top="505.834" Width="78.793" Foreground="Black" FontSize="16"/>
+                <TextBlock x:Name="textBlock12_Copy" Height="21.333" Canvas.Left="10.667" TextWrapping="Wrap" Text="Interests" Canvas.Top="555.833" Width="59.398" Foreground="Black" FontSize="16"/>
+                <TextBlock x:Name="textBlock12_Copy2" Height="21.333" Canvas.Left="10.667" TextWrapping="Wrap" Text="Description" Canvas.Top="607.797" Width="81.822" Foreground="Black" FontSize="16"/>
+                <TextBlock x:Name="textBlock12_Copy3" Height="21.333" Canvas.Left="10.667" TextWrapping="Wrap" Text="Bio" Canvas.Top="696.328" Width="81.822" Foreground="Black" FontSize="16"/>
+                <TextBlock x:Name="textBlock13_Copy" Height="27.864" Canvas.Left="10.667" TextWrapping="Wrap" Text="Private information" Canvas.Top="958.13" Width="251.882" FontWeight="Bold" Foreground="Black" FontSize="18"/>
+                <TextBlock x:Name="textBlock12_Copy1" Height="21.333" Canvas.Left="10.667" TextWrapping="Wrap" Text="E-mail Address" Canvas.Top="990.994" Width="126.152" Foreground="Black" FontSize="16"/>
+                <TextBlock x:Name="textBlock12_Copy4" Height="21.333" Canvas.Left="10.667" TextWrapping="Wrap" Text="Gender" Canvas.Top="1040.833" Width="126.152" Foreground="Black" FontSize="16"/>
+                <Button x:Name="SaveButton" Content="Button" Height="48.667" Canvas.Left="133.168" Style="{DynamicResource ButtonStyle9}" Canvas.Top="1102.004" Width="97.333" Cursor="Hand"/>
+                <TextBox x:Name="NameTextbox" Height="18.667" Canvas.Left="7.996" TextWrapping="Wrap" Text="Name" Canvas.Top="478.999" Width="348.337" BorderBrush="{x:Null}" Background="{x:Null}" Opacity="0.25" FontSize="14"/>
+                <TextBlock x:Name="textBlock12_Copy5" Height="21.333" Canvas.Left="10.667" TextWrapping="Wrap" Text="Full Name" Canvas.Top="456.501" Width="78.793" Foreground="Black" FontSize="16"/>
+                <TextBox x:Name="UsernameTextbox1" Height="18.667" TextWrapping="Wrap" Text="Username" Canvas.Top="530.166" Width="348.332" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="8.001" Opacity="0.25" FontSize="14"/>
+                <TextBox x:Name="InterestTextbox" Height="18.667" TextWrapping="Wrap" Text="Interests" Canvas.Top="581.499" Width="348.334" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="7.999" Opacity="0.25" FontSize="14"/>
+                <TextBox x:Name="DescriptionTextbox" Height="62.198" TextWrapping="Wrap" Text="Description" Canvas.Top="634.13" Width="348.334" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="7.999" Opacity="0.25" FontSize="14"/>
+                <TextBox x:Name="BioTextbox" Height="232.668" TextWrapping="Wrap" Text="Bio" Canvas.Top="720.462" Width="348.332" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="8.001" Opacity="0.25" FontSize="14"/>
+                <TextBox x:Name="EmailTextbox" Height="18.667" TextWrapping="Wrap" Text="E-mail" Canvas.Top="1014.166" Width="348.666" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="7.667" Opacity="0.25" FontSize="14"/>
+                <ComboBox x:Name="GenderConboBox" Height="32.666" Canvas.Left="4.661" Canvas.Top="1064.338" Width="358.339" Background="{x:Null}" BorderBrush="{x:Null}" BorderThickness="0" IsSynchronizedWithCurrentItem="False" FontSize="14" OpacityMask="#FF494747">
                     <ListBoxItem Content="Not Specified"/>
                     <ListBoxItem Content="Male"/>
                     <ListBoxItem Content="Female"/>
                 </ComboBox>
+                <Image x:Name="pictureBox" Height="304" Width="304" Stretch="Fill" Canvas.Left="66" Canvas.Top="74">
+                    <Image.Clip>
+                        <EllipseGeometry Center ="100,75" RadiusX="90" RadiusY="90" />
+                    </Image.Clip>
+                </Image>
 
             </Canvas>
         </ScrollViewer>
@@ -1168,7 +1172,7 @@
             <TextBox x:Name="LocationText" Height="46" Canvas.Left="153" TextWrapping="Wrap" Text="Starbucks" Canvas.Top="365.744" Width="165" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
             <TextBox x:Name="TimeText" Height="54.333" Canvas.Left="153" TextWrapping="Wrap" Text="Aprill 1 2018&#xD;&#xA;3:00 pm" Canvas.Top="475.667" Width="165" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
         </Canvas>
-        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367">
+        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
             <Rectangle Fill="#FF494848" Height="241" Canvas.Left="10" Stroke="Black" Canvas.Top="80" Width="336" RadiusX="10" RadiusY="10" Opacity="0.25"/>
             <TextBlock Height="56" Canvas.Left="16.853" TextWrapping="Wrap" Canvas.Top="89" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Name"/><LineBreak/><Run/><LineBreak/></TextBlock>
             <Ellipse Fill="White" Height="133" Canvas.Left="190" Stroke="#FF494848" Canvas.Top="253.5" Width="133"/>

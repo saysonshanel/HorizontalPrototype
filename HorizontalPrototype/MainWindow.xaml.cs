@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Win32;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,6 +20,8 @@ namespace HorizontalPrototype
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -219,6 +222,18 @@ namespace HorizontalPrototype
             this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
 
             this.SaveButton.Click += SaveButton_Click;
+            this.ChangePhotoButton.Click += ChangePhotoButton_Click;
+        }
+
+        private void ChangePhotoButton_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog open = new OpenFileDialog();
+            open.Filter = "JPG(*.JPG) | *.jpg";
+            if (open.ShowDialog() == true)
+            {
+                this.pictureBox.Source = new BitmapImage(new Uri(open.FileName));
+            }
+
         }
 
         private void HamburgerMenuButton_Click1(object sender, RoutedEventArgs e)
