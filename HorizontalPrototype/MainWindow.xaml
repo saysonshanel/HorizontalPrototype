@@ -692,6 +692,92 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle23" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Canvas x:Name="SignifierLeft" RenderTransformOrigin="0.5,0.5">
+                            <Canvas.RenderTransform>
+                                <TransformGroup>
+                                    <ScaleTransform/>
+                                    <SkewTransform/>
+                                    <RotateTransform Angle="-180"/>
+                                    <TranslateTransform/>
+                                </TransformGroup>
+                            </Canvas.RenderTransform>
+                            <Path Width="42.596" StrokeThickness="15" Stroke="#FFE8BD5F" Stretch="Fill" Opacity="0.65" Canvas.Left="39.596" Height="88" Data="M110,420 L146.36974,465.48318 103.86974,507.98318"/>
+                            <Path Width="42.596" StrokeThickness="15" Stroke="#FFE8BD5F" Stretch="Fill" Opacity="0.5" Height="88" Data="M110,420 L146.36974,465.48318 103.86974,507.98318"/>
+                            <Path Width="42.596" Canvas.Top="0.5" StrokeThickness="15" Stroke="#FFE8BD5F" Stretch="Fill" Opacity="0.85" Canvas.Left="77.096" Height="88" Data="M110,420 L146.36974,465.48318 103.86974,507.98318"/>
+                        </Canvas>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle24" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Canvas x:Name="SignifierRight_Copy">
+                            <Path Width="42.596" StrokeThickness="15" Stroke="#FFE8BD5F" Stretch="Fill" Opacity="0.65" Canvas.Left="39.596" Height="88" Data="M110,420 L146.36974,465.48318 103.86974,507.98318"/>
+                            <Path Width="42.596" StrokeThickness="15" Stroke="#FFE8BD5F" Stretch="Fill" Opacity="0.5" Height="88" Data="M110,420 L146.36974,465.48318 103.86974,507.98318"/>
+                            <Path Width="42.596" Canvas.Top="0.5" StrokeThickness="15" Stroke="#FFE8BD5F" Stretch="Fill" Opacity="0.85" Canvas.Left="77.096" Height="88" Data="M110,420 L146.36974,465.48318 103.86974,507.98318"/>
+                        </Canvas>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle25" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="#FFE8BD5F" RadiusY="5" RadiusX="5"/>
+                            <ContentPresenter TextBlock.Foreground="White" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="Questionaire"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle26" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Rectangle Fill="#FFE8BD5F" RadiusY="5" RadiusX="5"/>
+                            <ContentPresenter TextBlock.Foreground="White" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}" Content="Logout"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -851,6 +937,8 @@
                         <EllipseGeometry Center ="120, 120" RadiusX="110" RadiusY="110" />
                     </Image.Clip>
                 </Image>
+                <Button x:Name="QuizButton" Content="Questionarres" Height="48.667" Canvas.Left="254.5" Style="{DynamicResource ButtonStyle25}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
+                <Button x:Name="LogoutButton" Content="Questionarres" Height="48.667" Canvas.Left="10" Style="{DynamicResource ButtonStyle26}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
 
             </Canvas>
         </ScrollViewer>
@@ -1007,27 +1095,16 @@
                 <Ellipse Fill="#FFE22323" HorizontalAlignment="Left" Height="74.5" Margin="62.242,102,0,0" Stroke="Black" StrokeThickness="2" VerticalAlignment="Top" Width="63.5"/>
 
             </Grid>
-            <ScrollViewer HorizontalAlignment="Left" Height="200" Margin="0,180,0,0" Style="{DynamicResource SimpleScrollViewer}" VerticalAlignment="Top" Width="367" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" CanContentScroll="True">
+            <ScrollViewer HorizontalAlignment="Left" Height="200" Margin="0,180,0,0" Style="{DynamicResource SimpleScrollViewer}" VerticalAlignment="Top" Width="367" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" CanContentScroll="True" d:IsHidden="True" Visibility="Hidden">
                 <UniformGrid x:Name="AddMatches" Height="200" Rows="1"/>
             </ScrollViewer>
-            <Canvas x:Name="SignifierLeft" Height="88.5" Width="119.692" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" Margin="34.404,0,0,72" VerticalAlignment="Bottom">
-                <Canvas.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="-180"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Canvas.RenderTransform>
-                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="39.596" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.65"/>
-                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.5"/>
-                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="77.096" Stretch="Fill" Canvas.Top="0.5" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.85"/>
-            </Canvas>
-            <Canvas x:Name="SignifierRight_Copy" Height="88.5" Width="119.692" HorizontalAlignment="Right" Margin="0,0,34.904,72" VerticalAlignment="Bottom">
-                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="39.596" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.65"/>
-                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.5"/>
-                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="77.096" Stretch="Fill" Canvas.Top="0.5" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.85"/>
-            </Canvas>
+            <Button x:Name="LeftButton1" Content="Button" HorizontalAlignment="Left" Height="88.5" Margin="34.404,0,0,72" Style="{DynamicResource ButtonStyle23}" VerticalAlignment="Bottom" Width="119.692"/>
+            <Button x:Name="RightButton1" Content="Button" HorizontalAlignment="Right" Height="88.5" Margin="0,0,34.904,72" Style="{DynamicResource ButtonStyle24}" VerticalAlignment="Bottom" Width="119.692"/>
+            <Grid x:Name="Carousel" HorizontalAlignment="Left" Height="245" Margin="0,164.784,0,0" VerticalAlignment="Top" Width="367" Grid.Row="1" Grid.RowSpan="5">
+                <local:ViewMatch HorizontalAlignment="Left" Height="245" Margin="96,0,0,0" VerticalAlignment="Top" Width="183.5" Visibility="Hidden"/>
+                <local:ViewMatch HorizontalAlignment="Left" Height="129.5" Margin="0,40,0,0" VerticalAlignment="Top" Width="91" Visibility="Hidden"/>
+                <local:ViewMatch HorizontalAlignment="Left" Height="100" Margin="96,32.48,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
+            </Grid>
 
         </Grid>
         <Canvas x:Name="SwipeUp1" Height="636" Width="367" d:IsHidden="True">
@@ -1227,6 +1304,19 @@
             <MenuItem x:Name="BackTextbox" Header="Back" Height="56" Width="113"/>
         </Menu>
         <Button x:Name="HamburgerBack" Content="Button" Height="636" Width="254" Opacity="0" d:IsHidden="True"/>
+        <Menu x:Name="BottomMenu" Width="367" Height="40" RenderTransformOrigin="0.5,0.5" Canvas.Top="596">
+            <Menu.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Menu.RenderTransform>
+            <MenuItem x:Name="MainFeedTextbox1" Header="Main Feed" Height="40" Width="122"/>
+            <MenuItem x:Name="ViewMatchesTextbox1" Header="View Matches" Height="40" Width="122"/>
+            <MenuItem x:Name="EditProfileTextbox1" Header="Edit Profile" Height="40" Width="122"/>
+        </Menu>
 
     </Canvas>
 </Window>
