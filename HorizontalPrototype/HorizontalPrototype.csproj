@@ -123,6 +123,30 @@
   <ItemGroup>
     <Resource Include="TestFace.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_1333609_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_1073268_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_186582_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_156667_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_304196_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_1296944_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_168484_cc.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="noun_304212_cc.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -78,9 +78,9 @@ namespace HorizontalPrototype
             this.ConfirmationButton.Click += ViewButton_Click;
 
             //menu buttons
-            this.MainFeedTextbox1.Click += MainFeedTextbox_Click;
-            this.ViewMatchesTextbox1.Click += ViewMatchesTextbox_Click;
-            this.EditProfileTextbox1.Click += EditProfileTextbox_Click;
+            this.homebutton.Click += MainFeedTextbox_Click;
+            this.matchesbutton.Click += ViewMatchesTextbox_Click;
+            this.profilebutton.Click += EditProfileTextbox_Click;
         }
 
         private void ScalePerson(ViewMatch person, double scale)
@@ -253,7 +253,6 @@ namespace HorizontalPrototype
             this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
 
             this.SaveButton.Click += SaveButton_Click;
-            this.QuizButton.Click += QuestionnaireTextbox_Click;
             this.LogoutButton.Click += LogoutTextbox_Click;
             this.ChangePhotoButton.Click += ChangePhotoButton_Click;
         }
@@ -340,6 +339,14 @@ namespace HorizontalPrototype
             HideAll();
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+            this.editprofilebutton.Click += Editprofilebutton_Click;
+            this.questionnairebutton.Click += QuestionnaireTextbox_Click;
+        }
+
+        private void Editprofilebutton_Click(object sender, RoutedEventArgs e)
+        {
+            HideAll();
             this.EditScreenViewer.Visibility = Visibility.Visible;
         }
 

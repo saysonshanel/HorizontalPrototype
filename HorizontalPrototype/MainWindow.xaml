@@ -778,6 +778,96 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle27" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image x:Name="image" Source="noun_1333609_cc.png"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle28" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image x:Name="image" Source="noun_1073268_cc.png"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle29" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image x:Name="image" Cursor="Hand" Source="noun_1296944_cc.png"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle30" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image x:Name="image" Source="noun_168484_cc.png"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle31" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Image x:Name="image2" Source="noun_304212_cc.png"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -908,8 +998,8 @@
             <TextBox x:Name="SignupEmailTextbox" Height="40.667" Canvas.Left="84.5" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="415.334" Width="205.334" TextAlignment="Left"/>
 
         </Canvas>
-        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388">
-            <Canvas x:Name="EditScreenCanvas" Height="1078.763" Width="367">
+        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388" d:IsHidden="True">
+            <Canvas x:Name="EditScreenCanvas" Height="1115.763" Width="367">
                 <TextBlock x:Name="textBlock10" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
                 <Button x:Name="ChangePhotoButton" Content="Button" Height="39.099" Canvas.Left="99.385" Style="{DynamicResource ButtonStyle8}" Canvas.Top="301.401" Width="167.999" Cursor="Hand"/>
                 <TextBlock x:Name="textBlock12" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Username" Canvas.Top="406.952" Width="78.793" Foreground="Black" FontSize="16"/>
@@ -919,7 +1009,7 @@
                 <TextBlock x:Name="textBlock13_Copy" Height="27.864" Canvas.Left="6.167" TextWrapping="Wrap" Text="Private information" Canvas.Top="859.248" Width="251.882" FontWeight="Bold" Foreground="Black" FontSize="18"/>
                 <TextBlock x:Name="textBlock12_Copy1" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="E-mail Address" Canvas.Top="892.112" Width="126.152" Foreground="Black" FontSize="16"/>
                 <TextBlock x:Name="textBlock12_Copy4" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Gender" Canvas.Top="941.951" Width="126.152" Foreground="Black" FontSize="16"/>
-                <Button x:Name="SaveButton" Content="Button" Height="48.667" Canvas.Left="128.668" Style="{DynamicResource ButtonStyle9}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
+                <Button x:Name="SaveButton" Content="Button" Height="48.667" Canvas.Left="188.668" Style="{DynamicResource ButtonStyle9}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
                 <TextBox x:Name="NameTextbox" Height="18.667" Canvas.Left="3.496" TextWrapping="Wrap" Text="Name" Canvas.Top="380.117" Width="348.337" BorderBrush="{x:Null}" Background="{x:Null}" Opacity="0.25" FontSize="14"/>
                 <TextBlock x:Name="textBlock12_Copy5" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Full Name" Canvas.Top="357.619" Width="78.793" Foreground="Black" FontSize="16"/>
                 <TextBox x:Name="UsernameTextbox1" Height="18.667" TextWrapping="Wrap" Text="Username" Canvas.Top="431.284" Width="348.332" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="3.501" Opacity="0.25" FontSize="14"/>
@@ -937,8 +1027,7 @@
                         <EllipseGeometry Center ="120, 120" RadiusX="110" RadiusY="110" />
                     </Image.Clip>
                 </Image>
-                <Button x:Name="QuizButton" Content="Questionarres" Height="48.667" Canvas.Left="254.5" Style="{DynamicResource ButtonStyle25}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
-                <Button x:Name="LogoutButton" Content="Questionarres" Height="48.667" Canvas.Left="10" Style="{DynamicResource ButtonStyle26}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
+                <Button x:Name="LogoutButton" Content="Questionarres" Height="48.667" Canvas.Left="70" Style="{DynamicResource ButtonStyle26}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
 
             </Canvas>
         </ScrollViewer>
@@ -947,13 +1036,6 @@
                 <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
                     <Ellipse x:Name="ProfileImage" Height="141" Stroke="Black" Width="137.146" Opacity="0.35" Fill="White" Canvas.Left="20.855" Canvas.Top="42"/>
-                    <Grid Height="180" Canvas.Left="229.501" Canvas.Top="35" Width="88">
-                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
-                    </Grid>
                     <UniformGrid x:Name="Gallery" Height="173" Canvas.Top="220" Width="357">
                         <Image Margin="0,0,0,-86.5"/>
                         <Image Margin="0,0,0,-86.5"/>
@@ -970,8 +1052,18 @@
                         </TextBlock.Foreground>
                     </TextBlock>
                     <TextBlock x:Name="SelfDesctiption" Height="212" Canvas.Left="10" TextWrapping="Wrap" Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum." Canvas.Top="436.67" Width="234" FontFamily="Georgia" FontSize="14" TextAlignment="Center"/>
+                    <Button x:Name="editprofilebutton" Content="Button" Height="65.5" Canvas.Left="246.323" Style="{DynamicResource ButtonStyle27}" Canvas.Top="57.333" Width="64" Cursor="Hand"/>
+                    <Button x:Name="questionnairebutton" Content="Button" Height="54" Canvas.Left="245.323" Style="{DynamicResource ButtonStyle28}" Canvas.Top="128.833" Width="65" Cursor="Hand"/>
+                    <Grid Height="180" Canvas.Left="256" Canvas.Top="472.67" Width="88">
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="68"><Run Text="Interest"/></TextBlock>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,84,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,121,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                        <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,159,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
+                    </Grid>
                 </Canvas>
             </ScrollViewer>
+            <Rectangle Fill="White" Height="19.25" Stroke="White" Width="113.5"/>
         </Canvas>
         <Canvas x:Name="QuizMainScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <Button x:Name="Quiz1Button" Content="New Comer" Height="50" Canvas.Left="94" Canvas.Top="180" Width="179" FontFamily="Georgia" FontWeight="Bold" FontSize="16"/>
@@ -1304,7 +1396,7 @@
             <MenuItem x:Name="BackTextbox" Header="Back" Height="56" Width="113"/>
         </Menu>
         <Button x:Name="HamburgerBack" Content="Button" Height="636" Width="254" Opacity="0" d:IsHidden="True"/>
-        <Menu x:Name="BottomMenu" Width="367" Height="40" RenderTransformOrigin="0.5,0.5" Canvas.Top="596">
+        <Menu x:Name="BottomMenu" Width="367" Height="74" RenderTransformOrigin="0.5,0.5" Canvas.Top="562">
             <Menu.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1313,9 +1405,11 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Menu.RenderTransform>
-            <MenuItem x:Name="MainFeedTextbox1" Header="Main Feed" Height="40" Width="122"/>
-            <MenuItem x:Name="ViewMatchesTextbox1" Header="View Matches" Height="40" Width="122"/>
-            <MenuItem x:Name="EditProfileTextbox1" Header="Edit Profile" Height="40" Width="122"/>
+            <Button x:Name="matchesbutton" Content="Button" Height="55.696" Style="{DynamicResource ButtonStyle30}" Width="81.333"/>
+            <Button x:Name="homebutton" Content="Button" Height="74" Style="{DynamicResource ButtonStyle31}" Width="101.333"/>
+            <Button x:Name="profilebutton" Height="64" Style="{DynamicResource ButtonStyle29}" Width="94.896">
+                <Image x:Name="image1" Height="33.667" Width="44.667"/>
+            </Button>
         </Menu>
 
     </Canvas>
