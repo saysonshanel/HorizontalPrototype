@@ -998,8 +998,8 @@
             <TextBox x:Name="SignupEmailTextbox" Height="40.667" Canvas.Left="84.5" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="415.334" Width="205.334" TextAlignment="Left"/>
 
         </Canvas>
-        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388" d:IsHidden="True">
-            <Canvas x:Name="EditScreenCanvas" Height="1115.763" Width="367">
+        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388">
+            <Canvas x:Name="EditScreenCanvas" Height="1141.263" Width="367">
                 <TextBlock x:Name="textBlock10" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
                 <Button x:Name="ChangePhotoButton" Content="Button" Height="39.099" Canvas.Left="99.385" Style="{DynamicResource ButtonStyle8}" Canvas.Top="301.401" Width="167.999" Cursor="Hand"/>
                 <TextBlock x:Name="textBlock12" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Username" Canvas.Top="406.952" Width="78.793" Foreground="Black" FontSize="16"/>
@@ -1396,7 +1396,19 @@
             <MenuItem x:Name="BackTextbox" Header="Back" Height="56" Width="113"/>
         </Menu>
         <Button x:Name="HamburgerBack" Content="Button" Height="636" Width="254" Opacity="0" d:IsHidden="True"/>
-        <Menu x:Name="BottomMenu" Width="367" Height="74" RenderTransformOrigin="0.5,0.5" Canvas.Top="562">
+        <Menu x:Name="BottomMenu" Width="367" Height="85.666" RenderTransformOrigin="0.5,0.5" Canvas.Top="550.334" Foreground="{x:Null}" Opacity="0.95">
+            <Menu.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFB4B1B1" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </Menu.Background>
+            <Menu.OpacityMask>
+                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
+                    <GradientStop Color="Gray"/>
+                    <GradientStop Color="Black" Offset="1"/>
+                </LinearGradientBrush>
+            </Menu.OpacityMask>
             <Menu.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1405,9 +1417,9 @@
                     <TranslateTransform/>
                 </TransformGroup>
             </Menu.RenderTransform>
-            <Button x:Name="matchesbutton" Content="Button" Height="55.696" Style="{DynamicResource ButtonStyle30}" Width="81.333"/>
-            <Button x:Name="homebutton" Content="Button" Height="74" Style="{DynamicResource ButtonStyle31}" Width="101.333"/>
-            <Button x:Name="profilebutton" Height="64" Style="{DynamicResource ButtonStyle29}" Width="94.896">
+            <Button x:Name="matchesbutton" Content="Button" Height="56.916" Style="{DynamicResource ButtonStyle30}" Width="100.728"/>
+            <Button x:Name="homebutton" Content="Button" Height="75.666" Style="{DynamicResource ButtonStyle31}" Width="101.367"/>
+            <Button x:Name="profilebutton" Height="77.643" Style="{DynamicResource ButtonStyle29}" Width="119.062">
                 <Image x:Name="image1" Height="33.667" Width="44.667"/>
             </Button>
         </Menu>

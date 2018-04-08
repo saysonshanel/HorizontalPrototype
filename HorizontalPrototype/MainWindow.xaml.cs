@@ -348,6 +348,7 @@ namespace HorizontalPrototype
         {
             HideAll();
             this.EditScreenViewer.Visibility = Visibility.Visible;
+            this.BottomMenu.Visibility = Visibility.Visible;
         }
 
         private void ViewMatchesTextbox_Click(object sender, RoutedEventArgs e)
