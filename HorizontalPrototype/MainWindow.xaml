@@ -182,7 +182,7 @@
                 <Setter.Value>
                     <ControlTemplate TargetType="{x:Type Button}">
                         <Grid>
-                            <Ellipse Fill="#FFF4F4F5" Opacity="0.5"/>
+                            <Ellipse Fill="#FF959292" Opacity="0.5"/>
                         </Grid>
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsFocused" Value="True"/>
@@ -868,6 +868,42 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Style x:Key="ButtonStyle32" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="White" Opacity="0.5"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+        <Style x:Key="ButtonStyle33" TargetType="{x:Type Button}">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="{x:Type Button}">
+                        <Grid>
+                            <Ellipse Fill="White" Opacity="0.5"/>
+                        </Grid>
+                        <ControlTemplate.Triggers>
+                            <Trigger Property="IsFocused" Value="True"/>
+                            <Trigger Property="IsDefaulted" Value="True"/>
+                            <Trigger Property="IsMouseOver" Value="True"/>
+                            <Trigger Property="IsPressed" Value="True"/>
+                            <Trigger Property="IsEnabled" Value="False"/>
+                        </ControlTemplate.Triggers>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -998,9 +1034,8 @@
             <TextBox x:Name="SignupEmailTextbox" Height="40.667" Canvas.Left="84.5" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="415.334" Width="205.334" TextAlignment="Left"/>
 
         </Canvas>
-        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388">
+        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388" d:IsHidden="True">
             <Canvas x:Name="EditScreenCanvas" Height="1141.263" Width="367">
-                <TextBlock x:Name="textBlock10" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
                 <Button x:Name="ChangePhotoButton" Content="Button" Height="39.099" Canvas.Left="99.385" Style="{DynamicResource ButtonStyle8}" Canvas.Top="301.401" Width="167.999" Cursor="Hand"/>
                 <TextBlock x:Name="textBlock12" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Username" Canvas.Top="406.952" Width="78.793" Foreground="Black" FontSize="16"/>
                 <TextBlock x:Name="textBlock12_Copy" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Interests" Canvas.Top="456.951" Width="59.398" Foreground="Black" FontSize="16"/>
@@ -1028,6 +1063,7 @@
                     </Image.Clip>
                 </Image>
                 <Button x:Name="LogoutButton" Content="Questionarres" Height="48.667" Canvas.Left="70" Style="{DynamicResource ButtonStyle26}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
+                <TextBlock x:Name="LogoText_Copy6" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
 
             </Canvas>
         </ScrollViewer>
@@ -1070,8 +1106,10 @@
             <Button x:Name="Quiz2Button" Content="Animal Type Test" Height="50" Canvas.Left="94" Canvas.Top="250" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
             <Button x:Name="Quiz3Button" Content="Archetype Test" Height="50" Canvas.Left="94" Canvas.Top="320" Width="179" FontWeight="Bold" FontFamily="Georgia" FontSize="16"/>
             <Button x:Name="Quiz4Button" Content="Soul Age Test" Height="50" Canvas.Left="94" Canvas.Top="390" Width="179" FontSize="16" FontFamily="Georgia" FontWeight="Bold"/>
+            <Button x:Name="BackButton1_Copy1" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle32}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.657" Canvas.Top="24.664"/>
         </Canvas>
-        <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
+        <Canvas x:Name="QuizQuestionScreen" Height="636" Width="367" Background="#FFE8BD5F">
             <TextBlock x:Name="QuestionText" Height="65" TextWrapping="Wrap" Canvas.Top="124" Width="347" FontFamily="Georgia" FontSize="14" Canvas.Left="10" TextAlignment="Center" Foreground="#FF494848"><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit,, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua?"/><LineBreak/><Run/></TextBlock>
             <Button x:Name="Answer4Button" Content="Ab illo inventore veritatis&#xD;&#xA;" Height="42" Canvas.Left="31" Canvas.Top="428" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
             <Button x:Name="Answer1Button" Content="voluptatem sequi nesciunt" Height="42" Canvas.Left="31" Canvas.Top="248" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
@@ -1084,7 +1122,7 @@
             </Canvas>
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.768" Canvas.Top="24.338"/>
             <TextBlock x:Name="textBlock17" Height="43.333" Canvas.Left="221.67" TextWrapping="Wrap" Text="swipe to answer" Canvas.Top="206" Width="118" FontWeight="Bold" Foreground="White" Opacity="0.75"/>
-            <Button x:Name="BackButton1_Copy" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Button x:Name="BackButton1_Copy" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle33}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
             <Button x:Name="QuizSaveButton" Content="Button" Height="42" Canvas.Left="142.168" Style="{DynamicResource QuizSaveButton}" Canvas.Top="512.167" Width="92.666" Cursor="Hand"/>
         </Canvas>
         <Canvas x:Name="ViewAllMatches" Height="636" Width="367" d:IsHidden="True">
@@ -1104,6 +1142,9 @@
             <TextBlock Height="50" Canvas.Left="113.834" TextWrapping="Wrap" Text="[Name of match]" Canvas.Top="291" Width="161" FontSize="20"/>
             <Button x:Name="ChatButton" Content="Button" Height="100" Canvas.Left="42" Style="{DynamicResource ButtonStyle13}" Canvas.Top="417.5" Width="100"/>
             <Button x:Name="LocationButton" Content="Button" Height="100" Canvas.Left="235.834" Style="{DynamicResource ButtonStyle14}" Canvas.Top="417.5" Width="100"/>
+            <Button x:Name="BackButton1_Copy2" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.768" Canvas.Top="24.338"/>
+            <TextBlock x:Name="LogoText_Copy" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="MessagingScreen" Height="636" Width="367" d:IsHidden="True">
             <Ellipse Height="100" Canvas.Left="10" Stroke="Black" Canvas.Top="10" Width="100">
@@ -1111,11 +1152,11 @@
                     <ImageBrush ImageSource="TestFace.png"/>
                 </Ellipse.Fill>
             </Ellipse>
-            <ScrollViewer x:Name="MessageScroller" Height="463.5" Canvas.Top="115" Width="367">
+            <ScrollViewer x:Name="MessageScroller" Height="463.5" Canvas.Top="115" Width="387">
                 <Grid x:Name="Messages" Height="463.5" Width="351">
                     <Grid x:Name="TestMessage" Margin="10,10,83.5,402.5">
-                        <Rectangle HorizontalAlignment="Left" Height="51" Stroke="Black" VerticalAlignment="Top" Width="257.5" Fill="#7023FF00" RadiusX="20" RadiusY="10"/>
-                        <TextBlock HorizontalAlignment="Left" Height="51" Margin="10,0,0,0" TextWrapping="Wrap" Text="Hello, this is a test message. If you are reading this, contact technical support immediately." VerticalAlignment="Top" Width="237.5"/>
+                        <Rectangle HorizontalAlignment="Left" Height="51" Stroke="Black" VerticalAlignment="Top" Width="257.5" Fill="#7023FF00" RadiusX="20" RadiusY="10" Margin="-7.337,0,0,0"/>
+                        <TextBlock HorizontalAlignment="Left" Height="51" Margin="2.663,0,0,0" TextWrapping="Wrap" Text="Hello, this is a test message. If you are reading this, contact technical support immediately." VerticalAlignment="Top" Width="237.5"/>
                     </Grid>
                     <Grid x:Name="TestMessage2" Margin="210.5,76.5,5.5,365">
                         <Rectangle HorizontalAlignment="Left" Height="21" Stroke="Black" VerticalAlignment="Top" Width="134" Fill="#520000FF" RadiusX="10" RadiusY="5"/>
@@ -1123,14 +1164,17 @@
                     </Grid>
                 </Grid>
             </ScrollViewer>
-            <Label Height="41" Canvas.Left="10" Style="{DynamicResource LabelStyle1}" Canvas.Top="585" Width="306"/>
-            <Button x:Name="SendButton" Content="Button" Height="41" Canvas.Left="321" Style="{DynamicResource ButtonStyle15}" Canvas.Top="585" Width="41"/>
-            <TextBlock Height="37.5" Canvas.Left="128" TextWrapping="Wrap" Text="Name" Canvas.Top="31.5" Width="132" FontSize="20"/>
+            <Label Height="41" Canvas.Left="10" Style="{DynamicResource LabelStyle1}" Canvas.Top="577.663" Width="288.335"/>
+            <Button x:Name="SendButton" Content="Button" Height="41" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle15}" Canvas.Top="578.33" Width="41"/>
+            <TextBlock Height="37.5" Canvas.Left="129" TextWrapping="Wrap" Text="Name" Canvas.Top="47" Width="132" FontSize="20"/>
             <Button x:Name="BackToViewProfile" Content="Button" Height="100" Canvas.Left="10" Canvas.Top="10" Width="100" Opacity="0"/>
+            <Button x:Name="BackButton1_Copy3" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.768" Canvas.Top="24.338"/>
+            <TextBlock x:Name="LogoText_Copy1" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Grid x:Name="MatchInitScreen" Height="636" Width="367" d:IsHidden="True">
             <Canvas x:Name="Logo1_Copy" Margin="124.492,50,62,476.216">
-                <Path x:Name="HeartLogo_Copy2" Fill="#FFE64646" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="109.784" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Width="106.099">
+                <Path x:Name="HeartLogo_Copy2" Fill="#FFE64646" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="109.784" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Width="106.099" Canvas.Left="26" Canvas.Top="44">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1140,7 +1184,7 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <Path x:Name="HeartLogo_Copy3" Fill="#FF494848" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="67.646" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Canvas.Left="53.024" Width="65.375" Canvas.Top="33.546">
+                <Path x:Name="HeartLogo_Copy3" Fill="#FF494848" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="67.646" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Canvas.Left="79.024" Width="65.375" Canvas.Top="77.546">
                     <Path.RenderTransform>
                         <TransformGroup>
                             <ScaleTransform/>
@@ -1150,7 +1194,6 @@
                         </TransformGroup>
                     </Path.RenderTransform>
                 </Path>
-                <TextBlock x:Name="textBlock18" Height="27" Canvas.Left="85.008" TextWrapping="Wrap" Canvas.Top="7.5" Width="95.5" FontWeight="Bold" FontSize="20"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
             </Canvas>
 
             <Grid Margin="95.758,180,87.747,274.5" Visibility="Hidden">
@@ -1190,13 +1233,14 @@
             <ScrollViewer HorizontalAlignment="Left" Height="200" Margin="0,180,0,0" Style="{DynamicResource SimpleScrollViewer}" VerticalAlignment="Top" Width="367" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled" CanContentScroll="True" d:IsHidden="True" Visibility="Hidden">
                 <UniformGrid x:Name="AddMatches" Height="200" Rows="1"/>
             </ScrollViewer>
-            <Button x:Name="LeftButton1" Content="Button" HorizontalAlignment="Left" Height="88.5" Margin="34.404,0,0,72" Style="{DynamicResource ButtonStyle23}" VerticalAlignment="Bottom" Width="119.692"/>
-            <Button x:Name="RightButton1" Content="Button" HorizontalAlignment="Right" Height="88.5" Margin="0,0,34.904,72" Style="{DynamicResource ButtonStyle24}" VerticalAlignment="Bottom" Width="119.692"/>
+            <Button x:Name="LeftButton1" Content="Button" HorizontalAlignment="Left" Height="88.5" Margin="34.404,0,0,111" Style="{DynamicResource ButtonStyle23}" VerticalAlignment="Bottom" Width="119.692"/>
+            <Button x:Name="RightButton1" Content="Button" HorizontalAlignment="Right" Height="88.5" Margin="0,0,34.904,111" Style="{DynamicResource ButtonStyle24}" VerticalAlignment="Bottom" Width="119.692"/>
             <Grid x:Name="Carousel" HorizontalAlignment="Left" Height="245" Margin="0,164.784,0,0" VerticalAlignment="Top" Width="367" Grid.Row="1" Grid.RowSpan="5">
                 <local:ViewMatch HorizontalAlignment="Left" Height="245" Margin="96,0,0,0" VerticalAlignment="Top" Width="183.5" Visibility="Hidden"/>
                 <local:ViewMatch HorizontalAlignment="Left" Height="129.5" Margin="0,40,0,0" VerticalAlignment="Top" Width="91" Visibility="Hidden"/>
                 <local:ViewMatch HorizontalAlignment="Left" Height="100" Margin="96,32.48,0,0" VerticalAlignment="Top" Width="75" Visibility="Hidden"/>
             </Grid>
+            <TextBlock x:Name="LogoText_Copy2" Height="32" TextWrapping="Wrap" FontWeight="Bold" FontSize="20" Margin="158.001,10,145.499,0" VerticalAlignment="Top"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
 
         </Grid>
         <Canvas x:Name="SwipeUp1" Height="636" Width="367" d:IsHidden="True">
@@ -1251,7 +1295,7 @@
                 <Button x:Name="UndoButton" Content="Button" Height="51.333" Style="{DynamicResource ButtonStyle18}" Width="95.333" Canvas.Top="436.334" Canvas.Left="130.833"/>
 
             </Canvas>
-            <TextBlock x:Name="textBlock10_Copy2" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
+            <TextBlock x:Name="LogoText_Copy3" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="MeetingScreen" Height="636" Width="367" d:IsHidden="True">
             <Ellipse x:Name="YourMatchPic" Height="100" Canvas.Left="42.5" Stroke="Black" Canvas.Top="157.5" Width="100">
@@ -1340,6 +1384,9 @@
             <Button x:Name="ConfirmationButton" Content="Confirm" Height="37" Canvas.Left="114" Canvas.Top="573" Width="149" FontSize="18" Background="#FFC7C7C7"/>
             <TextBox x:Name="LocationText" Height="46" Canvas.Left="153" TextWrapping="Wrap" Text="Starbucks" Canvas.Top="365.744" Width="165" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
             <TextBox x:Name="TimeText" Height="54.333" Canvas.Left="153" TextWrapping="Wrap" Text="Aprill 1 2018&#xD;&#xA;3:00 pm" Canvas.Top="475.667" Width="165" FontSize="18" Background="{x:Null}" BorderBrush="{x:Null}"/>
+            <Button x:Name="BackButton1_Copy4" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.768" Canvas.Top="24.338"/>
+            <TextBlock x:Name="LogoText_Copy4" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
             <Rectangle Fill="#FF494848" Height="241" Canvas.Left="10" Stroke="Black" Canvas.Top="80" Width="336" RadiusX="10" RadiusY="10" Opacity="0.25"/>
@@ -1369,13 +1416,13 @@
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,47,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
                 <TextBlock Height="32" Margin="78,47,106,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top"/>
             </Grid>
-            <TextBlock x:Name="textBlock10_Copy3" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="161.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
             <TextBlock x:Name="textBlock19" Height="105.5" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="148" Width="310"><Run Text="Short Description: "/><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure non proident, sunt in culpa qui officia deserunt mollit."/><LineBreak/><Run/></TextBlock>
             <TextBlock x:Name="textBlock21" Height="27.333" Canvas.Left="25.5" TextWrapping="Wrap" Text="swipe for not interested" Canvas.Top="496.167" Width="154" Foreground="#FFE8BD5F"/>
             <TextBlock x:Name="textBlock21_Copy" Height="27.333" Canvas.Left="213.671" TextWrapping="Wrap" Text="swipe for interested" Canvas.Top="496.167" Width="154" Foreground="#FFE8BD5F"/>
             <Button x:Name="SignifierDown" Content="Button" Height="44.5" Canvas.Left="147.808" Style="{DynamicResource ButtonStyle21}" Canvas.Top="426" Width="58.692" Cursor="Hand"/>
             <TextBlock x:Name="textBlock22" Height="39.5" Canvas.Left="143.808" TextWrapping="Wrap" Canvas.Top="465.5" Width="66.5" Foreground="#FFE64646" FontSize="10" TextAlignment="Center"><Run Text="swipe down"/><LineBreak/><Run Text="to remove"/></TextBlock>
             <Button x:Name="SwipeUpButton" Content="Button" Height="22" Canvas.Left="25.5" Style="{DynamicResource ButtonStyle22}" Canvas.Top="326" Width="154" Opacity="0.5" Cursor="Hand"/>
+            <TextBlock x:Name="LogoText_Copy5" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
         <Menu x:Name="HamburgerMenu" Canvas.Left="254" Width="113" Height="636" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
@@ -1396,7 +1443,7 @@
             <MenuItem x:Name="BackTextbox" Header="Back" Height="56" Width="113"/>
         </Menu>
         <Button x:Name="HamburgerBack" Content="Button" Height="636" Width="254" Opacity="0" d:IsHidden="True"/>
-        <Menu x:Name="BottomMenu" Width="367" Height="85.666" RenderTransformOrigin="0.5,0.5" Canvas.Top="550.334" Foreground="{x:Null}" Opacity="0.95">
+        <Menu x:Name="BottomMenu" Width="367" Height="85.666" RenderTransformOrigin="0.5,0.5" Canvas.Top="550.334" Foreground="{x:Null}" Opacity="0.95" d:IsHidden="True">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFB4B1B1" Offset="1"/>
