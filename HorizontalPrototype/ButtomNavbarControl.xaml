@@ -1,0 +1,19 @@
+﻿<UserControl x:Class="HorizontalPrototype.ButtomNavbarControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:HorizontalPrototype"
+             mc:Ignorable="d" 
+             d:DesignHeight="60" d:DesignWidth="367">
+    <Grid>
+        <Menu x:Name="ButtomNavbar" Background="Black" Padding="7,0,0,0">
+            <MenuItem x:Name="Navbutton1" Header="Main&#xD;&#xA;Feed" Height="59" Width="70" Background="{x:Null}" FontFamily="Georgia" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <MenuItem x:Name="Navbutton2" Header="View&#xD;&#xA;Match" Height="59" Width="70" Background="{x:Null}" FontFamily="Georgia" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <MenuItem x:Name="Navbutton3" Header="Me" Height="59" Width="70" Background="{x:Null}" FontFamily="Georgia" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <MenuItem x:Name="Navbutton4" Header="Quiz" Height="59" Width="70" Background="{x:Null}" FontFamily="Georgia" FontSize="16" FontWeight="Bold" Foreground="White"/>
+            <MenuItem x:Name="Navbutton5" Header="Setting" Height="59" Width="70" Background="{x:Null}" FontFamily="Georgia" FontSize="16" FontWeight="Bold" Foreground="White"/>
+        </Menu>
+
+    </Grid>
+</UserControl>

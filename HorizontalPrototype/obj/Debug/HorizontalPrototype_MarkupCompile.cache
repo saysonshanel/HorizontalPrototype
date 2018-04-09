@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Shanel\Documents\Visual Studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\
 HorizontalPrototype
 none
 false
 DEBUG;TRACE
-C:\Users\Shanel\Documents\Visual Studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\App.xaml
-61807544698
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype-master\HorizontalPrototype\App.xaml
+61200873136
 
-9-968559074
+9984458618
 13738642453
-MainWindow.xaml;MatchInit.xaml;Simple Styles.xaml;SwipeUp.xaml;ViewMatch.xaml;ViewMatchesControl.xaml;
+ButtomNavbarControl.xaml;MainWindow.xaml;MatchInit.xaml;Simple Styles.xaml;SwipeUp.xaml;ViewMatch.xaml;
 
-True
+False
 
