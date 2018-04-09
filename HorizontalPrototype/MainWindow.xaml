@@ -971,65 +971,19 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Storyboard x:Key="handmovement">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-20.667"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-61.334"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-98.001"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-60"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-52"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="-20.667"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock21">
-                <EasingDoubleKeyFrame KeyTime="0" Value="3.333"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock21">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-64"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="textBlock21_Copy">
-                <EasingDoubleKeyFrame KeyTime="0" Value="0.667"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="textBlock21_Copy">
-                <EasingDoubleKeyFrame KeyTime="0" Value="-63.333"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
         <Storyboard x:Key="tutorialanimation" RepeatBehavior="2x">
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="image">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="-41"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="-71.6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="45"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="93"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="58"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="-2"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-75"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="82"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="-2"/>
             </DoubleAnimationUsingKeyFrames>
             <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="image">
                 <EasingDoubleKeyFrame KeyTime="0" Value="0"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="6"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.8" Value="42"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="8"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2" Value="57"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.4" Value="30"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:2.8" Value="0"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:0.7" Value="-1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:1.6" Value="1"/>
+                <EasingDoubleKeyFrame KeyTime="0:0:2.3" Value="0"/>
             </DoubleAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="image">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.6" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.4" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.8" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock21_Copy">
-                <DiscreteObjectKeyFrame KeyTime="0" Value="{x:Static Visibility.Hidden}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="{x:Static Visibility.Visible}"/>
-                <DiscreteObjectKeyFrame KeyTime="0:0:2.8" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
-            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="textBlock21">
-                <DiscreteObjectKeyFrame KeyTime="0:0:1.2" Value="{x:Static Visibility.Hidden}"/>
-            </ObjectAnimationUsingKeyFrames>
         </Storyboard>
     </Window.Resources>
     <Window.Triggers>
@@ -1037,7 +991,7 @@
             <BeginStoryboard x:Name="SplashAppear_BeginStoryboard" Storyboard="{StaticResource SplashAppear}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="LoginButton">
-            <BeginStoryboard Storyboard="{StaticResource SplashDisappear}"/>
+            <BeginStoryboard x:Name="SplashDisappear_BeginStoryboard" Storyboard="{StaticResource SplashDisappear}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="SignupButton">
             <BeginStoryboard x:Name="SplashDisappear1_BeginStoryboard" Storyboard="{StaticResource SplashDisappear1}"/>
@@ -1060,8 +1014,7 @@
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
             <BeginStoryboard x:Name="animation1_BeginStoryboard" Storyboard="{StaticResource animation1}"/>
             <BeginStoryboard Storyboard="{StaticResource bounce}"/>
-            <BeginStoryboard Storyboard="{StaticResource handmovement}"/>
-            <BeginStoryboard x:Name="tutorialanimation_BeginStoryboard" Storyboard="{StaticResource tutorialanimation}"/>
+            <BeginStoryboard Storyboard="{StaticResource tutorialanimation}"/>
         </EventTrigger>
     </Window.Triggers>
     <Canvas x:Name="Canvas">
@@ -1567,7 +1520,7 @@
                 <TextBlock Height="32" Margin="78,47,106,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top"/>
             </Grid>
             <TextBlock x:Name="textBlock19" Height="105.5" Canvas.Left="22" TextWrapping="Wrap" Canvas.Top="148" Width="310"><Run Text="Short Description: "/><Run Text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure non proident, sunt in culpa qui officia deserunt mollit."/><LineBreak/><Run/></TextBlock>
-            <TextBlock x:Name="textBlock21" Height="27.333" Canvas.Left="24.5" TextWrapping="Wrap" Text="swipe for not interested" Canvas.Top="492.05" Width="154" Foreground="#FFE8BD5F" RenderTransformOrigin="0.5,0.5">
+            <TextBlock x:Name="textBlock21" Height="27.333" Canvas.Left="52.5" TextWrapping="Wrap" Text="not interested" Canvas.Top="492.05" Width="154" Foreground="#FFE8BD5F" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
@@ -1577,7 +1530,7 @@
                     </TransformGroup>
                 </TextBlock.RenderTransform>
             </TextBlock>
-            <TextBlock x:Name="textBlock21_Copy" Height="27.333" Canvas.Left="227.671" TextWrapping="Wrap" Text="swipe for interested" Canvas.Top="492.05" Width="154" Foreground="#FFE8BD5F" RenderTransformOrigin="0.5,0.5">
+            <TextBlock x:Name="textBlock21_Copy" Height="27.333" Canvas.Left="237.671" TextWrapping="Wrap" Text="interested" Canvas.Top="492.05" Width="154" Foreground="#FFE8BD5F" RenderTransformOrigin="0.5,0.5">
                 <TextBlock.RenderTransform>
                     <TransformGroup>
                         <ScaleTransform/>
