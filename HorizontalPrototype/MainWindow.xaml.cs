@@ -120,6 +120,7 @@ namespace HorizontalPrototype
         private void SignupButtonComplete(object sender, EventArgs e)
         {
             //hide other screens
+            this.FeedbackMessage.Visibility = Visibility.Hidden;
             this.LoginScreenCanvas.Visibility = Visibility.Hidden;
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
@@ -130,7 +131,7 @@ namespace HorizontalPrototype
 
             //when signup button is clicked, direct to edit profile
             //this.RegisterSignupButton.Click += ToLoginScreen;
-            this.RegisterSignupButton.Click += CheckSignupFieldsOnClicked;
+            this.RegisterSignupButton.PreviewMouseDown += CheckSignupFieldsOnClicked;
             //otherwise back button is clicked, direct to main screen
             this.BackButton1.Click += OnBackButtonClicked;
 
@@ -138,7 +139,7 @@ namespace HorizontalPrototype
 
         private void CheckSignupFieldsOnClicked(object sender, RoutedEventArgs e)
         {
-
+            this.FeedbackMessage.Visibility = Visibility.Visible;
             if(SignupPasswordTextbox.Password != SignupPwRepeatTextbox.Password)
             {
                 MessageBox.Show("Passwords do not match.");
@@ -209,6 +210,8 @@ namespace HorizontalPrototype
         private void ToLoginScreen(object sender, EventArgs e)
         {
             //hide the main screen
+            HideAll();
+            this.LoginFeedbackMessage.Visibility = Visibility.Hidden;
             this.MainScreenCanvas.Visibility = Visibility.Hidden;
             this.SignupScreenCanvas.Visibility = Visibility.Hidden;
             this.LoginUsernameErrorCanvas.Visibility = Visibility.Hidden;
@@ -218,7 +221,7 @@ namespace HorizontalPrototype
 
             //when login button is clicked, move to the edit profile screen
             //  this.LoginScreenLoginButton.Click += ToEditProfileScreen;
-            this.LoginScreenLoginButton.Click += CheckLoginScreenFieldsOnClicked;
+            this.LoginScreenLoginButton.PreviewMouseDown += CheckLoginScreenFieldsOnClicked;
 
             //otherwise, if back button is clicked, go back to main screen
             this.BackButton.Click += OnBackButtonClicked;
@@ -227,18 +230,19 @@ namespace HorizontalPrototype
 
         private void CheckLoginScreenFieldsOnClicked(object sender, RoutedEventArgs e)
         {
-            if((this.UsernameTextbox.Text == string.Empty) && (this.PasswordBox.Password == string.Empty))
+            this.LoginFeedbackMessage.Visibility = Visibility.Visible;
+            if ((this.UsernameTextbox.Text == string.Empty) && (this.PasswordBox.Password == string.Empty))
             {
                 this.LoginUsernameErrorCanvas.Visibility = Visibility.Visible;
                 this.LoginPasswordErrorCanvas.Visibility = Visibility.Visible;
 
             }
-            else if(this.UsernameTextbox.Text == string.Empty)
+            else if (this.UsernameTextbox.Text == string.Empty)
             {
                 this.LoginPasswordErrorCanvas.Visibility = Visibility.Hidden;
 
                 this.LoginUsernameErrorCanvas.Visibility = Visibility.Visible;
-            }else if(this.PasswordBox.Password == string.Empty)
+            } else if (this.PasswordBox.Password == string.Empty)
             {
                 this.LoginUsernameErrorCanvas.Visibility = Visibility.Hidden;
                 this.LoginPasswordErrorCanvas.Visibility = Visibility.Visible;
@@ -258,7 +262,7 @@ namespace HorizontalPrototype
            // this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
 
             this.SaveButton.Click += EditProfileTextbox_Click;
-            this.LogoutButton.Click += LogoutTextbox_Click;
+            this.LogoutButton.Click += ToLoginScreen;
             this.ChangePhotoButton.Click += ChangePhotoButton_Click;
         }
 
