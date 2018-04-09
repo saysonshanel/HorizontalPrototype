@@ -87,3 +87,5 @@ C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\Horizo
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\image.g.cs
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\image.baml

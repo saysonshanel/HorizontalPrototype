@@ -337,6 +337,9 @@ namespace HorizontalPrototype
         private void QuizbuttonOnClick(object sender, RoutedEventArgs e)
         {
             HideAll();
+
+            Storyboard quizsignifiersb = this.FindResource("animation1") as Storyboard;
+            quizsignifiersb.Begin();
             this.QuizQuestionScreen.Visibility = Visibility.Visible;
             this.QuizSaveButton.Click += QuestionnaireTextbox_Click;
             this.BackButton1_Copy.Click += QuestionnaireTextbox_Click;
@@ -370,6 +373,8 @@ namespace HorizontalPrototype
         private void MainFeedTextbox_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
+            Storyboard bouncesb = this.FindResource("bounce") as Storyboard;
+            bouncesb.Begin();
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.MainFeedCanvas.Visibility = Visibility.Visible;
