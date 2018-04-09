@@ -113,3 +113,5 @@ C:\Users\xiangyu.han\source\repos\HorizontalPrototype-master\HorizontalPrototype
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\ButtomNavbarControl.g.cs
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\ButtomNavbarControl.baml
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype-master\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\ButtomNavbarControl.g.cs
+C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\ButtomNavbarControl.baml
