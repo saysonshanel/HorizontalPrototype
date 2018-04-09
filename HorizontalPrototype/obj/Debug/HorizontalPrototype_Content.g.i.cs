@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("noun_304212_cc.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("selena.png")]
 
 

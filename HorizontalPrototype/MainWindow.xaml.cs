@@ -377,8 +377,12 @@ namespace HorizontalPrototype
         private void MainFeedTextbox_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
-            Storyboard bouncesb = this.FindResource("bounce") as Storyboard;
-            bouncesb.Begin();
+          //  Storyboard bouncesb = this.FindResource("bounce") as Storyboard;
+           // bouncesb.Begin();
+
+            Storyboard animation = this.FindResource("tutorialanimation") as Storyboard;
+            animation.Begin();
+
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.MainFeedCanvas.Visibility = Visibility.Visible;
