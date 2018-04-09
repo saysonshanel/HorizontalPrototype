@@ -55,8 +55,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="image.xaml.cs">
-      <DependentUpon>image.xaml</DependentUpon>
+    <Compile Include="ButtomNavbarControl.xaml.cs">
+      <DependentUpon>ButtomNavbarControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="MatchInit.xaml.cs">
       <DependentUpon>MatchInit.xaml</DependentUpon>
@@ -67,7 +67,7 @@
     <Compile Include="ViewMatch.xaml.cs">
       <DependentUpon>ViewMatch.xaml</DependentUpon>
     </Compile>
-    <Page Include="image.xaml">
+    <Page Include="ButtomNavbarControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -153,9 +153,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="noun_304212_cc.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="selena.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

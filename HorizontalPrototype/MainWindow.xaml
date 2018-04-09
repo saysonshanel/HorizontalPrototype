@@ -904,81 +904,6 @@
                 </Setter.Value>
             </Setter>
         </Style>
-        <Storyboard x:Key="animation1" RepeatBehavior="Forever">
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="0.5"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path1">
-                <EasingDoubleKeyFrame KeyTime="0:0:0.6" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="0.65"/>
-            </DoubleAnimationUsingKeyFrames>
-            <DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Opacity)" Storyboard.TargetName="path2">
-                <EasingDoubleKeyFrame KeyTime="0:0:1" Value="1"/>
-                <EasingDoubleKeyFrame KeyTime="0:0:1.2" Value="1"/>
-            </DoubleAnimationUsingKeyFrames>
-        </Storyboard>
-        <Storyboard x:Key="bounce">
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="rectangle">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="0,-4,0,0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="0"/>
-            </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="path3">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="0,-4,0,0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="0"/>
-            </ThicknessAnimationUsingKeyFrames>
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="mainfeedpicture">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="0,-4,0,0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="0"/>
-            </ThicknessAnimationUsingKeyFrames>
-        </Storyboard>
-        <Style x:Key="ButtonStyle34" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
-                            <Ellipse Fill="White" Opacity="0.5"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsFocused" Value="True"/>
-                            <Trigger Property="IsDefaulted" Value="True"/>
-                            <Trigger Property="IsMouseOver" Value="True"/>
-                            <Trigger Property="IsPressed" Value="True"/>
-                            <Trigger Property="IsEnabled" Value="False"/>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Style x:Key="ButtonStyle35" TargetType="{x:Type Button}">
-            <Setter Property="Template">
-                <Setter.Value>
-                    <ControlTemplate TargetType="{x:Type Button}">
-                        <Grid>
-                            <Ellipse Fill="White" Opacity="0.5"/>
-                        </Grid>
-                        <ControlTemplate.Triggers>
-                            <Trigger Property="IsFocused" Value="True"/>
-                            <Trigger Property="IsDefaulted" Value="True"/>
-                            <Trigger Property="IsMouseOver" Value="True"/>
-                            <Trigger Property="IsPressed" Value="True"/>
-                            <Trigger Property="IsEnabled" Value="False"/>
-                        </ControlTemplate.Triggers>
-                    </ControlTemplate>
-                </Setter.Value>
-            </Setter>
-        </Style>
-        <Storyboard x:Key="upanimation">
-            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ProfileScreenCanvas">
-                <EasingThicknessKeyFrame KeyTime="0" Value="0,667,0,0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="0,337,0,0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="0,150,0,0"/>
-                <EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="0"/>
-            </ThicknessAnimationUsingKeyFrames>
-        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -1005,13 +930,9 @@
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="Answer4Button">
             <BeginStoryboard x:Name="Answer4Selected_BeginStoryboard" Storyboard="{StaticResource Answer4Selected}"/>
         </EventTrigger>
-        <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard Storyboard="{StaticResource upanimation}"/>
-        </EventTrigger>
-        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="SwipeUpButton"/>
     </Window.Triggers>
-    <Canvas x:Name="Canvas">
-        <Canvas x:Name="MainScreenCanvas" Height="377.333" Canvas.Left="41" Canvas.Top="143.334" Width="284.334" d:IsHidden="True">
+    <Canvas x:Name="Canvas" d:IsHidden="True">
+        <Canvas x:Name="MainScreenCanvas" Height="377.333" Canvas.Left="41" Canvas.Top="143.334" Width="284.334">
             <Canvas x:Name="Logo" Height="131.333" Canvas.Left="47.671" Width="208.666">
                 <TextBlock x:Name="useekLogo" Height="99.333" TextWrapping="Wrap" FontSize="72" FontWeight="Bold" Canvas.Top="32" Width="208.666"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
                 <Path x:Name="HeartLogo" Fill="#FFE8BD5F" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="109.784" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Canvas.Left="30" Width="106.099">
@@ -1067,7 +988,7 @@
             <TextBlock x:Name="textBlock3" Height="35.456" Canvas.Left="100.667" TextWrapping="Wrap" Text="username or e-mail" Canvas.Top="267.328" Width="172.998" Foreground="White" Opacity="0.85" FontSize="20"/>
             <TextBlock x:Name="textBlock3_Copy" Height="30.385" Canvas.Left="143.666" TextWrapping="Wrap" Text="password" Canvas.Top="336.399" Width="94.667" Foreground="White" Opacity="0.85" FontSize="20"/>
             <Button x:Name="LoginScreenLoginButton" Content="Button" Height="42.667" Canvas.Left="144.666" Style="{DynamicResource ButtonStyle5}" Canvas.Top="441.515" Width="83.5" Cursor="Hand"/>
-            <Button x:Name="BackButton" Content="Button" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle34}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Button x:Name="BackButton" Content="Button" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Canvas.Left="314.02" Stretch="Fill" Stroke="White" StrokeThickness="4" Canvas.Top="25.333" Width="18.563" Cursor="Hand"/>
             <CheckBox x:Name="RememberMeCheck" Content="CheckBox" Height="19.333" Canvas.Left="124.685" Canvas.Top="411.667" Width="18.667"/>
             <TextBlock x:Name="textBlock9" Height="22.848" Canvas.Left="145.519" TextWrapping="Wrap" Canvas.Top="408.5" Width="146" Text="Remember me" Foreground="White" Opacity="0.75" FontSize="14"/>
@@ -1093,7 +1014,7 @@
             <TextBlock x:Name="textBlock7" Height="24.667" Canvas.Left="93.167" TextWrapping="Wrap" Text="I accept the Terms of Service. *" Canvas.Top="473.5" Width="196.667" Foreground="White" Opacity="0.75" FontSize="14"/>
             <TextBlock x:Name="textBlock8" Height="48.666" Canvas.Left="93.167" TextWrapping="Wrap" Text="You agree to be responsible for maintaining the confidentiality of your passwords or other account identifiers." Canvas.Top="494.167" Width="222.667" FontSize="11" Foreground="White" Opacity="0.65"/>
             <Button x:Name="RegisterSignupButton" Content="Button" Height="42" Canvas.Left="136.668" Style="{DynamicResource ButtonStyle7}" Canvas.Top="551.167" Width="92.666" Cursor="Hand"/>
-            <Button x:Name="BackButton1" Content="Button" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle35}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
+            <Button x:Name="BackButton1" Content="Button" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle6}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Canvas.Left="314.02" Stretch="Fill" Stroke="White" StrokeThickness="4" Canvas.Top="25.333" Width="18.563" Cursor="Hand"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="415.334" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="68" Opacity="0.5"/>
             <TextBlock x:Name="textBlock6_Copy3" Height="37.333" TextWrapping="Wrap" Text="full name" Width="100.667" Foreground="White" FontSize="20" Opacity="0.85" Canvas.Left="141.333" Canvas.Top="104.251"/>
@@ -1146,7 +1067,7 @@
 
             </Canvas>
         </ScrollViewer>
-        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367">
+        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367" d:IsHidden="True">
             <ScrollViewer Height="636" Width="367">
                 <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
@@ -1195,9 +1116,9 @@
             <Button x:Name="Answer3Button" Content="Ut enim ad&#xD;&#xA;" Height="42" Canvas.Left="31" Canvas.Top="368" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
             <Button x:Name="Answer2Button" Content="Sed quia consequuntur&#xD;&#xA;&#xA;" Height="42" Canvas.Left="31" Canvas.Top="308" Width="307" Background="{x:Null}" FontFamily="Georgia" FontWeight="Bold" FontSize="16" BorderBrush="#FF494848" Foreground="#FF494848" BorderThickness="2" Margin="0" Padding="1,6,1,1"/>
             <Canvas x:Name="SignifierRight" Height="88.5" Canvas.Left="207.404" Canvas.Top="219.5" Width="119.692">
-                <Path x:Name="path1" Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="39.596" Stretch="Fill" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.65"/>
-                <Path x:Name="path" Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Stretch="Fill" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.5"/>
-                <Path x:Name="path2" Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="77.096" Stretch="Fill" Canvas.Top="0.5" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.75"/>
+                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="39.596" Stretch="Fill" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.65"/>
+                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Stretch="Fill" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.5"/>
+                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="77.096" Stretch="Fill" Canvas.Top="0.5" Width="42.596" Stroke="White" StrokeThickness="15" Opacity="0.75"/>
             </Canvas>
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Stretch="Fill" Stroke="White" StrokeThickness="4" Width="18.563" Cursor="Hand" Canvas.Left="314.768" Canvas.Top="24.338"/>
             <TextBlock x:Name="textBlock17" Height="43.333" Canvas.Left="221.67" TextWrapping="Wrap" Text="swipe to answer" Canvas.Top="206" Width="118" FontWeight="Bold" Foreground="White" Opacity="0.75"/>
@@ -1468,13 +1389,9 @@
             <TextBlock x:Name="LogoText_Copy4" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
-            <Rectangle x:Name="rectangle" Fill="#FF494848" Height="241" Canvas.Left="10" Stroke="Black" Canvas.Top="80" Width="336" RadiusX="10" RadiusY="10" Opacity="0.25"/>
+            <Rectangle Fill="#FF494848" Height="241" Canvas.Left="10" Stroke="Black" Canvas.Top="80" Width="336" RadiusX="10" RadiusY="10" Opacity="0.25"/>
             <TextBlock Height="56" Canvas.Left="16.853" TextWrapping="Wrap" Canvas.Top="89" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Name"/><LineBreak/><Run/><LineBreak/></TextBlock>
-            <Image x:Name="mainfeedpicture" Height="177" Width="184.192" Canvas.Left="163.808" Canvas.Top="239" Source="selena.png" Stretch="UniformToFill">
-                <Image.Clip>
-                    <EllipseGeometry Center ="90, 80" RadiusX="70" RadiusY="70" />
-                </Image.Clip>
-            </Image>
+            <Ellipse Fill="White" Height="133" Canvas.Left="190" Stroke="#FF494848" Canvas.Top="253.5" Width="133"/>
             <Canvas x:Name="SignifierRight_Copy1" Height="88.5" Width="119.692" RenderTransformOrigin="0.5,0.5" Canvas.Left="206.308" Canvas.Top="397.5">
                 <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="39.596" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.65"/>
                 <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.5"/>
@@ -1489,19 +1406,9 @@
                         <TranslateTransform/>
                     </TransformGroup>
                 </Canvas.RenderTransform>
-                <Path x:Name="path5" Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="39.596" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.65"/>
-                <Path x:Name="path4" Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.5"/>
-                <Path x:Name="path6" Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="77.096" Stretch="Fill" Canvas.Top="0.5" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.85"/>
-                <Path x:Name="path3" Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="34.286" Canvas.Left="39.453" Stretch="Fill" Canvas.Top="112.857" Width="16.596" Stroke="#FFC5C0C0" StrokeThickness="5" Opacity="0.85" RenderTransformOrigin="0.5,0.5">
-                    <Path.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="87.492"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Path.RenderTransform>
-                </Path>
+                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="39.596" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.65"/>
+                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Stretch="Fill" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.5"/>
+                <Path Data="M110,420 L146.36974,465.48318 103.86974,507.98318" Height="88" Canvas.Left="77.096" Stretch="Fill" Canvas.Top="0.5" Width="42.596" Stroke="#FFE8BD5F" StrokeThickness="15" Opacity="0.85"/>
             </Canvas>
             <Grid Height="77" Canvas.Left="16.853" Canvas.Top="244" Width="236">
                 <TextBlock HorizontalAlignment="Left" Height="32" Margin="10,10,0,0" TextWrapping="Wrap" Text="Interest" VerticalAlignment="Top" Width="68"/>
@@ -1535,34 +1442,7 @@
             <MenuItem x:Name="LogoutTextbox" Header="Logout" Height="56" Width="113"/>
             <MenuItem x:Name="BackTextbox" Header="Back" Height="56" Width="113"/>
         </Menu>
-        <Button x:Name="HamburgerBack" Content="Button" Height="636" Width="254" Opacity="0" d:IsHidden="True"/>
-        <Menu x:Name="BottomMenu" Width="367" Height="85.666" RenderTransformOrigin="0.5,0.5" Canvas.Top="550.334" Foreground="{x:Null}" Opacity="0.95" d:IsHidden="True">
-            <Menu.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="#FFB4B1B1" Offset="1"/>
-                    <GradientStop Color="White"/>
-                </LinearGradientBrush>
-            </Menu.Background>
-            <Menu.OpacityMask>
-                <LinearGradientBrush EndPoint="0.5,1" MappingMode="RelativeToBoundingBox" StartPoint="0.5,0">
-                    <GradientStop Color="Gray"/>
-                    <GradientStop Color="Black" Offset="1"/>
-                </LinearGradientBrush>
-            </Menu.OpacityMask>
-            <Menu.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Menu.RenderTransform>
-            <Button x:Name="matchesbutton" Content="Button" Height="56.916" Style="{DynamicResource ButtonStyle30}" Width="100.728"/>
-            <Button x:Name="homebutton" Content="Button" Height="75.666" Style="{DynamicResource ButtonStyle31}" Width="101.367"/>
-            <Button x:Name="profilebutton" Height="77.643" Style="{DynamicResource ButtonStyle29}" Width="119.062">
-                <Image x:Name="image1" Height="33.667" Width="44.667"/>
-            </Button>
-        </Menu>
+        <local:ButtomNavbarControl x:Name="BottomNavBar" Height="60" Canvas.Top="576" Width="367"/>
 
     </Canvas>
 </Window>
