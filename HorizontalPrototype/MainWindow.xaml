@@ -971,6 +971,14 @@
                 </Setter.Value>
             </Setter>
         </Style>
+        <Storyboard x:Key="upanimation">
+            <ThicknessAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Margin)" Storyboard.TargetName="ProfileScreenCanvas">
+                <EasingThicknessKeyFrame KeyTime="0" Value="0,667,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.2" Value="0,337,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.4" Value="0,150,0,0"/>
+                <EasingThicknessKeyFrame KeyTime="0:0:0.6" Value="0"/>
+            </ThicknessAnimationUsingKeyFrames>
+        </Storyboard>
     </Window.Resources>
     <Window.Triggers>
         <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="BackButton">
@@ -998,9 +1006,9 @@
             <BeginStoryboard x:Name="Answer4Selected_BeginStoryboard" Storyboard="{StaticResource Answer4Selected}"/>
         </EventTrigger>
         <EventTrigger RoutedEvent="FrameworkElement.Loaded">
-            <BeginStoryboard x:Name="animation1_BeginStoryboard" Storyboard="{StaticResource animation1}"/>
-            <BeginStoryboard Storyboard="{StaticResource bounce}"/>
+            <BeginStoryboard Storyboard="{StaticResource upanimation}"/>
         </EventTrigger>
+        <EventTrigger RoutedEvent="ButtonBase.Click" SourceName="SwipeUpButton"/>
     </Window.Triggers>
     <Canvas x:Name="Canvas">
         <Canvas x:Name="MainScreenCanvas" Height="377.333" Canvas.Left="41" Canvas.Top="143.334" Width="284.334" d:IsHidden="True">
@@ -1071,7 +1079,7 @@
             </Canvas>
 
         </Canvas>
-        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
+        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
             <TextBlock x:Name="textBlock5" Height="59.334" Canvas.Left="119.832" TextWrapping="Wrap" Text="sign-up" Width="139.334" FontSize="36" FontWeight="Bold" Canvas.Top="39.833" Foreground="#FF494848"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="125.334" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="197" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
@@ -1138,7 +1146,7 @@
 
             </Canvas>
         </ScrollViewer>
-        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367" d:IsHidden="True">
+        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367">
             <ScrollViewer Height="636" Width="367">
                 <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
@@ -1462,7 +1470,6 @@
         <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" d:IsHidden="True">
             <Rectangle x:Name="rectangle" Fill="#FF494848" Height="241" Canvas.Left="10" Stroke="Black" Canvas.Top="80" Width="336" RadiusX="10" RadiusY="10" Opacity="0.25"/>
             <TextBlock Height="56" Canvas.Left="16.853" TextWrapping="Wrap" Canvas.Top="89" Width="213"><Run FontWeight="Bold" FontSize="36" Text="Name"/><LineBreak/><Run/><LineBreak/></TextBlock>
-            <Ellipse x:Name="ellipse" Fill="White" Height="133" Canvas.Left="190" Stroke="#FF494848" Canvas.Top="253.5" Width="133"/>
             <Image x:Name="mainfeedpicture" Height="177" Width="184.192" Canvas.Left="163.808" Canvas.Top="239" Source="selena.png" Stretch="UniformToFill">
                 <Image.Clip>
                     <EllipseGeometry Center ="90, 80" RadiusX="70" RadiusY="70" />

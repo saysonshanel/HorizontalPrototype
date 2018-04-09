@@ -368,7 +368,10 @@ namespace HorizontalPrototype
             this.MatchInitScreen.Visibility = Visibility.Visible;
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
+
         }
+
+
 
         private void MainFeedTextbox_Click(object sender, RoutedEventArgs e)
         {
@@ -379,7 +382,21 @@ namespace HorizontalPrototype
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.MainFeedCanvas.Visibility = Visibility.Visible;
             this.SignifierDown.Click += SignifierDown_Click;
-            this.SwipeUpButton.Click += View_Profile_Click;
+            this.SwipeUpButton.Click += ToUserProfile; 
+        }
+
+        private void ToUserProfile(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+            Storyboard sb = this.FindResource("upanimation") as Storyboard;
+            sb.Completed += Sb_Completed;
+        }
+
+        private void Sb_Completed(object sender, EventArgs e)
+        {
+            HideAll();
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
         }
 
         private void SignifierDown_Click(object sender, RoutedEventArgs e)
