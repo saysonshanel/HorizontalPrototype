@@ -257,7 +257,7 @@ namespace HorizontalPrototype
         {
             HideAll();
             this.EditScreenViewer.Visibility = Visibility.Visible;
-           // this.BottomMenu.Visibility = Visibility.Visible;
+            this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
            // this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
 
