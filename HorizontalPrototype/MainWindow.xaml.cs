@@ -296,12 +296,37 @@ namespace HorizontalPrototype
 
         private void MainFeedSwipeUp(object sender, RoutedEventArgs e)
         {
-            this.BottomMenu.Visibility = Visibility.Visible;
-            //this.HamburgerMenuButton.Visibility = Visibility.Visible;
-            this.SwipeUp1.Visibility = Visibility.Visible;
-            Storyboard story = this.FindResource("FullBioScrollUp") as Storyboard;
-            story.Completed += MainFeedScrollUp_Completed;
+            Storyboard story = this.FindResource("MainFeedScrollUp") as Storyboard;
+            story.Begin();
 
+            Storyboard appear = this.TryFindResource("profileappear") as Storyboard;
+            appear.Begin();
+
+            this.buttonbackmain.Click += Buttonbackmain_Click; ;
+
+            this.editprofilebutton.Visibility = Visibility.Hidden;
+            this.questionnairebutton.Visibility = Visibility.Hidden;
+            this.buttonbackmain.Visibility = Visibility.Visible;
+            this.BottomMenu.Visibility = Visibility.Hidden;
+            //this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+
+        }
+
+        private void Buttonbackmain_Click(object sender, RoutedEventArgs e)
+        {
+          //  Storyboard disappear = this.TryFindResource("profiledisappear") as Storyboard;
+         //   disappear.Begin();
+
+            Storyboard appear = this.TryFindResource("ResetMainFeed") as Storyboard;
+            appear.Begin();
+            HideAll();
+            
+            
+            this.editprofilebutton.Visibility = Visibility.Visible;
+            this.questionnairebutton.Visibility = Visibility.Visible;
+            this.MainFeedCanvas.Visibility = Visibility.Visible;
+            this.BottomMenu.Visibility = Visibility.Visible;
 
         }
 
@@ -369,6 +394,8 @@ namespace HorizontalPrototype
         private void EditProfileTextbox_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
+            this.buttonbackmain.Visibility = Visibility.Hidden;
+
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.ProfileScreenCanvas.Visibility = Visibility.Visible;
@@ -396,13 +423,17 @@ namespace HorizontalPrototype
             HideAll();
             this.MainFeedCanvas.Visibility = Visibility.Visible;
             //this.MainFeedCanvas.Margin = new Thickness { Top = 0 };
-            Storyboard bouncesb = this.FindResource("bounce") as Storyboard;
-            bouncesb.Begin();
+           
+
+            Storyboard animation = this.FindResource("tutorialanimation") as Storyboard;
+            animation.Begin();
+
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.SignifierDown.Click += SignifierDown_Click;
             this.SwipeUpButton.Click += MainFeedSwipeUp;
         }
+
 
         private void SignifierDown_Click(object sender, RoutedEventArgs e)
         {
