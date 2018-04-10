@@ -12,10 +12,7 @@ C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\De
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csproj.CoreCompileInputs.cache
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
-C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
-C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\DropDownMenuControl.g.cs
 C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\GeneratedInternalTypeHelper.g.cs
-C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\DropDownMenuControl.baml
 C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe.config
 C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.exe
 C:\Users\ssayson\Downloads\HorizontalPrototype-master\HorizontalPrototype\bin\Debug\HorizontalPrototype.pdb
@@ -115,3 +112,14 @@ C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\Horizo
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.exe
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.pdb
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\Simple Styles.baml
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\ButtomNavbarControl.g.cs
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\MatchInit.g.cs
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\SwipeUp.g.cs
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\ViewMatch.g.cs
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\App.baml
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\ButtomNavbarControl.baml
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\MatchInit.baml
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\SwipeUp.baml
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\ViewMatch.baml
+C:\Users\xiangyu.han\source\repos\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.csprojResolveAssemblyReference.cache
