@@ -1540,8 +1540,8 @@
                     </TransformGroup>
                 </TextBlock.RenderTransform>
             </TextBlock>
-            <Button x:Name="SignifierDown" Content="Button" Height="44.5" Canvas.Left="147.808" Style="{DynamicResource ButtonStyle21}" Canvas.Top="426" Width="58.692" Cursor="Hand" Visibility="Hidden"/>
-            <TextBlock x:Name="textBlock22" Height="39.5" Canvas.Left="143.808" TextWrapping="Wrap" Canvas.Top="465.5" Width="66.5" Foreground="#FFE64646" FontSize="10" TextAlignment="Center" Visibility="Hidden"><Run Text="swipe down"/><LineBreak/><Run Text="to remove"/></TextBlock>
+            <Button x:Name="SignifierDown" Content="Button" Height="44.5" Canvas.Left="158.001" Style="{DynamicResource ButtonStyle21}" Canvas.Top="357.543" Width="58.692" Cursor="Hand"/>
+            <TextBlock x:Name="textBlock22" Height="39.5" Canvas.Left="154.001" TextWrapping="Wrap" Canvas.Top="397.043" Width="66.5" Foreground="#FFE64646" FontSize="10" TextAlignment="Center"><Run Text="swipe down"/><LineBreak/><Run Text="to remove"/></TextBlock>
             <Button x:Name="SwipeUpButton" Content="Button" Height="22" Canvas.Left="25.5" Style="{DynamicResource ButtonStyle22}" Canvas.Top="326" Width="154" Opacity="0.5" Cursor="Hand"/>
             <TextBlock x:Name="LogoText_Copy5" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
             <Image x:Name="image" Height="102.957" Canvas.Left="136" Canvas.Top="402.043" Width="116.853" Source="noun_188715_cc.png" RenderTransformOrigin="0.5,0.5">
