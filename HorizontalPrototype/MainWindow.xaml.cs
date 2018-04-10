@@ -45,7 +45,7 @@ namespace HorizontalPrototype
             //when facebook or google connection is clicked,  move to login
             this.FacebookButton.Click += ToEditProfileScreen;
             this.GoogleButton.Click += ToEditProfileScreen;
-            
+
             /*for(int i = 0; i < 5; i++)
             {
                 ViewMatch person = new ViewMatch();
@@ -53,6 +53,7 @@ namespace HorizontalPrototype
                 person.ViewButton.Click += ViewButton_Click;
             }
             this.AddMatches.Width = 5 * 160;*/
+
 
 
             ViewMatch[] persons = new ViewMatch[5];// people in carousel
@@ -277,6 +278,7 @@ namespace HorizontalPrototype
 
         }
 
+        /*
         private void HamburgerMenuButton_Click1(object sender, RoutedEventArgs e)
         {
             this.HamburgerMenu.Visibility = Visibility.Visible;
@@ -290,13 +292,22 @@ namespace HorizontalPrototype
             this.HamburgerBack.Click += BackTextbox_Click;
             this.View_Profile.Click += View_Profile_Click;
         }
+        */
 
-        private void View_Profile_Click(object sender, RoutedEventArgs e)
+        private void MainFeedSwipeUp(object sender, RoutedEventArgs e)
         {
-            HideAll();
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
-            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+            this.SwipeUp1.Visibility = Visibility.Visible;
+            Storyboard story = this.FindResource("FullBioScrollUp") as Storyboard;
+            story.Completed += MainFeedScrollUp_Completed;
+
+
+        }
+
+        private void MainFeedScrollUp_Completed(object sender, EventArgs e)
+        {
+            this.MainFeedCanvas.Visibility = Visibility.Hidden;
         }
 
         private void BackTextbox_Click(object sender, RoutedEventArgs e)
@@ -328,7 +339,7 @@ namespace HorizontalPrototype
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.QuizMainScreenCanvas.Visibility = Visibility.Visible;
-            this.BackButton1_Copy1.Click += View_Profile_Click;
+            this.BackButton1_Copy1.Click += ShowOwnProfile; ;
 
             this.Quiz1Button.Click += QuizbuttonOnClick;
             this.Quiz2Button.Click += QuizbuttonOnClick;
@@ -336,7 +347,13 @@ namespace HorizontalPrototype
             this.Quiz4Button.Click += QuizbuttonOnClick;
         }
 
-
+        private void ShowOwnProfile(object sender, RoutedEventArgs e)
+        {
+            HideAll();
+            this.BottomMenu.Visibility = Visibility.Visible;
+            //this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+        }
 
         private void QuizbuttonOnClick(object sender, RoutedEventArgs e)
         {
@@ -377,17 +394,14 @@ namespace HorizontalPrototype
         private void MainFeedTextbox_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
-          //  Storyboard bouncesb = this.FindResource("bounce") as Storyboard;
-           // bouncesb.Begin();
-
-            Storyboard animation = this.FindResource("tutorialanimation") as Storyboard;
-            animation.Begin();
-
+            this.MainFeedCanvas.Visibility = Visibility.Visible;
+            //this.MainFeedCanvas.Margin = new Thickness { Top = 0 };
+            Storyboard bouncesb = this.FindResource("bounce") as Storyboard;
+            bouncesb.Begin();
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
-            this.MainFeedCanvas.Visibility = Visibility.Visible;
             this.SignifierDown.Click += SignifierDown_Click;
-            this.SwipeUpButton.Click += View_Profile_Click;
+            this.SwipeUpButton.Click += MainFeedSwipeUp;
         }
 
         private void SignifierDown_Click(object sender, RoutedEventArgs e)
