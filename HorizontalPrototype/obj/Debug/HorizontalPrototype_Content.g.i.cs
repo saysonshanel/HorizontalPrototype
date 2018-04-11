@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("selena.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("keyboard.png")]
 
 

@@ -1225,7 +1225,7 @@
             <TextBlock x:Name="FeedbackMessage" Height="18.251" Canvas.Left="93.167" TextWrapping="Wrap" Text="The following is/are required!" Canvas.Top="454.001" Width="183.5" Foreground="Red" TextAlignment="Center" FontSize="14"/>
 
         </Canvas>
-        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388" d:IsHidden="True">
+        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388">
             <Canvas x:Name="EditScreenCanvas" Height="1141.263" Width="367">
                 <Button x:Name="ChangePhotoButton" Content="Button" Height="39.099" Canvas.Left="99.385" Style="{DynamicResource ButtonStyle8}" Canvas.Top="301.401" Width="167.999" Cursor="Hand"/>
                 <TextBlock x:Name="textBlock12" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Username" Canvas.Top="406.952" Width="78.793" Foreground="Black" FontSize="16"/>
@@ -1235,7 +1235,7 @@
                 <TextBlock x:Name="textBlock13_Copy" Height="27.864" Canvas.Left="6.167" TextWrapping="Wrap" Text="Private information" Canvas.Top="859.248" Width="251.882" FontWeight="Bold" Foreground="Black" FontSize="18"/>
                 <TextBlock x:Name="textBlock12_Copy1" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="E-mail Address" Canvas.Top="892.112" Width="126.152" Foreground="Black" FontSize="16"/>
                 <TextBlock x:Name="textBlock12_Copy4" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Gender" Canvas.Top="941.951" Width="126.152" Foreground="Black" FontSize="16"/>
-                <Button x:Name="SaveButton" Content="Button" Height="48.667" Canvas.Left="188.668" Style="{DynamicResource ButtonStyle9}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
+                <Button x:Name="SaveButton" Content="Button" Height="48.667" Canvas.Left="211.84" Style="{DynamicResource ButtonStyle9}" Canvas.Top="1010.122" Width="97.333" Cursor="Hand"/>
                 <TextBox x:Name="NameTextbox" Height="18.667" Canvas.Left="3.496" TextWrapping="Wrap" Text="Name" Canvas.Top="380.117" Width="348.337" BorderBrush="{x:Null}" Background="{x:Null}" Opacity="0.25" FontSize="14"/>
                 <TextBlock x:Name="textBlock12_Copy5" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Full Name" Canvas.Top="357.619" Width="78.793" Foreground="Black" FontSize="16"/>
                 <TextBox x:Name="UsernameTextbox1" Height="18.667" TextWrapping="Wrap" Text="Username" Canvas.Top="431.284" Width="348.332" BorderBrush="{x:Null}" Background="{x:Null}" Canvas.Left="3.501" Opacity="0.25" FontSize="14"/>
@@ -1253,12 +1253,12 @@
                         <EllipseGeometry Center ="120, 120" RadiusX="110" RadiusY="110" />
                     </Image.Clip>
                 </Image>
-                <Button x:Name="LogoutButton" Content="Questionarres" Height="48.667" Canvas.Left="70" Style="{DynamicResource ButtonStyle26}" Canvas.Top="1003.122" Width="97.333" Cursor="Hand"/>
+                <Button x:Name="LogoutButton" Content="Questionarres" Height="48.667" Canvas.Left="43.027" Style="{DynamicResource ButtonStyle26}" Canvas.Top="1010.122" Width="97.333" Cursor="Hand"/>
                 <TextBlock x:Name="LogoText_Copy6" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
 
             </Canvas>
         </ScrollViewer>
-        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367">
+        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367" d:IsHidden="True">
             <ScrollViewer Height="636" Width="367">
                 <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
@@ -1708,7 +1708,7 @@
             <MenuItem x:Name="BackTextbox" Header="Back" Height="56" Width="113"/>
         </Menu>
         <Button x:Name="HamburgerBack" Content="Button" Height="636" Width="254" Opacity="0" d:IsHidden="True"/>
-        <Menu x:Name="BottomMenu" Width="367" Height="85.666" RenderTransformOrigin="0.5,0.5" Canvas.Top="550.334" Foreground="{x:Null}" Opacity="0.95">
+        <Menu x:Name="BottomMenu" Width="367" Height="85.666" RenderTransformOrigin="0.5,0.5" Canvas.Top="550.334" Foreground="{x:Null}" Opacity="0.95" d:IsHidden="True">
             <Menu.Background>
                 <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                     <GradientStop Color="#FFB4B1B1" Offset="1"/>
@@ -1735,6 +1735,7 @@
                 <Image x:Name="image1" Height="33.667" Width="44.667"/>
             </Button>
         </Menu>
+        <Image x:Name="KeyboardView" Height="183" Canvas.Top="453" Width="367" Source="keyboard.png" Stretch="UniformToFill"/>
 
     </Canvas>
 </Window>

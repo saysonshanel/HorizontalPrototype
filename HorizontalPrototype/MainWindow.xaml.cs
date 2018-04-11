@@ -220,12 +220,20 @@ namespace HorizontalPrototype
             //show the login screen
             this.LoginScreenCanvas.Visibility = Visibility.Visible;
 
+            this.UsernameTextbox.PreviewMouseDown += UsernameTextbox_PreviewMouseDown;
+
             //when login button is clicked, move to the edit profile screen
             //  this.LoginScreenLoginButton.Click += ToEditProfileScreen;
             this.LoginScreenLoginButton.PreviewMouseDown += CheckLoginScreenFieldsOnClicked;
 
             //otherwise, if back button is clicked, go back to main screen
             this.BackButton.Click += OnBackButtonClicked;
+
+        }
+
+        private void UsernameTextbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        {
+            this.KeyboardView.Visibility = Visibility.Visible;
 
         }
 
@@ -466,6 +474,7 @@ namespace HorizontalPrototype
             this.MainFeedCanvas.Visibility = Visibility.Hidden;
             this.HamburgerBack.Visibility = Visibility.Hidden;
             this.BottomMenu.Visibility = Visibility.Hidden;
+            this.KeyboardView.Visibility = Visibility.Hidden;
         }
 
         //profile screen
