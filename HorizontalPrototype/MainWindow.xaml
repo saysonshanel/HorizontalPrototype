@@ -1279,7 +1279,7 @@
             <TextBlock x:Name="FeedbackMessage" Height="18.251" Canvas.Left="93.167" TextWrapping="Wrap" Text="The following is/are required!" Canvas.Top="454.001" Width="183.5" Foreground="Red" TextAlignment="Center" FontSize="14"/>
 
         </Canvas>
-        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388" d:IsHidden="True">
+        <ScrollViewer x:Name="EditScreenViewer" Height="626" Width="388">
             <Canvas x:Name="EditScreenCanvas" Height="1141.263" Width="367">
                 <Button x:Name="ChangePhotoButton" Content="Button" Height="39.099" Canvas.Left="99.385" Style="{DynamicResource ButtonStyle8}" Canvas.Top="301.401" Width="167.999" Cursor="Hand"/>
                 <TextBlock x:Name="textBlock12" Height="21.333" Canvas.Left="6.167" TextWrapping="Wrap" Text="Username" Canvas.Top="406.952" Width="78.793" Foreground="Black" FontSize="16"/>
@@ -1635,7 +1635,7 @@
             <TextBlock x:Name="LogoText_Copy4" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
-        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1797,7 +1797,7 @@
                 <Image x:Name="image1" Height="33.667" Width="44.667"/>
             </Button>
         </Menu>
-        <Image x:Name="KeyboardView" Height="183" Canvas.Top="453" Width="367" Source="keyboard.png" Stretch="UniformToFill" d:IsHidden="True"/>
+        <Image x:Name="KeyboardView" Height="183" Canvas.Top="453" Width="367" Source="keyboard.png" Stretch="UniformToFill"/>
         <Canvas x:Name="UndoFeedback" Height="99.333" Canvas.Left="68.001" Canvas.Top="421.334" Width="264" Opacity="0.99" d:IsHidden="True">
             <Rectangle Fill="#FFEA6262" Height="108" RadiusY="10" RadiusX="10" Stroke="Black" Width="251" Canvas.Top="-8.667"/>
             <TextBlock x:Name="hidingtextbox" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Canvas.Left="40"><Run Text="You are about to hide this profile"/></TextBlock>

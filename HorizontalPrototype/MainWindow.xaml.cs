@@ -54,8 +54,6 @@ namespace HorizontalPrototype
             }
             this.AddMatches.Width = 5 * 160;*/
 
-
-
             ViewMatch[] persons = new ViewMatch[5];// people in carousel
             double center = this.Canvas.Width / 2;
             double[] location = {center-75, center-(center/4+20), center+ (center / 4 + 20), center-(center+50), center+(center+50)};// location of people in carousel
@@ -82,6 +80,12 @@ namespace HorizontalPrototype
             this.homebutton.Click += MainFeedTextbox_Click;
             this.matchesbutton.Click += ViewMatchesTextbox_Click;
             this.profilebutton.Click += EditProfileTextbox_Click;
+        }
+
+        private void HideKeyboardButton_Click(object sender, RoutedEventArgs e)
+        {
+            this.KeyboardView.Visibility = Visibility.Hidden;
+            this.HamburgerBack.Visibility = Visibility.Hidden;
         }
 
         private void ScalePerson(ViewMatch person, double scale)
@@ -129,6 +133,13 @@ namespace HorizontalPrototype
             this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
             //show signup screen
             this.SignupScreenCanvas.Visibility = Visibility.Visible;
+
+            this.SignupPasswordTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.SignupPwRepeatTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.SignupUsernameTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.SignupFullnameTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.SignupEmailTextbox.PreviewMouseDown += PreviewKeyboard;
+
 
             //when signup button is clicked, direct to edit profile
             //this.RegisterSignupButton.Click += ToLoginScreen;
@@ -220,7 +231,8 @@ namespace HorizontalPrototype
             //show the login screen
             this.LoginScreenCanvas.Visibility = Visibility.Visible;
 
-            this.UsernameTextbox.PreviewMouseDown += UsernameTextbox_PreviewMouseDown;
+            this.UsernameTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.PasswordBox.PreviewMouseDown += PreviewKeyboard;
 
             //when login button is clicked, move to the edit profile screen
             //  this.LoginScreenLoginButton.Click += ToEditProfileScreen;
@@ -231,9 +243,11 @@ namespace HorizontalPrototype
 
         }
 
-        private void UsernameTextbox_PreviewMouseDown(object sender, MouseButtonEventArgs e)
+        private void PreviewKeyboard(object sender, MouseButtonEventArgs e)
         {
             this.KeyboardView.Visibility = Visibility.Visible;
+            this.HamburgerBack.Visibility = Visibility.Visible;
+            this.HamburgerBack.Click += HideKeyboardButton_Click;
 
         }
 
@@ -268,7 +282,15 @@ namespace HorizontalPrototype
             this.EditScreenViewer.Visibility = Visibility.Visible;
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
-           // this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
+            // this.HamburgerMenuButton.Click += HamburgerMenuButton_Click1;
+
+            this.NameTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.UsernameTextbox1.PreviewMouseDown += PreviewKeyboard;
+            this.InterestTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.DescriptionTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.BioTextbox.PreviewMouseDown += PreviewKeyboard;
+            this.EmailTextbox.PreviewMouseDown += PreviewKeyboard;
+
 
             this.SaveButton.Click += EditProfileTextbox_Click;
             this.LogoutButton.Click += ToLoginScreen;
