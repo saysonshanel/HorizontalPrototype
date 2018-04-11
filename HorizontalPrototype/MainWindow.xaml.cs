@@ -431,7 +431,8 @@ namespace HorizontalPrototype
             HideAll();
             this.MainFeedCanvas.Visibility = Visibility.Visible;
             //this.MainFeedCanvas.Margin = new Thickness { Top = 0 };
-           
+
+            this.SignifierUp.Click += MainFeedSwipeUp;
 
             Storyboard animation = this.FindResource("tutorialanimation") as Storyboard;
             animation.Begin();
@@ -446,11 +447,24 @@ namespace HorizontalPrototype
         private void SignifierDown_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
+            Storyboard flash = this.TryFindResource("Flash") as Storyboard;
+            flash.Begin();
             this.BottomMenu.Visibility = Visibility.Visible;
+            this.MainFeedCanvas.Visibility = Visibility.Visible;
+            this.UndoFeedback.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
-            this.SwipeDown.Visibility = Visibility.Visible;
-            this.UndoButton.Click += MainFeedTextbox_Click;
+            this.UndoButton_Copy.Click += MainFeedTextbox_Click;
+            this.Continue_Button.Click += Continue_Button_Click;
         }
+
+        private void Continue_Button_Click(object sender, RoutedEventArgs e)
+        {
+            Storyboard disappear = this.FindResource("MainFeedScrollDown") as Storyboard;
+            disappear.Begin();
+            this.UndoFeedback.Visibility = Visibility.Hidden;   
+
+        }
+
 
 
         public void HideAll()
@@ -475,6 +489,8 @@ namespace HorizontalPrototype
             this.HamburgerBack.Visibility = Visibility.Hidden;
             this.BottomMenu.Visibility = Visibility.Hidden;
             this.KeyboardView.Visibility = Visibility.Hidden;
+            this.UndoFeedback.Visibility = Visibility.Hidden;
+
         }
 
         //profile screen
