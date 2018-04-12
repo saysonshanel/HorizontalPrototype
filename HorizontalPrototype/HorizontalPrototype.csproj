@@ -58,9 +58,6 @@
     <Compile Include="ButtomNavbarControl.xaml.cs">
       <DependentUpon>ButtomNavbarControl.xaml</DependentUpon>
     </Compile>
-    <Compile Include="MatchInit.xaml.cs">
-      <DependentUpon>MatchInit.xaml</DependentUpon>
-    </Compile>
     <Compile Include="SwipeUp.xaml.cs">
       <DependentUpon>SwipeUp.xaml</DependentUpon>
     </Compile>
@@ -83,10 +80,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="MatchInit.xaml">
-      <Generator>MSBuild:Compile</Generator>
-      <SubType>Designer</SubType>
-    </Page>
     <Page Include="Simple Styles.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -162,6 +155,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="keyboard.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Beandys.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
