@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("keyboard.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("beandys-de-los-santos.jpg")]
 
 
