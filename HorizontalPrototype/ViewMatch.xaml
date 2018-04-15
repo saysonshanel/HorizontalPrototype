@@ -8,7 +8,7 @@
              d:DesignHeight="200" d:DesignWidth="150">
     <Grid>
         <Image HorizontalAlignment="Left" Width="150" Margin="0,0,0,50"/>
-        <TextBlock Margin="5,0,0,5" TextWrapping="Wrap" Text="Name of Match" HorizontalAlignment="Left" Width="140" Height="40" VerticalAlignment="Bottom"/>
+        <TextBlock x:Name="Name" Margin="5,0,0,5" TextWrapping="Wrap" Text="Name of Match" HorizontalAlignment="Left" Width="140" Height="40" VerticalAlignment="Bottom" FontFamily="Georgia" FontWeight="Bold" TextAlignment="Center"/>
         <Ellipse Stroke="Black" Margin="0,0,0,50">
             <Ellipse.Fill>
                 <ImageBrush ImageSource="TestFace.png"/>
