@@ -372,7 +372,15 @@ namespace HorizontalPrototype
             Storyboard appear = this.TryFindResource("profileappear") as Storyboard;
             appear.Begin();
 
-            this.buttonbackmain.Click += Buttonbackmain_Click; ;
+            this.buttonbackmain.Click += Buttonbackmain_Click;
+            this.profilepicture.Visibility = Visibility.Hidden;
+            this.profilepicture1.Visibility = Visibility.Visible;
+            this.profilepicture3.Visibility = Visibility.Hidden;
+            this.ProfileImage.Visibility = Visibility.Hidden;
+
+            this.Gallery.Visibility = Visibility.Hidden;
+            this.Gallery2.Visibility = Visibility.Hidden;
+            this.Gallery3.Visibility = Visibility.Visible;
 
             this.editprofilebutton.Visibility = Visibility.Hidden;
             this.questionnairebutton.Visibility = Visibility.Hidden;
@@ -465,6 +473,14 @@ namespace HorizontalPrototype
         {
             HideAll();
             this.buttonbackmain.Visibility = Visibility.Hidden;
+            this.ProfileImage.Visibility = Visibility.Hidden;
+            this.profilepicture3.Visibility = Visibility.Hidden;
+            this.profilepicture.Visibility = Visibility.Visible;
+            this.profilepicture1.Visibility = Visibility.Hidden;
+
+            this.Gallery.Visibility = Visibility.Visible;
+            this.Gallery2.Visibility = Visibility.Hidden;
+            this.Gallery3.Visibility = Visibility.Hidden;
 
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
@@ -525,6 +541,34 @@ namespace HorizontalPrototype
                 this.mainfeedpicture.Visibility = Visibility.Visible;
                 this.mainfeedpicture2.Visibility = Visibility.Hidden;
             }
+
+            this.SwipeUpButton.Click += SwipeUpButton_Click;
+        }
+
+        private void SwipeUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            Storyboard story = this.FindResource("MainFeedScrollUp") as Storyboard;
+            story.Begin();
+
+            Storyboard appear = this.TryFindResource("profileappear") as Storyboard;
+            appear.Begin();
+
+            this.buttonbackmain.Click += Buttonbackmain_Click;
+            this.profilepicture.Visibility = Visibility.Hidden;
+            this.profilepicture1.Visibility = Visibility.Hidden;
+            this.profilepicture3.Visibility = Visibility.Visible;
+            this.ProfileImage.Visibility = Visibility.Hidden;
+
+            this.Gallery.Visibility = Visibility.Hidden;
+            this.Gallery3.Visibility = Visibility.Hidden;
+            this.Gallery2.Visibility = Visibility.Visible;
+
+            this.editprofilebutton.Visibility = Visibility.Hidden;
+            this.questionnairebutton.Visibility = Visibility.Hidden;
+            this.buttonbackmain.Visibility = Visibility.Visible;
+            this.BottomMenu.Visibility = Visibility.Hidden;
+            //this.HamburgerMenuButton.Visibility = Visibility.Visible;
+            this.ProfileScreenCanvas.Visibility = Visibility.Visible;
         }
 
         private void SignifierDown_Click(object sender, RoutedEventArgs e)

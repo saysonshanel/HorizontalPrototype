@@ -91,7 +91,6 @@ C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\Horizo
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\Simple Styles.baml
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\ButtomNavbarControl.g.cs
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MainWindow.g.cs
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MatchInit.g.cs
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\SwipeUp.g.cs
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\ViewMatch.g.cs
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\App.g.cs
@@ -101,7 +100,6 @@ C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\Horizo
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\App.baml
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\ButtomNavbarControl.baml
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MainWindow.baml
-C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\MatchInit.baml
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\SwipeUp.baml
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\ViewMatch.baml
 C:\Users\Shanel\documents\visual studio 2015\Projects\HorizontalPrototype\HorizontalPrototype\obj\Debug\HorizontalPrototype.g.resources
