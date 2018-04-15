@@ -47,31 +47,6 @@ namespace HorizontalPrototype
             this.FacebookButton.Click += ToEditProfileScreen;
             this.GoogleButton.Click += ToEditProfileScreen;
 
-            /*for(int i = 0; i < 5; i++)
-            {
-                ViewMatch person = new ViewMatch();
-                this.AddMatches.Children.Add(person);
-                person.ViewButton.Click += ViewButton_Click;
-            }
-            this.AddMatches.Width = 5 * 160;*/
-
-            /*ViewMatch[] persons = new ViewMatch[5];// people in carousel
-            double center = this.Canvas.Width / 2;
-            double[] location = {center-75, center-(center/4+20), center+ (center / 4 + 20), center-(center+50), center+(center+50)};// location of people in carousel
-            double[] size = { 1, .65, .65, .25, .25 };// size of people in carousel
-            for(int i = 0; i < 5; i++)// add and scale people in carousel
-            {
-                persons[i] = new ViewMatch{Width = 150, Height = 200};
-                this.Carousel.Children.Add(persons[i]);
-                persons[i].ViewButton.Click += ViewButton_Click;
-                ScalePerson(persons[i], size[i]);
-            }
-            persons[0].HorizontalAlignment = HorizontalAlignment.Center;// using alignment to move poeple because I can't modify margins without hardcoding
-            persons[1].HorizontalAlignment = HorizontalAlignment.Left;
-            persons[2].HorizontalAlignment = HorizontalAlignment.Right;
-            persons[3].Visibility = Visibility.Hidden;
-            persons[4].Visibility = Visibility.Hidden;*/
-
             this.LeftButton1.Click += LeftButton1_Click;
             this.RightButton1.Click += RightButton1_Click;
             this.viewMatch.ViewButton.Click += ViewButton_Click;
@@ -348,22 +323,6 @@ namespace HorizontalPrototype
 
         }
 
-        /*
-        private void HamburgerMenuButton_Click1(object sender, RoutedEventArgs e)
-        {
-            this.HamburgerMenu.Visibility = Visibility.Visible;
-            this.HamburgerBack.Visibility = Visibility.Visible;
-            this.MainFeedTextbox.Click += MainFeedTextbox_Click;
-            this.ViewMatchesTextbox.Click += ViewMatchesTextbox_Click;
-            this.EditProfileTextbox.Click += EditProfileTextbox_Click;
-            this.QuestionnaireTextbox.Click += QuestionnaireTextbox_Click;
-            this.LogoutTextbox.Click += LogoutTextbox_Click;
-            this.BackTextbox.Click += BackTextbox_Click;
-            this.HamburgerBack.Click += BackTextbox_Click;
-            this.View_Profile.Click += View_Profile_Click;
-        }
-        */
-
         private void MainFeedSwipeUp(object sender, RoutedEventArgs e)
         {
             Storyboard story = this.FindResource("MainFeedScrollUp") as Storyboard;
@@ -373,6 +332,8 @@ namespace HorizontalPrototype
             appear.Begin();
 
             this.buttonbackmain.Click += Buttonbackmain_Click;
+            this.SwipeLeft.Click += SwipeLeft_Click;
+
             this.profilepicture.Visibility = Visibility.Hidden;
             this.profilepicture1.Visibility = Visibility.Visible;
             this.profilepicture3.Visibility = Visibility.Hidden;
@@ -399,12 +360,13 @@ namespace HorizontalPrototype
             Storyboard appear = this.TryFindResource("ResetMainFeed") as Storyboard;
             appear.Begin();
             HideAll();
-            
-            
+
             this.editprofilebutton.Visibility = Visibility.Visible;
             this.questionnairebutton.Visibility = Visibility.Visible;
             this.MainFeedCanvas.Visibility = Visibility.Visible;
             this.BottomMenu.Visibility = Visibility.Visible;
+
+            this.SwipeLeft.Click += SwipeLeft_Click;
 
         }
 
@@ -499,14 +461,19 @@ namespace HorizontalPrototype
         private void ViewMatchesTextbox_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
+            this.profilepicture3.Visibility = Visibility.Hidden;
             this.MatchInitScreen.Visibility = Visibility.Visible;
             this.BottomMenu.Visibility = Visibility.Visible;
+            this.SwipeLeft.Click += SwipeLeft_Click;
+
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
         }
 
         private void MainFeedTextbox_Click(object sender, RoutedEventArgs e)
         {
             HideAll();
+            this.mainfeedpicture.Visibility = Visibility.Hidden;
+            this.mainfeedpicture2.Visibility = Visibility.Visible;
             this.MainFeedCanvas.Visibility = Visibility.Visible;
             //this.MainFeedCanvas.Margin = new Thickness { Top = 0 };
 
@@ -515,29 +482,34 @@ namespace HorizontalPrototype
             Storyboard animation = this.FindResource("tutorialanimation") as Storyboard;
             animation.Begin();
 
+
+
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.SignifierDown.Click += SignifierDown_Click;
             this.SwipeUpButton.Click += MainFeedSwipeUp;
             this.SwipeLeft.Click += SwipeLeft_Click;
-            this.SwipeRight.Click += InterestedClicked;
+            this.SwipeRight.Click += ViewMatchesTextbox_Click;
         }
 
         private void InterestedClicked(object sender, RoutedEventArgs e)
         {
             HideAll();
+
             this.MatchInitScreen.Visibility = Visibility.Visible;
             this.BottomMenu.Visibility = Visibility.Visible;
         }
 
         private void SwipeLeft_Click(object sender, RoutedEventArgs e)
         {
+
             if (this.mainfeedpicture.Visibility == Visibility.Visible)
             {
                 this.mainfeedpicture.Visibility = Visibility.Hidden;
                 this.mainfeedpicture2.Visibility = Visibility.Visible;
+
             }
-            else {
+            if(this.mainfeedpicture2.Visibility == Visibility.Visible) { 
                 this.mainfeedpicture.Visibility = Visibility.Visible;
                 this.mainfeedpicture2.Visibility = Visibility.Hidden;
             }
@@ -554,14 +526,6 @@ namespace HorizontalPrototype
             appear.Begin();
 
             this.buttonbackmain.Click += Buttonbackmain_Click;
-            this.profilepicture.Visibility = Visibility.Hidden;
-            this.profilepicture1.Visibility = Visibility.Hidden;
-            this.profilepicture3.Visibility = Visibility.Visible;
-            this.ProfileImage.Visibility = Visibility.Hidden;
-
-            this.Gallery.Visibility = Visibility.Hidden;
-            this.Gallery3.Visibility = Visibility.Hidden;
-            this.Gallery2.Visibility = Visibility.Visible;
 
             this.editprofilebutton.Visibility = Visibility.Hidden;
             this.questionnairebutton.Visibility = Visibility.Hidden;
@@ -569,6 +533,10 @@ namespace HorizontalPrototype
             this.BottomMenu.Visibility = Visibility.Hidden;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+
+            this.SwipeLeft.Click += SwipeLeft_Click;
+
+
         }
 
         private void SignifierDown_Click(object sender, RoutedEventArgs e)
@@ -581,18 +549,51 @@ namespace HorizontalPrototype
             this.UndoFeedback.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.UndoButton_Copy.Click += MainFeedTextbox_Click;
-            this.Continue_Button.Click += Continue_Button_Click;
+            //  this.Continue_Button.Click += Continue_Button_Click;
+
+            if (this.mainfeedpicture.Visibility == Visibility.Visible)
+            {
+
+                this.Continue_Button.Click += Continue_Button_Click1;
+                this.SwipeLeft.Click += SwipeLeft_Click;
+
+            }
+            if (this.mainfeedpicture2.Visibility == Visibility.Visible)
+            {
+
+                this.Continue_Button.Click += Continue_Button_Click;
+                this.SwipeLeft.Click += SwipeLeft_Click;
+
+            }
+
+        }
+
+        private void Continue_Button_Click1(object sender, RoutedEventArgs e)
+        {
+            this.mainfeedpicture.Visibility = Visibility.Hidden;
+
+            Storyboard disappear = this.FindResource("MainFeedScrollDown") as Storyboard;
+            disappear.Begin();
+            this.UndoFeedback.Visibility = Visibility.Hidden;
+            this.mainfeedpicture2.Visibility = Visibility.Visible;
+            this.SwipeLeft.Click += SwipeLeft_Click;
+
+
         }
 
         private void Continue_Button_Click(object sender, RoutedEventArgs e)
         {
+            this.mainfeedpicture2.Visibility = Visibility.Hidden;
+
+
             Storyboard disappear = this.FindResource("MainFeedScrollDown") as Storyboard;
             disappear.Begin();
-            this.UndoFeedback.Visibility = Visibility.Hidden;   
+            this.UndoFeedback.Visibility = Visibility.Hidden;
+            this.mainfeedpicture.Visibility = Visibility.Visible;
+            this.SwipeLeft.Click += SwipeLeft_Click;
+
 
         }
-
-
 
         public void HideAll()
         {
