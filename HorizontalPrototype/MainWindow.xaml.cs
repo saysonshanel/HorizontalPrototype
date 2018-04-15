@@ -145,6 +145,7 @@ namespace HorizontalPrototype
             this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
             this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
             this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
+            this.VerifyCheckErrorCanvas.Visibility = Visibility.Hidden;
             //show signup screen
             this.SignupScreenCanvas.Visibility = Visibility.Visible;
 
@@ -165,54 +166,81 @@ namespace HorizontalPrototype
 
         private void CheckSignupFieldsOnClicked(object sender, RoutedEventArgs e)
         {
-            this.FeedbackMessage.Visibility = Visibility.Visible;
             if(SignupPasswordTextbox.Password != SignupPwRepeatTextbox.Password)
             {
                 MessageBox.Show("Passwords do not match.");
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
+                this.FeedbackMessage.Visibility = Visibility.Visible;
 
-            }else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
+
+            }
+            else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
-            }else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty))
+                this.FeedbackMessage.Visibility = Visibility.Visible;
+
+            }
+            else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPasswordTextbox.Password == string.Empty))
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
-            }else if((this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
+                this.FeedbackMessage.Visibility = Visibility.Visible;
+
+            }
+            else if((this.SignupPasswordTextbox.Password == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
-            
+                this.FeedbackMessage.Visibility = Visibility.Visible;
 
-            }else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
+
+
+            }
+            else if ((this.SignupUsernameTextbox.Text == string.Empty) && (this.SignupPwRepeatTextbox.Password == string.Empty))
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
+                this.FeedbackMessage.Visibility = Visibility.Visible;
+
             }
             else if(this.SignupUsernameTextbox.Text == string.Empty)
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Visible;
-            }else if(this.SignupPasswordTextbox.Password == string.Empty)
+                this.FeedbackMessage.Visibility = Visibility.Visible;
+
+            }
+            else if(this.SignupPasswordTextbox.Password == string.Empty)
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Hidden;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
+                this.FeedbackMessage.Visibility = Visibility.Visible;
 
-            }else if(this.SignupPwRepeatTextbox.Password == string.Empty)
+
+            }
+            else if(this.SignupPwRepeatTextbox.Password == string.Empty)
             {
                 this.SignupPasswordErrorCanvas.Visibility = Visibility.Hidden;
                 this.SignupRepeatErrorCanvas.Visibility = Visibility.Visible;
                 this.SignupUsernameErrorCanvas.Visibility = Visibility.Hidden;
+                this.FeedbackMessage.Visibility = Visibility.Visible;
 
-            }else
+
+            }else if (this.VerifyCheckbox.IsChecked == false)
+            {
+                this.VerifyCheckErrorCanvas.Visibility = Visibility.Visible;
+                this.FeedbackMessage.Visibility = Visibility.Visible;
+
+            }
+            else
             {
                 this.RegisterSignupButton.Click += ToLoginScreen;
             }
@@ -268,11 +296,13 @@ namespace HorizontalPrototype
 
         private void CheckLoginScreenFieldsOnClicked(object sender, RoutedEventArgs e)
         {
-            this.LoginFeedbackMessage.Visibility = Visibility.Visible;
+  
+            
             if ((this.UsernameTextbox.Text == string.Empty) && (this.PasswordBox.Password == string.Empty))
             {
                 this.LoginUsernameErrorCanvas.Visibility = Visibility.Visible;
                 this.LoginPasswordErrorCanvas.Visibility = Visibility.Visible;
+                this.LoginFeedbackMessage.Visibility = Visibility.Visible;
 
             }
             else if (this.UsernameTextbox.Text == string.Empty)
@@ -280,11 +310,17 @@ namespace HorizontalPrototype
                 this.LoginPasswordErrorCanvas.Visibility = Visibility.Hidden;
 
                 this.LoginUsernameErrorCanvas.Visibility = Visibility.Visible;
-            } else if (this.PasswordBox.Password == string.Empty)
+                this.LoginFeedbackMessage.Visibility = Visibility.Visible;
+
+            }
+            else if (this.PasswordBox.Password == string.Empty)
             {
                 this.LoginUsernameErrorCanvas.Visibility = Visibility.Hidden;
                 this.LoginPasswordErrorCanvas.Visibility = Visibility.Visible;
-            }else
+                this.LoginFeedbackMessage.Visibility = Visibility.Visible;
+
+            }
+            else
             {
                 this.LoginScreenLoginButton.Click += ToEditProfileScreen;
             }

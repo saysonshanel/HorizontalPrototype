@@ -1383,8 +1383,8 @@
             <TextBlock x:Name="textBlock2" Height="57.5" TextWrapping="Wrap" Text="g" Width="31" FontSize="36" FontWeight="Bold" Foreground="White" Canvas.Left="95" Canvas.Top="319.833"/>
 
         </Canvas>
-        <Canvas x:Name="LoginScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
-            <Canvas x:Name="Logo1" Height="109.784" Canvas.Left="128.492" Canvas.Top="190" Width="180.508">
+        <Canvas x:Name="LoginScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
+            <Canvas x:Name="Logo1" Height="109.784" Canvas.Left="128.492" Canvas.Top="143.5" Width="180.508">
                 <Path x:Name="HeartLogo_Copy" Fill="#FFE64646" Data="M50,0 C69.847732,0 86.99443,5.396699 95.069458,13.217179 L95.264778,13.412395 95.457519,13.55882 C104.45373,20.711323 108.51564,41.255924 104.6232,64.227997 100.00993,91.454155 85.970405,111.78011 73.265045,109.62728 60.559681,107.47445 53.999748,83.658073 58.613018,56.431911 59.189678,53.028641 59.91362,49.733189 60.763832,46.575977 L60.897186,46.103592 60.076744,46.191956 C56.821865,46.502773 53.451778,46.666 50,46.666 22.385763,46.666 -1.9231629E-07,36.21946 0,23.333 -1.9231629E-07,10.44654 22.385763,0 50,0 z" Height="109.784" RenderTransformOrigin="0.471256183398143,0.212536166034206" Stretch="Fill" Width="106.099">
                     <Path.RenderTransform>
                         <TransformGroup>
@@ -1407,27 +1407,27 @@
                 </Path>
                 <TextBlock x:Name="textBlock4" Height="27" Canvas.Left="85.008" TextWrapping="Wrap" Canvas.Top="7.5" Width="95.5" FontWeight="Bold" FontSize="20"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
             </Canvas>
-            <Rectangle Fill="White" Height="41.667" Canvas.Left="65.833" RadiusY="20" RadiusX="20" Canvas.Top="289.333" Width="235.666" Opacity="0.5"/>
-            <TextBox x:Name="UsernameTextbox" Height="27" Canvas.Left="81.331" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="295.669" Width="205.334" TextAlignment="Left"/>
-            <Rectangle Fill="White" Height="41.667" Canvas.Left="65.833" RadiusY="20" RadiusX="20" Canvas.Top="357.666" Width="235.666" Opacity="0.5"/>
-            <PasswordBox x:Name="PasswordBox" Height="28.667" Canvas.Left="81.331" Canvas.Top="364.665" Width="205.334" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Foreground="White" Opacity="0.65" Cursor="IBeam" SelectionOpacity="0" BorderThickness="0"/>
-            <TextBlock x:Name="textBlock3" Height="35.456" Canvas.Left="100.667" TextWrapping="Wrap" Text="username or e-mail" Canvas.Top="267.328" Width="172.998" Foreground="White" Opacity="0.85" FontSize="20"/>
-            <TextBlock x:Name="textBlock3_Copy" Height="30.385" Canvas.Left="143.666" TextWrapping="Wrap" Text="password" Canvas.Top="336.399" Width="94.667" Foreground="White" Opacity="0.85" FontSize="20"/>
-            <Button x:Name="LoginScreenLoginButton" Content="Button" Height="42.667" Canvas.Left="144.666" Style="{DynamicResource ButtonStyle5}" Canvas.Top="448.859" Width="83.5" Cursor="Hand"/>
+            <Rectangle Fill="White" Height="41.667" Canvas.Left="65.833" RadiusY="20" RadiusX="20" Canvas.Top="242.833" Width="235.666" Opacity="0.5"/>
+            <TextBox x:Name="UsernameTextbox" Height="27" Canvas.Left="81.331" Style="{DynamicResource TextBoxStyle3}" TextWrapping="Wrap" Canvas.Top="249.169" Width="205.334" TextAlignment="Left"/>
+            <Rectangle Fill="White" Height="41.667" Canvas.Left="65.833" RadiusY="20" RadiusX="20" Canvas.Top="311.166" Width="235.666" Opacity="0.5"/>
+            <PasswordBox x:Name="PasswordBox" Height="28.667" Canvas.Left="81.331" Canvas.Top="318.165" Width="205.334" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Foreground="White" Opacity="0.65" Cursor="IBeam" SelectionOpacity="0" BorderThickness="0"/>
+            <TextBlock x:Name="textBlock3" Height="35.456" Canvas.Left="100.667" TextWrapping="Wrap" Text="username or e-mail" Canvas.Top="220.828" Width="172.998" Foreground="White" Opacity="0.85" FontSize="20"/>
+            <TextBlock x:Name="textBlock3_Copy" Height="30.385" Canvas.Left="143.666" TextWrapping="Wrap" Text="password" Canvas.Top="289.899" Width="94.667" Foreground="White" Opacity="0.85" FontSize="20"/>
+            <Button x:Name="LoginScreenLoginButton" Content="Button" Height="42.667" Canvas.Left="144.666" Style="{DynamicResource ButtonStyle5}" Canvas.Top="402.359" Width="83.5" Cursor="Hand"/>
             <Button x:Name="BackButton" Content="Button" Height="43.333" Canvas.Left="303.335" Style="{DynamicResource ButtonStyle34}" Canvas.Top="19.669" Width="44.667" Cursor="Hand"/>
             <Path Data="M330.58335,27.333333 L316.02086,41.895829 330.43786,55.813804" Height="32.48" Canvas.Left="314.02" Stretch="Fill" Stroke="White" StrokeThickness="4" Canvas.Top="25.333" Width="18.563" Cursor="Hand"/>
-            <CheckBox x:Name="RememberMeCheck" Content="CheckBox" Height="19.333" Canvas.Left="124.685" Canvas.Top="419.011" Width="18.667"/>
-            <TextBlock x:Name="textBlock9" Height="22.848" Canvas.Left="145.519" TextWrapping="Wrap" Canvas.Top="415.844" Width="146" Text="Remember me" Foreground="White" Opacity="0.75" FontSize="14"/>
-            <Canvas x:Name="LoginUsernameErrorCanvas" Height="64" Canvas.Left="255" Canvas.Top="235.784" Width="54">
+            <CheckBox x:Name="RememberMeCheck" Content="CheckBox" Height="19.333" Canvas.Left="124.685" Canvas.Top="372.511" Width="18.667"/>
+            <TextBlock x:Name="textBlock9" Height="22.848" Canvas.Left="145.519" TextWrapping="Wrap" Canvas.Top="369.344" Width="146" Text="Remember me" Foreground="White" Opacity="0.75" FontSize="14"/>
+            <Canvas x:Name="LoginUsernameErrorCanvas" Height="64" Canvas.Left="255" Canvas.Top="189.284" Width="54">
                 <TextBlock x:Name="textBlock11" Height="32" Canvas.Left="18" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
             </Canvas>
-            <Canvas x:Name="LoginPasswordErrorCanvas" Height="64" Canvas.Left="217.665" Canvas.Top="303.784" Width="54">
+            <Canvas x:Name="LoginPasswordErrorCanvas" Height="64" Canvas.Left="217.665" Canvas.Top="257.284" Width="54">
                 <TextBlock x:Name="textBlock13" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
             </Canvas>
-            <TextBlock x:Name="LoginFeedbackMessage" Height="30.515" Canvas.Left="70.667" TextWrapping="Wrap" Text="invalid password or username" Canvas.Top="399.333" Width="230.832" TextAlignment="Center" Foreground="Red" FontSize="14"/>
+            <TextBlock x:Name="LoginFeedbackMessage" Height="30.515" Canvas.Left="70.667" TextWrapping="Wrap" Text="invalid password or username" Canvas.Top="352.833" Width="230.832" TextAlignment="Center" Foreground="Red" FontSize="14"/>
 
         </Canvas>
-        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F" d:IsHidden="True">
+        <Canvas x:Name="SignupScreenCanvas" Height="636" Width="367" Background="#FFE8BD5F">
             <TextBlock x:Name="textBlock5" Height="59.334" Canvas.Left="119.832" TextWrapping="Wrap" Text="sign-up" Width="139.334" FontSize="36" FontWeight="Bold" Canvas.Top="39.833" Foreground="#FF494848"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="117.834" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
             <Rectangle Height="40.667" StrokeThickness="4" Canvas.Top="189.5" Width="232.666" RadiusX="20" RadiusY="20" Fill="White" Canvas.Left="69.5" Opacity="0.5"/>
@@ -1453,6 +1453,9 @@
             </Canvas>
             <Canvas x:Name="SignupRepeatErrorCanvas" Height="64" Canvas.Left="250.834" Canvas.Top="282.417" Width="54">
                 <TextBlock x:Name="textBlock16" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
+            </Canvas>
+            <Canvas x:Name="VerifyCheckErrorCanvas" Height="64" Canvas.Left="260.834" Canvas.Top="440.32" Width="54">
+                <TextBlock x:Name="textBlock10" Height="32" Canvas.Left="10" TextWrapping="Wrap" Text="*" Canvas.Top="22" Width="34" FontWeight="Bold" FontSize="36" Foreground="Red"/>
             </Canvas>
             <PasswordBox x:Name="SignupPasswordTextbox" Height="40.667" Canvas.Left="84.5" Canvas.Top="261.917" Width="205.334" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Foreground="White" Opacity="0.65" Cursor="IBeam" SelectionOpacity="0" BorderThickness="0"/>
             <PasswordBox x:Name="SignupPwRepeatTextbox" Height="40.667" Canvas.Left="84.5" Canvas.Top="333.667" Width="205.334" FontSize="20" Background="{x:Null}" BorderBrush="{x:Null}" SelectionBrush="{x:Null}" Foreground="White" Opacity="0.65" Cursor="IBeam" SelectionOpacity="0" BorderThickness="0"/>
@@ -1495,7 +1498,7 @@
 
             </Canvas>
         </ScrollViewer>
-        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367">
+        <Canvas x:Name="ProfileScreenCanvas" Height="636" Width="367" d:IsHidden="True">
             <ScrollViewer Height="636" Width="367">
                 <Canvas Height="1080" Width="367" Background="White">
                     <Image x:Name="BackgroundImage" Height="220" Width="357"/>
@@ -1800,7 +1803,7 @@
             <TextBlock x:Name="LogoText_Copy4" Height="32" TextWrapping="Wrap" Width="63.5" FontWeight="Bold" FontSize="20" Canvas.Left="158.001" Canvas.Top="10"><Run Foreground="#FFE64646" Text="u"/><Run Foreground="#FFE8BD5F" Text="s"/><Run Foreground="#FF494848" Text="eek"/></TextBlock>
         </Canvas>
         <Button x:Name="HamburgerMenuButton" Content="Button" Height="40" Canvas.Left="305" Style="{DynamicResource ButtonStyle10}" Canvas.Top="25" Width="40" d:IsHidden="True"/>
-        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" RenderTransformOrigin="0.5,0.5">
+        <Canvas x:Name="MainFeedCanvas" Height="636" Width="367" RenderTransformOrigin="0.5,0.5" d:IsHidden="True">
             <Canvas.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -1972,7 +1975,7 @@
                 <Image x:Name="image1" Height="33.667" Width="44.667"/>
             </Button>
         </Menu>
-        <Image x:Name="KeyboardView" Height="183" Canvas.Top="453" Width="367" Source="keyboard.png" Stretch="UniformToFill" d:IsHidden="True"/>
+        <Image x:Name="KeyboardView" Height="183" Canvas.Top="453" Width="367" Source="keyboard.png" Stretch="UniformToFill"/>
         <Canvas x:Name="UndoFeedback" Height="99.333" Canvas.Left="68.001" Canvas.Top="421.334" Width="264" Opacity="0.99" d:IsHidden="True">
             <Rectangle Fill="#FFEA6262" Height="108" RadiusY="10" RadiusX="10" Stroke="Black" Width="251" Canvas.Top="-8.667"/>
             <TextBlock x:Name="hidingtextbox" HorizontalAlignment="Left" Height="21" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" Canvas.Left="40"><Run Text="You are about to hide this profile"/></TextBlock>
