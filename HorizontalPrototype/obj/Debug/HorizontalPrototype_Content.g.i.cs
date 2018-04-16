@@ -8,6 +8,6 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("no-photo.png")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("noun_1073268_cc%20(1).png")]
 
 

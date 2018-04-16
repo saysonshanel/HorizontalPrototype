@@ -417,12 +417,13 @@ namespace HorizontalPrototype
             this.Gallery.Visibility = Visibility.Hidden;
             this.Gallery2.Visibility = Visibility.Hidden;
             this.Gallery3.Visibility = Visibility.Hidden;
-            if (mainFeed == "Selena")
+
+            if (this.mainfeedpicture.Visibility == Visibility.Visible)
             {
                 this.ProfileSelena.Visibility = Visibility.Visible;
                 this.Gallery2.Visibility = Visibility.Visible;
             }
-            else if (mainFeed == "Beandys")
+            else if (this.mainfeedpicture2.Visibility == Visibility.Visible)
             {
                 this.ProfileBeandys.Visibility = Visibility.Visible;
                 this.Gallery3.Visibility = Visibility.Visible;
@@ -450,7 +451,7 @@ namespace HorizontalPrototype
             {
                 this.mainfeedpicture.Visibility = Visibility.Visible;
             }
-            else if (this.mainFeed == "Beandys") ;
+            else if (this.mainFeed == "Beandys")
             {
                 this.mainfeedpicture2.Visibility = Visibility.Visible;
 
@@ -576,7 +577,7 @@ namespace HorizontalPrototype
             {
                 this.mainfeedpicture.Visibility = Visibility.Visible;
             }
-            else if (this.mainFeed == "Beandys") ;
+            else if (this.mainFeed == "Beandys")
             {
                 this.mainfeedpicture2.Visibility = Visibility.Visible;
   
@@ -586,8 +587,8 @@ namespace HorizontalPrototype
 
             this.SignifierUp.Click += MainFeedSwipeUp;
 
-            //Storyboard animation = this.FindResource("tutorialanimation") as Storyboard;
-            //animation.Begin();
+            Storyboard animation = this.FindResource("tutorialanimation") as Storyboard;
+            animation.Begin();
 
             this.BottomMenu.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
@@ -600,6 +601,9 @@ namespace HorizontalPrototype
 
         private void SwipeLeft_Click(object sender, RoutedEventArgs e)
         {
+            Storyboard sb1 = this.FindResource("SwipeLeft") as Storyboard;
+            sb1.Begin();
+
             //this.MainFeedCanvas.Visibility = Visibility.Hidden;
             //this.MainFeedCanvas.Visibility = Visibility.Visible;
             this.mainfeedpicture.Visibility = Visibility.Hidden;
@@ -613,6 +617,8 @@ namespace HorizontalPrototype
                 this.mainfeedpicture.Visibility = Visibility.Visible;
                 this.mainFeed = "Selena";
             }
+
+
         }
 
         private void SwipeUpButton_Click(object sender, RoutedEventArgs e)
@@ -626,9 +632,9 @@ namespace HorizontalPrototype
             this.buttonbackmain.Click += Buttonbackmain_Click;
             this.ProfileImage.Visibility = Visibility.Hidden;
 
-            this.Gallery.Visibility = Visibility.Hidden;
-            this.Gallery3.Visibility = Visibility.Hidden;
-            this.Gallery2.Visibility = Visibility.Visible;
+           this.Gallery.Visibility = Visibility.Hidden;
+           // this.Gallery3.Visibility = Visibility.Hidden;
+            //this.Gallery2.Visibility = Visibility.Visible;
 
             this.editprofilebutton.Visibility = Visibility.Hidden;
             this.questionnairebutton.Visibility = Visibility.Hidden;
@@ -636,6 +642,14 @@ namespace HorizontalPrototype
             this.BottomMenu.Visibility = Visibility.Hidden;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.ProfileScreenCanvas.Visibility = Visibility.Visible;
+
+            if(this.mainfeedpicture.Visibility == Visibility.Visible)
+            {
+                this.ProfileSelena.Visibility = Visibility.Visible;
+                this.ProfileBeandys.Visibility = Visibility.Hidden;
+                this.Gallery3.Visibility = Visibility.Hidden;
+                this.Gallery2.Visibility = Visibility.Visible;
+            }
         }
 
         private void SignifierDown_Click(object sender, RoutedEventArgs e)
@@ -648,14 +662,43 @@ namespace HorizontalPrototype
             this.UndoFeedback.Visibility = Visibility.Visible;
             //this.HamburgerMenuButton.Visibility = Visibility.Visible;
             this.UndoButton_Copy.Click += MainFeedTextbox_Click;
-            this.Continue_Button.Click += Continue_Button_Click;
+           // this.Continue_Button.Click += Continue_Button_Click;
+
+            if (this.mainfeedpicture.Visibility == Visibility.Visible)
+            {
+                this.Continue_Button.Click += Continue_Button_Click1;
+                
+            }else // (this.mainfeedpicture2.Visibility == Visibility.Visible)
+                            {
+                this.Continue_Button.Click += Continue_Button_Click;
+                
+                            }
+            
+            }
+
+
+
+        private void Continue_Button_Click1(object sender, RoutedEventArgs e)
+        {
+            this.mainfeedpicture.Visibility = Visibility.Hidden;
+
+            Storyboard disappear = this.FindResource("MainFeedScrollDown") as Storyboard;
+            disappear.Begin();
+            this.UndoFeedback.Visibility = Visibility.Hidden;
+            this.mainfeedpicture2.Visibility = Visibility.Visible;
+            this.ProfileSelena.Visibility = Visibility.Hidden;
+            this.ProfileBeandys.Visibility = Visibility.Visible;
         }
+
 
         private void Continue_Button_Click(object sender, RoutedEventArgs e)
         {
             Storyboard disappear = this.FindResource("MainFeedScrollDown") as Storyboard;
             disappear.Begin();
-            this.UndoFeedback.Visibility = Visibility.Hidden;   
+            this.UndoFeedback.Visibility = Visibility.Hidden;
+            this.mainfeedpicture.Visibility = Visibility.Visible;
+            this.ProfileBeandys.Visibility = Visibility.Hidden;
+            this.ProfileSelena.Visibility = Visibility.Visible;
 
         }
 
@@ -684,6 +727,7 @@ namespace HorizontalPrototype
             this.UndoFeedback.Visibility = Visibility.Hidden;
             this.mainfeedpicture.Visibility = Visibility.Hidden;
             this.mainfeedpicture2.Visibility = Visibility.Hidden;
+            this.ProfileImage.Visibility = Visibility.Hidden;
 
         }
 
