@@ -1,4 +1,4 @@
 # Useek: The Matchmakers 
 
-A dating application catered to University of Calgary students.
+A front-end dating application catered to University of Calgary students.
 
